@@ -34,7 +34,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Bhatt, Gita. 1992. “SateEte Remote Sensing Provides\nNew Insights into the Dynamics of the Natural Environment.\nBut the Technology so Far Has Had Limited Operational Use.\nWhy?”\n\n\nBrady, Maria. 2021. “Remote Sensing for Dummies.”\nArcGIS StoryMaps. May 11, 2021. https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d.",
+    "text": "Brady, Maria. 2021. “Remote Sensing for Dummies.”\nArcGIS StoryMaps. May 11, 2021. https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d.",
     "crumbs": [
       "References"
     ]
@@ -64,7 +64,7 @@
     "href": "week1.html#reflection",
     "title": "1  Getting started with Remote Sensing",
     "section": "1.3 Reflection",
-    "text": "1.3 Reflection\nNext to learning about the electromagnetic field (something I hadn’t really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost. In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g. a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, considers remote sensing as a low cost option for data collection in comparison to airborne or ground surveys. Bhatt (1992)\n\n\n\n\nBhatt, Gita. 1992. “SateEte Remote Sensing Provides New Insights into the Dynamics of the Natural Environment. But the Technology so Far Has Had Limited Operational Use. Why?”\n\n\nBrady, Maria. 2021. “Remote Sensing for Dummies.” ArcGIS StoryMaps. May 11, 2021. https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d.",
+    "text": "1.3 Reflection\nNext to learning about the electromagnetic field (something I hadn’t really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost. In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g. a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, considers remote sensing as a low cost option for data collection in comparison to airborne or ground surveys. (bhattSateEteRemoteSensing1992?)\n\n\n\n\nBrady, Maria. 2021. “Remote Sensing for Dummies.” ArcGIS StoryMaps. May 11, 2021. https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with Remote Sensing</span>"
     ]
@@ -87,6 +87,46 @@
     "text": "This week is a little different and does not follow the usual structure of summary, application and reflection. We looked at the tools to make presentations and websites with code. For presentations, we can use Xaringan and for Books/Websites Quarto. This website is made with Quarto in R Studio and I set it up during week 2. Below you’ll find a short presentation on Sentinel-2, which i made using Xaringan.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan Presentation and Quarto Book</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html",
+    "href": "week3.html",
+    "title": "3  Remote Sensing Data & Corrections",
+    "section": "",
+    "text": "3.1 Summary\nThis week had a lot of very technical content around the concepts of corrections, merging images and enhancement. Honestly, a bit overwhelming at first. The good news is that a lot of the methods covered this week are automated, when using tools like Google Earth Engine. Therefore, for me it is important to understand the broad concepts rather than how each method is exactly implemented. The table below provides short explanations for some of the concepts of this week. I used the lecture slides, the practical content and Chat GPT to compile this table.\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nWarning: package 'kableExtra' was built under R version 4.3.2\n\n\n\nAttaching package: 'kableExtra'\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\n\n\n\n\nTerm\nDescription\n\n\n\n\nGeometric Correction\nRemote sensed data often have image distortion issues due to the angle its taken from (off-nadir, meaning not directly down), the topography, or the rotation of the earth. This can be fixed by taking Ground Control Points (GPS) and matching them with known points in the image and a reference dataset (goldstandard, we know its corrrect) using different algorithms.\n\n\nAtmospheric Correction\nThere are two sources of environmental attenuation: Atmospheric scattering and Topographic attenuation. Absorption and scattering crate atmospheric haze and makes pixels bleed into one another, which makes the image less clear (less contrast)\n\n\nOrthorectification correction\nGeorectification = giving coordinates to an image Orthorectification = removing distortions... making the pixels viewed at nadir\n\n\nDark Object Subtraction (DOS)\nMethod to correct for atmospheric effects and sensor-specific artifacts. In DOS, the darkest objects in an image, such as shadows or non-reflective surfaces, are identified and assumed to represent the true \"dark\" or background signal. The pixel values of these dark objects are then subtracted from the entire image, effectively normalizing the data and reducing atmospheric influence. DOS helps enhance the contrast and accuracy of satellite imagery, particularly in areas with varying atmospheric conditions or topography.\n\n\nDigital Number (DN)\nThe raw number, or the value that the sensor sees.\n\n\nRadiance\n\n\n\n\n\n\n\n\n\n\n\n\nTerm\nDescription\n\n\n\n\nGeometric Correction\nRemote sensed data often have image distortion issues due to the angle its taken from (off-nadir, meaning not directly down), the topography, or the rotation of the earth. This can be fixed by taking Ground Control Points (GPS) and matching them with known points in the image and a reference dataset (goldstandard, we know its corrrect) using different algorithms.\n\n\nAtmospheric Correction\nThere are two sources of environmental attenuation: Atmospheric scattering and Topographic attenuation. Absorption and scattering crate atmospheric haze and makes pixels bleed into one another, which makes the image less clear (less contrast)\n\n\nOrthorectification correction\nGeorectification = giving coordinates to an image Orthorectification = removing distortions... making the pixels viewed at nadir\n\n\nDark Object Subtraction (DOS)\nMethod to correct for atmospheric effects and sensor-specific artifacts. In DOS, the darkest objects in an image, such as shadows or non-reflective surfaces, are identified and assumed to represent the true \"dark\" or background signal. The pixel values of these dark objects are then subtracted from the entire image, effectively normalizing the data and reducing atmospheric influence. DOS helps enhance the contrast and accuracy of satellite imagery, particularly in areas with varying atmospheric conditions or topography.\n\n\nDigital Number (DN)\nThe raw number, or the value that the sensor sees.\n\n\nRadiance",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data & Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#application",
+    "href": "week3.html#application",
+    "title": "3  Remote Sensing Data & Corrections",
+    "section": "3.2 Application",
+    "text": "3.2 Application",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data & Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#reflection",
+    "href": "week3.html#reflection",
+    "title": "3  Remote Sensing Data & Corrections",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection\nThis week was a little painful, both for me (difficult concepts) and my laptop (computational power needed for working with remote sensing data).It got me excited to get started on Google Earth Engine, where a lot of these processes are automated and run on a cloud. It sounds like that makes it easier to focus on the analysis and get to the fun and interesting bits more quickly, rather than spending a long time making corrections and enhancements to the data. Thank you Google…\nNonetheless, for me, the key takeaways from this week are:\n\nB",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data & Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#nonetheless-for-me-the-key-takeaways-from-this-week-are",
+    "href": "week3.html#nonetheless-for-me-the-key-takeaways-from-this-week-are",
+    "title": "3  Remote Sensing Data & Corrections",
+    "section": "3.4 Nonetheless, for me, the key takeaways from this week are:",
+    "text": "3.4 Nonetheless, for me, the key takeaways from this week are:\n\nB",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data & Corrections</span>"
     ]
   }
 ]
