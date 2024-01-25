@@ -14,7 +14,7 @@ book:
     - summary.qmd
     - references.qmd
 
-bibliography: references.bib
+bibliography: Remote Sensing.bib
 
 format:
   html:
