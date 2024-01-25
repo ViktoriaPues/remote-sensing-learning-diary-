@@ -4,18 +4,38 @@
 
 This week, I am covering the basics of what remote sensing is. The topic is fairly new to me, so I will keep it simple.
 
-Remote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth's surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. (@bradyRemoteSensingDummies2021)
+Remote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth's surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. @bradyRemoteSensingDummies2021
 
-The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency (@bradyRemoteSensingDummies2021). Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.
+The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency @bradyRemoteSensingDummies2021. Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.
 
 The images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called "bands". The more bands, the higher the spectral resolution of the image.
 
 Generally, there are two types of sensors -- active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).
 
-```{r include_image, out.width='100%', fig.cap='Figure 1: Electric and magnetic waves in the electromagnetic field', fig.scap='Image Source: https://webapps.itc.utwente.nl/librarywww/papers_2009/general/principlesremotesensing.pdf'}
+```{r include_image, out.width='100%', fig.cap='Figure 1: Electric and magnetic waves in the electromagnetic field', fig.scap='Image Source: Principles of Remote Sensing'}
 knitr::include_graphics('figures/w1p1.png')
+```
+
+```{r include_image, out.width='100%', fig.cap='Figure 2: Amplitude, length, and frequency of electric wave ', fig.scap='Image Source: Principles of Remote Sensing '}
+knitr::include_graphics('figures/w1p2.png')
 ```
 
 ## 2. Application
 
+As for many other technologies, remote sensing has its origin in the military and defense sector. It was first invented to gather information about the enemy in war, e.g. troop deployment or battle territory @bradyRemoteSensingDummies2021.
+
+While still used in this sector, today remote sensing has been adopted in a range of other disciplines as well including:
+
+-   Climate science (e.g., measuring changes in temperature over time),
+
+-   Environmental science (e.g. measuring water quality),
+
+-   Geology (e.g. measuring volcanic activity),
+
+-   Urban Planning (e.g., identifying informal settlements and tracing urban growth),
+
+-   Conflict studies (e.g., measuring destruction in battle) and many more.
+
 ## 3. Reflection
+
+Next to learning about the electromagnetic field (something I hadn't really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost. In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g. a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, considers remote sensing as a low cost option for data collection in comparison to airborne or ground surveys. @bhattSateEteRemoteSensing1992
