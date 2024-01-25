@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "remote sensing learning diary"
@@ -7,6 +8,7 @@ book:
   date: "1/25/2024"
   chapters:
     - index.qmd
+    - week1.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
