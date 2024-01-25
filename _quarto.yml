@@ -8,9 +8,8 @@ book:
   date: "1/25/2024"
   chapters:
     - index.qmd
-    - introduction.qmd
-    - week1.qmd
     - intro.qmd
+    - week1.qmd
     - summary.qmd
     - references.qmd
 
