@@ -1,6 +1,6 @@
-# Week 2 - Xaringan Presentation 
+# Xaringan Presentation and Quarto Book 
 
-This week is a little different and does not follow the usual structure of summary, application and reflection. We looked at the tools to make presentations and websites in code. For presentations, we can use Xaringan and for Books or Websites Quarto. This website is made with Quarto in R Studio and I set it up during week 2. Below you'll find a short presentation on Sentinel-2, which i made using Xaringan.
+This week is a little different and does not follow the usual structure of summary, application and reflection. We looked at the tools to make presentations and websites with code. For presentations, we can use Xaringan and for Books/Websites Quarto. This website is made with Quarto in R Studio and I set it up during week 2. Below you'll find a short presentation on Sentinel-2, which i made using Xaringan.
 
 ```{=html}
 <iframe src="https://viktoriapues.github.io/w2_presentation/#1" width="800" height="600"></iframe>
