@@ -1,0 +1,36 @@
+# Remote Sensing Data & Corrections
+
+## Summary
+
+This week had a lot of very technical content around the concepts of corrections, merging images and enhancement. Honestly, a bit overwhelming at first. The good news is that a lot of the methods covered this week are automated, when using tools like Google Earth Engine. Therefore, for me it is important to understand the broad concepts rather than how each method is exactly implemented. The table below provides short explanations for some of the concepts of this week. I used the lecture slides, the practical content and Chat GPT to compile this table.
+
+```{r, results='hide'}
+library(tidyverse) 
+install.packages("kableExtra")
+library(kableExtra)
+my_table <- read.csv("week3 overview.csv")
+knitr::kable(head(my_table), format = 'html')
+
+my_table %>%
+  head() %>%
+  kable("html") %>%
+  kable_styling(
+    full_width = FALSE, # Adjust as needed
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    position = "center" # Center the table on the slide
+  ) %>%
+  column_spec(1, bold = TRUE) # Make the first column bold
+
+```
+
+\`\`\`
+
+## Application
+
+## Reflection
+
+This week was a little painful, both for me (difficult concepts) and my laptop (computational power needed for working with remote sensing data).It got me excited to get started on Google Earth Engine, where a lot of these processes are automated and run on a cloud. It sounds like that makes it easier to focus on the analysis and get to the fun and interesting bits more quickly, rather than spending a long time making corrections and enhancements to the data. Thank you Google...
+
+## Nonetheless, for me, the key takeaways from this week are:
+
+-   B

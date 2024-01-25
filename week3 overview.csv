@@ -1,0 +1,25 @@
+﻿Term ,Description 
+Geometric Correction ,"Remote sensed data often have image distortion issues due to the angle its taken from (off-nadir, meaning not directly down), the topography, or the rotation of the earth. This can be fixed by taking Ground Control Points (GPS) and matching them with known points in the image and a reference dataset (goldstandard, we know its corrrect) using different algorithms. 
+"
+Atmospheric Correction,"There are two sources of environmental attenuation: Atmospheric scattering and Topographic attenuation. Absorption and scattering crate atmospheric haze and makes pixels bleed into one another, which makes the image less clear (less contrast) "
+Orthorectification correction,"Georectification = giving coordinates to an image 
+Orthorectification = removing distortions... making the pixels viewed at nadir "
+Dark Object Subtraction (DOS),"Method to correct for atmospheric effects and sensor-specific artifacts. In DOS, the darkest objects in an image, such as shadows or non-reflective surfaces, are identified and assumed to represent the true ""dark"" or background signal. The pixel values of these dark objects are then subtracted from the entire image, effectively normalizing the data and reducing atmospheric influence. DOS helps enhance the contrast and accuracy of satellite imagery, particularly in areas with varying atmospheric conditions or topography."
+Digital Number (DN),"The raw number, or the value that the sensor sees. "
+Radiance,
+Surface Reflectance,
+Top of Atmosphere reflectance,
+Bottom of Atmosphere reflectance,
+"Collection, level and Tier","Collection, Level and Tier help us decide what remote sensing data product to choose, when downloading data. 
+
+Collection comes in 1 and 2 with a difference in how the data was collected. We always use 2 because it is the latest release. Levels refer to the quality of data and also comes in 1 and 2, where 1 = DN and 2=surface rediance. Tier refers to the quality of data, where 1 is the highest. 
+
+So going forward, we usually use: 
+Collection=2
+Level=2
+Tier=1"
+Ratio ,
+Filtering ,
+Texture ,
+Data Fusion ,
+Principal Component Analysis (PCA),
