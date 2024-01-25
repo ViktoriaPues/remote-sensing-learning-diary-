@@ -18,7 +18,6 @@ bibliography: Remote Sensing.bib
 format:
   html:
     theme: cosmo
-    message: false
   pdf:
     documentclass: scrreprt
 
