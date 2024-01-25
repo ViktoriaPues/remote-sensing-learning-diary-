@@ -42,31 +42,31 @@
   {
     "objectID": "week1.html",
     "href": "week1.html",
-    "title": "2  Week 1 - Getting started with Remote Sensing",
+    "title": "2  Getting started with Remote Sensing",
     "section": "",
-    "text": "2.1 1. Summary\nThis week, I am covering the basics of what remote sensing is. The topic is fairly new to me, so I will keep it simple.\nRemote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. (Brady (2021))\nThe Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency (Brady (2021)). Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.\nThe images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called “bands”. The more bands, the higher the spectral resolution of the image.\nGenerally, there are two types of sensors – active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).\nknitr::include_graphics('figures/w1p1.png')\n\n\n\n\nFigure 1: Electric and magnetic waves in the electromagnetic field",
+    "text": "2.1 Summary\nThis week, I am covering the basics of what remote sensing is. The topic is fairly new to me, so I will keep it simple.\nRemote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. Brady (2021)\nThe Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency Brady (2021). Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.\nThe images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called “bands”. The more bands, the higher the spectral resolution of the image.\nGenerally, there are two types of sensors – active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).\nknitr::include_graphics('figures/w1p1.png')\n\n\n\n\nFigure 1: Electric and magnetic waves in the electromagnetic field\n{r include_image, out.width=‘100%’, fig.cap=‘Figure 2: Amplitude, length, and frequency of electric wave’, fig.scap=‘Image Source: Principles of Remote Sensing’}knitr::include_graphics(‘figures/w1p2.png’)",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1 - Getting started with Remote Sensing</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting started with Remote Sensing</span>"
     ]
   },
   {
     "objectID": "week1.html#application",
     "href": "week1.html#application",
-    "title": "2  Week 1 - Getting started with Remote Sensing",
-    "section": "2.2 2. Application",
-    "text": "2.2 2. Application",
+    "title": "2  Getting started with Remote Sensing",
+    "section": "2.2 Application",
+    "text": "2.2 Application\nAs for many other technologies, remote sensing has its origin in the military and defense sector. It was first invented to gather information about the enemy in war, e.g. troop deployment or battle territory Brady (2021).\nWhile still used in this sector, today remote sensing has been adopted in a range of other disciplines as well including:\n\nClimate science (e.g., measuring changes in temperature over time),\nEnvironmental science (e.g. measuring water quality),\nGeology (e.g. measuring volcanic activity),\nUrban Planning (e.g., identifying informal settlements and tracing urban growth),\nConflict studies (e.g., measuring destruction in battle) and many more.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1 - Getting started with Remote Sensing</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting started with Remote Sensing</span>"
     ]
   },
   {
     "objectID": "week1.html#reflection",
     "href": "week1.html#reflection",
-    "title": "2  Week 1 - Getting started with Remote Sensing",
-    "section": "2.3 3. Reflection",
-    "text": "2.3 3. Reflection\n\n\n\n\nBrady, Maria. 2021. “Remote Sensing for Dummies.” ArcGIS StoryMaps. May 11, 2021. https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d.",
+    "title": "2  Getting started with Remote Sensing",
+    "section": "2.3 Reflection",
+    "text": "2.3 Reflection\nNext to learning about the electromagnetic field (something I hadn’t really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost. In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g. a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, considers remote sensing as a low cost option for data collection in comparison to airborne or ground surveys. Bhatt (1992)\n\n\n\n\nBhatt, Gita. 1992. “SateEte Remote Sensing Provides New Insights into the Dynamics of the Natural Environment. But the Technology so Far Has Had Limited Operational Use. Why?”\n\n\nBrady, Maria. 2021. “Remote Sensing for Dummies.” ArcGIS StoryMaps. May 11, 2021. https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1 - Getting started with Remote Sensing</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting started with Remote Sensing</span>"
     ]
   },
   {
