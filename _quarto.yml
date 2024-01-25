@@ -4,13 +4,12 @@ project:
 
 book:
   title: "remote sensing learning diary"
-  author: "Norah Jones"
+  author: "Viktoria Pues"
   date: "1/25/2024"
   chapters:
     - index.qmd
-    - intro.qmd
     - week1.qmd
-    - summary.qmd
+    - week2.qmd
     - references.qmd
 
 bibliography: Remote Sensing.bib
