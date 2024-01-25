@@ -4,7 +4,6 @@
 
 This week had a lot of very technical content around the concepts of corrections, merging images and enhancement. Honestly, a bit overwhelming at first. The good news is that a lot of the methods covered this week are automated, when using tools like Google Earth Engine. Therefore, for me it is important to understand the broad concepts rather than how each method is exactly implemented. The table below provides short explanations for some of the concepts of this week. I used the lecture slides, the practical content and Chat GPT to compile this table.
 
-
 ```{r, echo=FALSE}
 library(tidyverse) 
 library(kableExtra)
@@ -22,7 +21,6 @@ my_table %>%
   column_spec(1, bold = TRUE) # Make the first column bold
 
 ```
-
 
 ## Application
 
