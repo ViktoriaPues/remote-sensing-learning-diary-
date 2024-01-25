@@ -14,7 +14,7 @@
     "href": "intro.html",
     "title": "3  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "This is a book created from markdown and executable code.\nSee (knuth84?) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -22,11 +22,11 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "3  Summary",
+    "title": "4  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
@@ -37,6 +37,46 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "week1.html",
+    "href": "week1.html",
+    "title": "2  Week 1 - Getting started with Remote Sensing",
+    "section": "",
+    "text": "2.1 1. Summary\nThis week, I am covering the basics of what remote sensing is. The topic is fairly new to me, so I will keep it simple.\nRemote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. (Brady (2021))\nThe Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency (Brady (2021)). Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.\nThe images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called “bands”. The more bands, the higher the spectral resolution of the image.\nGenerally, there are two types of sensors – active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).\nknitr::include_graphics('figures/w1p1.png')\n\n\n\n\nFigure 1: Electric and magnetic waves in the electromagnetic field",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1 - Getting started with Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "week1.html#application",
+    "href": "week1.html#application",
+    "title": "2  Week 1 - Getting started with Remote Sensing",
+    "section": "2.2 2. Application",
+    "text": "2.2 2. Application",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1 - Getting started with Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "week1.html#reflection",
+    "href": "week1.html#reflection",
+    "title": "2  Week 1 - Getting started with Remote Sensing",
+    "section": "2.3 3. Reflection",
+    "text": "2.3 3. Reflection\n\n\n\n\nBrady, Maria. 2021. “Remote Sensing for Dummies.” ArcGIS StoryMaps. May 11, 2021. https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1 - Getting started with Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Hi there! I’m Viktoria. On the following pages you’ll find my learning diary for the module Remote Sensing, which is part of the MSc Urban Spatial Science at the CASA, the Centre for Advanced Spatial Analysis at the University College London. For each week, you’ll find a short summary of the concepts covered that week, some examples of how they are applied and some personal reflections.\nI am a part time student. When I’m not studying, I work as an urban planner in the international development sector. I have been working in this field for the past 5 years in different roles - as an urban development consultant for a multidisciplinary built environment consultancy (Atkins) and as a policy advisor to the Ministry for International Development in Germany. Over the years, I worked on the design and implementation of urban development projects and programmes, mainly linked to climate change and urban resilience as well as reconstruction in a range of cities in Low and Middle Income countries, including Gyumri in Armenia, Kharkiv in Ukraine, Rasjahi in Bangladesh, Mandera in Kenya, Alexandria in Egypt.\nFrom my experience, a key challenge in these projects is a lack of reliable data on the urban systems that can serve as a baseline for policy making and investment planning. This challenge is particularly acute in small cities in Africa and Asia, where the majority of urbanisation is predicted to take place in the future.\nI am studying the remote sensing module because I believe that remote sensing and earth observation have great potential for closing this data gap and thereby improving urban planning, policy and investment decisions, especially in Low and Middle Income Countries. Within this industry, there seems to be a lot of talk around the potential of this technology but very few people who can actually do the analysis or run programmes where such analysis is done. I want to become one of the people who can put remote sensing into practice and make it work for the international development and humanitarian sector.\nTherefore, i will relate the content covered in this module places and topics that are relevant within this sector. Some of the issues, I find interesting include:\n\nmonitor informal urban growth to better plan for informal settlements,\nmonitoring conflict and assess damage as a baseline for reconstruction processes,\nmeasuring drought to prevent famine,\nunderstand climate change related risks in cities, especially heat and flooding.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   }
 ]

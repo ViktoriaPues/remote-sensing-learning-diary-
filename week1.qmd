@@ -1,2 +1,21 @@
-# week 1 
+# Week 1 - Getting started with Remote Sensing
 
+## 1. Summary
+
+This week, I am covering the basics of what remote sensing is. The topic is fairly new to me, so I will keep it simple.
+
+Remote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth's surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. (@bradyRemoteSensingDummies2021)
+
+The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency (@bradyRemoteSensingDummies2021). Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.
+
+The images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called "bands". The more bands, the higher the spectral resolution of the image.
+
+Generally, there are two types of sensors -- active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).
+
+```{r include_image, out.width='100%', fig.cap='Figure 1: Electric and magnetic waves in the electromagnetic field', fig.scap='Image Source: https://webapps.itc.utwente.nl/librarywww/papers_2009/general/principlesremotesensing.pdf'}
+knitr::include_graphics('figures/w1p1.png')
+```
+
+## 2. Application
+
+## 3. Reflection

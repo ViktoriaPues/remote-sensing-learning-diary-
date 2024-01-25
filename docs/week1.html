@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>remote sensing learning diary - 2&nbsp; week 1</title>
+<title>remote sensing learning diary - 2&nbsp; Week 1 - Getting started with Remote Sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week 1</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 1 - Getting started with Remote Sensing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -121,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 1 - Getting started with Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,14 +202,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">2.1</span> 1. Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">2.2</span> 2. Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">2.3</span> 3. Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week 1</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 1 - Getting started with Remote Sensing</span></h1>
 </div>
 
 
@@ -172,8 +234,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.1</span> 1. Summary</h2>
+<p>This week, I am covering the basics of what remote sensing is. The topic is fairly new to me, so I will keep it simple.</p>
+<p>Remote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. (<span class="citation" data-cites="bradyRemoteSensingDummies2021">Brady (<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">2021</a>)</span>)</p>
+<p>The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency (<span class="citation" data-cites="bradyRemoteSensingDummies2021">Brady (<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">2021</a>)</span>). Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.</p>
+<p>The images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called “bands”. The more bands, the higher the spectral resolution of the image.</p>
+<p>Generally, there are two types of sensors – active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w1p1.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/w1p1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Figure 1: Electric and magnetic waves in the electromagnetic field</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="application" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="application"><span class="header-section-number">2.2</span> 2. Application</h2>
+</section>
+<section id="reflection" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">2.3</span> 3. Reflection</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-bradyRemoteSensingDummies2021" class="csl-entry" role="listitem">
+Brady, Maria. 2021. <span>“Remote Sensing for Dummies.”</span> <span>ArcGIS StoryMaps</span>. May 11, 2021. <a href="https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d">https://storymaps.arcgis.com/stories/cb1577b0f5bc485c974b4ea19d52282d</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
