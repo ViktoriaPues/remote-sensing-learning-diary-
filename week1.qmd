@@ -12,7 +12,7 @@ The images taken through remote sensing include wavelengths beyond those that ar
 
 Generally, there are two types of sensors -- active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).
 
-```{r include_image, out.width='100%', fig.cap='Figure 1: Electric and magnetic waves in the electromagnetic field', fig.scap='Image Source: Principles of Remote Sensing'}
+```{r, message=FALSE, include_image, out.width='100%', fig.cap='Figure 1: Electric and magnetic waves in the electromagnetic field', fig.scap='Image Source: Principles of Remote Sensing'}
 knitr::include_graphics('figures/w1p1.png')
 ```
 
