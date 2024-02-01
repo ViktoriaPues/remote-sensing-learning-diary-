@@ -12,11 +12,11 @@ The images taken through remote sensing include wavelengths beyond those that ar
 
 Generally, there are two types of sensors -- active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).
 
-```{r, message=FALSE, include_image, out.width='100%', fig.cap='Figure 1: Electric and magnetic waves in the electromagnetic field', fig.scap='Image Source: Principles of Remote Sensing'}
+```{r, message=FALSE, include_graphics1, out.width='100%', fig.cap='Figure 1: Electric and magnetic waves in the electromagnetic field', fig.scap='Image Source: Principles of Remote Sensing'}
 knitr::include_graphics('figures/w1p1.png')
 ```
 
-```{r, message=FALSE, include_image, out.width='100%', fig.cap='Figure 2: Amplitude, length, and frequency of electric wave', fig.scap='Image Source: Principles of Remote Sensing'}
+```{r, message=FALSE, include_graphics2, out.width='100%', fig.cap='Figure 2: Amplitude, length, and frequency of electric wave', fig.scap='Image Source: Principles of Remote Sensing'}
 knitr::include_graphics('figures/w1p2.png')
 ```
 
@@ -37,7 +37,7 @@ As for many other technologies, remote sensing has its origin in the military an
 
 Below I discuss two studies using the two types of sensors that we worked with in the practical, Landsat 8 and Sentinel 2. You can find more info on Sentinel in a short presentation in the week 2 section. Both of the studies are in the field of disaster mapping, a field that I find facinating. 
 
-**Flood Mapping in Mozambique Using Copernicus Sentinel-2 Satellite Data** 
+### Flood Mapping in Mozambique Using Copernicus Sentinel-2 Satellite Data
 
 Mozambique has been hit by numerous devastating cyclone over the past two decades that cause many floods with tremendous human casualties and economic loss. @twumasiFloodMappingMozambique2022, mapped inundation caused by tropical cyclones in Maputo and Beira using Sentinel 2 data. This was combined with demographic data to understand the impact of these floods on people. 
 
@@ -45,12 +45,11 @@ Some of the image processing methods applied sound already somewhat familiar as 
 
 Something that I noticed is that the study only takes into account the growing population for forecasting but not the effects of climate change on the likelihood and intensity of tropical cyclones in the future. 
 
-```{r, message=FALSE, include_image, out.width='100%', fig.cap='Figure 3: Senitnel 2 image of Mosampique flooding including in Maputo', fig.scap='Image Source: Principles of Remote Sensing'}
+```{r, message=FALSE, include_graphics3, out.width='100%', fig.cap='Figure 3: Senitnel 2 image of Mosampique flooding including in Maputo', fig.scap='Image Source: Principles of Remote Sensing'}
 knitr::include_graphics('figures/w1p3.png')
 ```
 
-
-
+### add another study here using landset data
 
 
 ## Reflection
