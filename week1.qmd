@@ -2,7 +2,7 @@
 
 ## Summary
 
-This week, I am covering the basics of what remote sensing is. The topic is fairly new to me, so I will keep it simple.
+This week, I am covering the basics of what remote sensing is and will focus on how remote sensing is based on the electro magnetic field. Other topics this week included scattering, interaction with the earth surface, data formats, and resolution.
 
 Remote Sensing, also referred to as Earth Observation, refers to the process of collecting information about the Earth's surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. @bradyRemoteSensingDummies2021
 
@@ -16,16 +16,13 @@ Generally, there are two types of sensors -- active and passive ones. Passive se
 knitr::include_graphics('figures/w1p1.png')
 ```
 
-```         
+```{r, message=FALSE, include_image, out.width='100%', fig.cap='Figure 2: Amplitude, length, and frequency of electric wave', fig.scap='Image Source: Principles of Remote Sensing'}
+knitr::include_graphics('figures/w1p2.png')
 ```
-
-{r include_image, out.width='100%', fig.cap='Figure 2: Amplitude, length, and frequency of electric wave', fig.scap='Image Source: Principles of Remote Sensing'}knitr::include_graphics('figures/w1p2.png')
 
 ## Application
 
-As for many other technologies, remote sensing has its origin in the military and defense sector. It was first invented to gather information about the enemy in war, e.g. troop deployment or battle territory @bradyRemoteSensingDummies2021.
-
-While still used in this sector, today remote sensing has been adopted in a range of other disciplines as well including:
+As for many other technologies, remote sensing has its origin in the military and defense sector. It was first invented to gather information about the enemy in war, e.g. troop deployment or battle territory @bradyRemoteSensingDummies2021. While still used in this sector, today remote sensing has been adopted in a range of other disciplines as well including:
 
 -   Climate science (e.g., measuring changes in temperature over time),
 
@@ -37,6 +34,20 @@ While still used in this sector, today remote sensing has been adopted in a rang
 
 -   Conflict studies (e.g., measuring destruction in battle) and many more.
 
+
+Below I discuss two studies using different the two types of sensors that we worked with in the practical: Landsat 8 and Sentinel 2. You can find more info on Sentinel in a short presentation in the week 2 section. 
+
+Disaster Mapping with Sentinel 2 
+
+
+Disaster Mapping with Landsat 
+
+
+
+
+
 ## Reflection
 
-Next to learning about the electromagnetic field (something I hadn't really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost. In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g. a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, considers remote sensing as a low cost option for data collection in comparison to airborne or ground surveys. @bhattSateEteRemoteSensing1992
+Next to learning about the electromagnetic field (something I hadn't really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost. In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g. a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, already considered remote sensing as a low cost option for data collection in comparison to airborne or ground surveys in 1992.  @bhattSateEteRemoteSensing1992 Today, there is much more satellite images available and analysis has become easier, using applications like google earth engine.
+
+
