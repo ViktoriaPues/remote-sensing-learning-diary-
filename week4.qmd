@@ -1,0 +1,35 @@
+# Policy 
+
+## Summary
+
+-   The summary criterion will refer to the summary of the policy and city you have selected.
+
+Rasjahi is one of the major urban centres in Bangaldesh with a population of around 500,000 people. It is located in the west of the country on the Indian-Bangladesh border and part of the Barind Tract, an area that experiences hot and dry climate. The most pressing climate challenges in the city are flooding during the monsoon season due to inadequate drainage system as well as extreme heat.
+
+According to the Word Health Organisation, heatwaves are among the deadliest climate risk globally. In fact, more than 166 000 people died due to extreme temperatures between 1998-2017 (<https://www.who.int/health-topics/heatwaves#tab=tab_3>). In cities heat stress can be exacerbated due to so called urban heat island effects (UHI). UHI is a phenomenon where urban areas experience higher temperatures compared to their surrounding rural areas due to human activities and the way the city is built (e.g. heat retention in buildings, infrastructure, sealed surfaces). With climate change temperatures in Bangaldesh are expected to increase and extreme weather events, such as heat waves, are expected to become more frequent and more intense.
+
+At the national level, the Government of Bangladesh has acknowledged the risk posed by increasing heat. In its National Adaptation Plan (2023), haet features as an adaptation priority or urban areas in its National Adaptation Plan. One of the action items in the urban area strategy of the NAP is to develop "heatwave and disease outbreak advisory services for city dwellers". No further guidance on how to tackle heat in cities is given and it is up to the local level governments to improve heat risk planning.
+
+At the local level in Rajshahi, the City Cooperation has understood the importance of including climate change related hazards, icluding heat, into urban management. In recent years they have developed three important plans:
+
+1.  They have updated their Masterplan to incorporate climate change issues (not publicly available, therefore will not discuss further),
+2.  They worked with ICLEI to develop a Climate Resilient Action Plan (CAP), and
+3.  They worked with the Red Cross Red Crescent Climate Center to assess heat thresholds in the city.
+
+The ICLEI CAP provides a high level climate risk assessment. It decribes UHI as an issue in the city but not spatially. Therefore, suggested mitigation and adaptation actions on heat remain vague.
+
+The RCRCCC study expands ICLEI's work by looking more closely at urban heat in the city and mapping it spatially. The authors used Landsat images between 2010 to 2020 to map Land Surface Temperature in the city to identify heat hotspots and Normalised difference water index (NDWI) and normalised difference vegetation index (NDVI) to analyse the relationship between landcover changes and urban heat island effect (UHI). The findings are combined with demographic and socio-economic data to understand vulnerability. However, the demographic and socio-economic datasets from the national cencus are only available by ward. However to develop action for mitigating and adapting to specific hotpots, we need data on the neigbourhood, street and building level.
+
+I see two ways on how we can take the RCRCCC study forward to help the City Cooperation better mitigate and adapt to extreme heat:
+
+-   Forcast heat stress and cccounting for the effects climate change applying different climate change scenarios.
+
+-   Using remote sensing data to improve the vulnerability assessment by identifying informal settlements with poor housing conditions where residents are at high risk of heat stress.
+
+## Application
+
+-   The application criterion will refer to how the remotely sensed data you sourced could be used to assist with contributing to the policy goal.
+
+## Reflection
+
+-   How could the data be applied to solve the policy challenge. The reflection criterion will refer to what you have learnt in relation to the policy, city and the application of the data.

@@ -50,7 +50,7 @@ knitr::include_graphics('figures/w1p3.png')
 ```
 
 ### add another study here using landset data
-
+tbc. 
 
 ## Reflection
 
@@ -59,5 +59,4 @@ Next to learning about the electromagnetic field (something I hadn't really thou
 In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g. a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, already considered remote sensing as a low cost option for data collection in comparison to airborne or ground surveys in 1992.  @bhattSateEteRemoteSensing1992 Today, there is much more satellite images available and analysis has become easier, using applications like Google Earth Engine. 
 
 Even though remote sensing is a low cost option for data collection, it is not yet applied yet in large scale in the area I work in (urban planning & international development). According to a recent paper on the potetnial of remote sensing for the urban developemnt sector, this may be due to limited capabilities in local governments and reluctancy to change existing data collection and management systems. @prakashOpenEarthObservations2020
-
 
