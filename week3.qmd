@@ -37,7 +37,9 @@ I looked more closely at a study conducted in Durban South Africa. @matariraGoog
 
 The method used was pretty complex and I didnt understand it fully. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:
 
--   Extraction of spectral and texture features from Sentinel 2A bands,
+-   3 images were selceted to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing. 
+
+- Extraction of spectral and texture features from Sentinel 2A bands,
 
 -   Establishing different combinations of these feature types to be tested,
 
@@ -55,9 +57,14 @@ It is great that the data used in this study is free. However, it still does not
 
 **add image**
 
-
 ## Reflection
 
 This week was a little painful, both for me (difficult concepts) and my laptop (computational power needed for working with remote sensing data).It got me excited to get started on Google Earth Engine, where a lot of these processes are automated and run on a cloud. It sounds like that makes it easier to focus on the analysis and get to the fun and interesting bits more quickly, rather than spending a long time making corrections and enhancements to the data. Thank you Google...
 
-I was not aware how difficult it is to map informal settlements with remote sensing data. I actually assumed it would be one of the easier methods as it is so well known. I can't say that I completly understood the method used in Durban. However, it was still a worth wile excersise for me because it gave me a better idea of what the workflow for remote sensing. It seems to be roughly: Choosing and downloading the images, making corrections on it, identifying the relevant features (spectral and texture), classification, validating and testing accuracy, spatial analysis (e.g. regression).
+I was not aware how difficult it is to map informal settlements with remote sensing data. I actually assumed it would be one of the easier methods as it is so well known. I can't say that I completely understood the method used in Durban. However, it was still a worth wile exercise for me because it gave me a better idea of the workflow for remote sensing. It seems to be roughly: - Choose and download the images, 
+- Make a composite, 
+- Make corrections on it, 
+- Identify the relevant features (spectral and texture), 
+- Classification, 
+- Validating and testing accuracy of classification, 
+- Spatial analysis (e.g. regression).
