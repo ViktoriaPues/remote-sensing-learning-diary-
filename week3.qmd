@@ -29,7 +29,6 @@ Informal settlements are often the most vulnerable parts of cities. They tend to
 
 **add image**
 
-
 I looked into a few studies that use remote sensing to map informal settlements and turns turns out its "a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytical processes." @matariraGoogleEarthEngine2022
 
 It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. @UsingOpenData More recently, researchers tried to find methods to work with openly available datasets such as sentinel or landsat to identify informal settlements.
