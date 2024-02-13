@@ -4,31 +4,31 @@
 
 -   The summary criterion will refer to the summary of the policy and city you have selected.
 
-Rasjahi is one of the major urban centres in Bangaldesh with a population of around 500,000 people. It is located in the west of the country on the Indian-Bangladesh border and part of the Barind Tract, an area that experiences hot and dry climate. The most pressing climate challenges in the city are flooding during the monsoon season due to inadequate drainage system as well as extreme and dangerous heat.
+Rasjahi is one of the major urban centres in Bangaldesh with a population of around 500,000 people. It is located in the west of the country on the Indian-Bangladesh border and part of the Barind Tract, an area that experiences hot and dry climate. The most pressing climate challenges in the city are flooding during the monsoon season due to a poorly designed and maintained drainage system as well as extreme and dangerous heat.
 
 According to the Word Health Organisation, heatwaves are among the deadliest climate risk globally. In fact, more than 166 000 people died due to extreme temperatures between 1998-2017 (<https://www.who.int/health-topics/heatwaves#tab=tab_3>). In cities heat stress can be exacerbated due to so called urban heat island effects (UHI). UHI is a phenomenon where urban areas experience higher temperatures compared to their surrounding rural areas due to human activities and the way the city is built (e.g. heat retention in buildings, infrastructure, sealed surfaces). With climate change temperatures in Bangladesh are expected to increase and extreme weather events, such as heat waves, are expected to become more frequent and more intense.
 
-At the national level, the Government of Bangladesh has acknowledged the risk posed by increasing heat. In its National Adaptation Plan (2023), haet features as an adaptation priority or urban areas in its National Adaptation Plan. One of the action items in the urban area strategy of the NAP is to develop "heatwave and disease outbreak advisory services for city dwellers". No further guidance on how to tackle heat in cities is given and it is up to the local level governments to improve heat risk planning.
+At the national level, the Government of Bangladesh has acknowledged the risk posed by increasing heat. In its National Adaptation Plan from 2023 (NAP), heat features as an adaptation priority for urban areas. One of the action items in the urban area strategy of the NAP is to develop "heatwave and disease outbreak advisory services for city dwellers". No further guidance on how to tackle heat in cities is given and it is up to the local level governments to improve heat risk planning. City budgets in Bangladesh tend to be very small, mainly dependent on national government funding transfers. It is often Multilateral Development Banks or donors, who finance urban plans or strategies, as part of the preparation of larger loan programmes.
 
-At the local level in Rajshahi, the City Cooperation has understood the importance of including climate change related hazards, icluding heat, into urban management. In recent years they have developed three important plans:
+At the local level in Rajshahi, the City Cooperation has understood the importance of including climate change related hazards, icuding heat, into urban management. In recent years they have developed three important plans:
 
 1.  A Masterplan that incorporate climate change issues (not publicly available, therefore will not discuss further),
-2.  A Climate Resilient Action Plan (CAP) (developed with ICLEI), and
-3.  A heat threshold assessment in the city (developed by Red Cross Red Crescent Climate Center).
+2.  The city government worked with ICLEI to develop a Climate Resilient Action Plan (CAP), and with
+3.  the Red Cross Red Cresent Climate Centre to develop a heat threshold assessment for Rajshahi.
 
-The ICLEI CAP provides a high level climate risk assessment. It decribes UHI as an issue in the city but not spatially. Therefore, suggested mitigation and adaptation actions on heat remain vague.
+The ICLEI CAP provides a high level climate risk assessment. It describes UHI as an issue in the city but not spatially. Therefore, suggested mitigation and adaptation actions on heat remain vague.
 
 The RCRC CC study expands ICLEI's work by looking more closely at urban heat in the city and mapping it spatially. The authors used Landsat images between 2010 to 2020 to map Land Surface Temperature in the city to identify heat hotspots and Normalised difference water index (NDWI) and normalised difference vegetation index (NDVI) to analyse the relationship between landcover changes and urban heat island effect (UHI). The findings are combined with demographic and socio-economic data to understand vulnerability. However, the demographic and socio-economic datasets from the national cencus are only available by ward. To develop specific actions for mitigating and adapting to the identified hotpots, we need data on the neigbourhood, street and building level.
-
-I see two ways on how we can take the RC RCCC study forward to help the City Cooperation better mitigate and adapt to extreme heat:
-
--   Forcast heat stress and cccounting for the effects climate change applying different climate change scenarios according to the IPCC.
-
--   Using remote sensing data to improve the vulnerability assessment by identifying informal settlements with poor housing conditions where residents are at high risk of heat stress.
 
 ## Application
 
 -   The application criterion will refer to how the remotely sensed data you sourced could be used to assist with contributing to the policy goal.
+
+I see two ways in which the heat threshold study could be taken forward to help the City Cooperation better mitigate and adapt to extreme heat:
+
+-   Forcast heat stress and accounting for the effects climate change applying different climate change scenarios according to the IPCC.
+
+-   Using remote sensing data to improve the vulnerability assessment by identifying informal settlements with poor housing conditions where residents are at high risk of heat stress.
 
 I will focus on the latter, identifying informal settlements, because it is an application area of remote sensing that I have always found interesting and I am keen to understand better how it is done. ... well, turns out its also "a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytical processes." @matariraGoogleEarthEngine2022 I chose two papers with different case studies to see how its done.
 
@@ -52,8 +52,22 @@ The method used was pretty complex and I didnt understand it fully. I still summ
 
 1.  ***Jakarta in Indonesia***
 
-2.  **Using open data to detect the structure and pattern of informal settlements: an outset to support inclusive SDGs\' achievement**
+The classification was done using Random Forest (RF) classifier through
+two complementary approaches to develop the training set. In the first
+approach, available survey data sets (Jakarta\'s informal settlements map
+for 2015) and visual interpretation using High-Resolution Google Map
+imagery have been used to build the training set. Throughout the second
+round of classification, OpenStreetMap (OSM) layers were used as the
+complementary approach for training. Results from the validation test
+for the second round revealed better accuracy and precision in
+classification.
 
 ## Reflection
 
 -   How could the data be applied to solve the policy challenge. The reflection criterion will refer to what you have learnt in relation to the policy, city and the application of the data.
+
+For me, it was an interesting exercise to go through these really challenging methodologies. When working with clients on projects we sometimes get asked to do some "little" additional pieces of analysis, such as mapping slum areas. This is a great example of scope creep (adding seemingly small tasks to a project when already underway). If you're not the technical expert, which both client and project manager are usually not, it can happen that substantial additional tasks get agreed.
+
+This exercise showed me how important it is to always understand exactly the method needed before promising and
+
+I think this may also be due to the fact that the topic of "informal settlement mapping through remote sensing"
