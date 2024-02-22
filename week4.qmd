@@ -18,56 +18,24 @@ At the local level in Rajshahi, the City Cooperation has understood the importan
 
 The ICLEI CAP provides a high level climate risk assessment. It describes UHI as an issue in the city but not spatially. Therefore, suggested mitigation and adaptation actions on heat remain vague.
 
-The RCRC CC study expands ICLEI's work by looking more closely at urban heat in the city and mapping it spatially. The authors used Landsat images between 2010 to 2020 to map Land Surface Temperature in the city to identify heat hotspots and Normalised difference water index (NDWI) and normalised difference vegetation index (NDVI) to analyse the relationship between landcover changes and urban heat island effect (UHI). The findings are combined with demographic and socio-economic data to understand vulnerability. However, the demographic and socio-economic datasets from the national cencus are only available by ward. To develop specific actions for mitigating and adapting to the identified hotpots, we need data on the neigbourhood, street and building level.
+The RCRC CC study expands ICLEI's work by looking more closely at urban heat in the city and mapping it spatially. The authors used Landsat images between 2010 to 2020 to map Land Surface Temperature in the city to identify heat hotspots and Normalised difference water index (NDWI) and normalised difference vegetation index (NDVI) to analyse the relationship between landcover changes and urban heat island effect (UHI). The findings are combined with demographic and socio-economic data to understand vulnerability. However, the demographic and socio-economic datasets from the national cencus are only available by ward. To develop specific actions for mitigating and adapting to the identified hotpots, we need data on the neigbourhood, street and building level. The study presents some high level policy options for mitigation, including increasing green space, housing retrofit and street design.
 
 ## Application
 
 -   The application criterion will refer to how the remotely sensed data you sourced could be used to assist with contributing to the policy goal.
 
-I see two ways in which the heat threshold study could be taken forward to help the City Cooperation better mitigate and adapt to extreme heat:
+Remote sensing data could be used to improve the existing vulnerability assessment by identifying specific neighbourhoods with poor housing conditions, such as slums, where residents are at high risk of extreme indoor heat.
 
--   Forcast heat stress and accounting for the effects climate change applying different climate change scenarios according to the IPCC.
+It is likely that Rajshahi does not have high resolution remote sensing data, such a Lidar data. Therefore, it is important to rely on publicly available data to ensure that the local government could reproduce the study. As demonstrated in a study conducted in Jakarta, Landsat 8, data can be used to identify informal settlements, despite lower resolution. A similar approach could be taken here.
 
--   Using remote sensing data to improve the vulnerability assessment by identifying informal settlements with poor housing conditions where residents are at high risk of heat stress.
-
-I will focus on the latter, identifying informal settlements, because it is an application area of remote sensing that I have always found interesting and I am keen to understand better how it is done. ... well, turns out its also "a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytical processes." @matariraGoogleEarthEngine2022 I chose two papers with different case studies to see how its done.
-
-1.  ***Durban in South Africa***
-
-The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy.
-
-The study used, multiple Sentinel 2A images from August 2020 with cloud cover \> 10% were. 3 images were selceted to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing.
-
-The method used was pretty complex and I didnt understand it fully. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:
-
-1.  Extraction of spectral and texture features from Sentinel 2A bands,
-2.  Establishing different combinations of these feature types to be tested,
-3.  Random Forest Classification using GGE,
-4.  Replication of understand accuracy of the classier's perfromance, (20 classification results were obtained for each input feature set).
-5.  Performance evaluation of feature subsets through a comparison of classification results of different feature subsets against the original feature set from which they were derived in order to establish if feature reduction would significantly improve informal settlement identification or not.
-6.  Accuracy assessment to develop the relative comparative performances of different feature sets, against the benchmark experiment and was tested using Pixel-Based Accuracy Assessment and patch based.
-7.  Regression between Extracted Informal Settlement Areas and Ground Truth Data.
-
-@matariraGoogleEarthEngine2022
-
-1.  ***Jakarta in Indonesia***
-
-The classification was done using Random Forest (RF) classifier through
-two complementary approaches to develop the training set. In the first
-approach, available survey data sets (Jakarta\'s informal settlements map
-for 2015) and visual interpretation using High-Resolution Google Map
-imagery have been used to build the training set. Throughout the second
-round of classification, OpenStreetMap (OSM) layers were used as the
-complementary approach for training. Results from the validation test
-for the second round revealed better accuracy and precision in
-classification.
+Several recent (e.g. from 2023) cloud-free images of the city should be obtained with a resolution of 30m. The relevant bands include: band 1-coastal aerosol, band 2-blue, band 3-green, band 4-red, band 5-near infrared (NIR), and bands 6 & 7-shortwave infrared (SWIR).   The classification of land cover types could be done using Random Forest (RF) classifier combined available survey data of the city\'s informal settlements and Open Street Map data. If no survey data exists, the local government could identify known informal areas. The sample should cover approximately 0.25% of the total study area to reach high accuracy.
 
 ## Reflection
 
--   How could the data be applied to solve the policy challenge. The reflection criterion will refer to what you have learnt in relation to the policy, city and the application of the data.
+How could the data be applied to solve the policy challenge. The reflection criterion will refer to what you have learnt in relation to the policy, city and the application of the data.
 
-For me, it was an interesting exercise to go through these really challenging methodologies. When working with clients on projects we sometimes get asked to do some "little" additional pieces of analysis, such as mapping slum areas. This is a great example of scope creep (adding seemingly small tasks to a project when already underway). If you're not the technical expert, which both client and project manager are usually not, it can happen that substantial additional tasks get agreed.
+The identified neighbourhoods could be prioritised in investment planning. Incremental upgrading of buildings to reduce indoor temperature or planting of trees in most vulnerable areas could be possible policy options to battle heat stress in an equitable manner, where those most vulnerable are prioritised to achieve more equal living standards across the city.
 
-This exercise showed me how important it is to always understand exactly the method needed before promising and
+It is very important to understand vulnerability spatially to take robust planning decisions. Many planning documents, including climate action plans, lack specification in terms of location of specific measures. The ICLEI Climate Action Plan for Rajshahi, for example, suggests increasing green space, but does not specify where. Could include Medellin example.
 
-I think this may also be due to the fact that the topic of "informal settlement mapping through remote sensing"
+The goal of planning decisions is usually to maximize the benefit of an investment while minimising costs (cost benefit analysis). The next step after identifying where informal settlements are would be to understand benefits of specific interventions, e.g. by modelling the effects of tree planting in different locations. This was done by xxx.

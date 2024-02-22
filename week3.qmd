@@ -29,31 +29,27 @@ Informal settlements are often the most vulnerable parts of cities. They tend to
 
 **add image**
 
-I looked into a few studies that use remote sensing to map informal settlements and turns turns out its "a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytical processes." @matariraGoogleEarthEngine2022
+I looked into a few studies that use remote sensing to map informal settlements and turns out its "a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytical processes." @matariraGoogleEarthEngine2022
 
-It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. @UsingOpenData More recently, researchers tried to find methods to work with openly available datasets such as sentinel or landsat to identify informal settlements.
+It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. @UsingOpenData More recently, researchers tried to find methods to work with openly available datasets such as Sentinel or Landsat to identify informal settlements.
 
 I looked more closely at a study conducted in Durban South Africa. @matariraGoogleEarthEngine2022 The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings.The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy.
 
-The method used was pretty complex and I didnt understand it fully. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:
+The method used was pretty complex and I didn't understand it fully. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:
 
--   3 images were selceted to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing. 
-
+- 3 images were selceted to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing. 
 - Extraction of spectral and texture features from Sentinel 2A bands,
+- Establishing different combinations of these feature types to be tested,
+- Random Forest Classification using GGE,
+- Replication of understand accuracy of the classier's perfromance, (20 classification results were obtained for each input feature set).
+- Performance evaluation of feature subsets through a comparison of classification results of different feature subsets against the original feature set from which they were derived in order to establish if feature reduction would significantly improve informal settlement identification or not.
+- Accuracy assessment to develop the relative comparative performances of different feature sets, against the benchmark experiment and was tested using Pixel-Based Accuracy Assessment and patch based.
+- Regression between Extracted Informal Settlement Areas and Ground Truth Data.
 
--   Establishing different combinations of these feature types to be tested,
+It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map slums in their city in an automated way or at least with less technical requirements. Ollie Ballinger actually managed to built an interesting Google Earth Engine Application to map slums in Dar es Salam in Tansania. It is different to the approach taken in Durban because he remove the formal buildings and than applies classification only on the remaining areas.
 
--   Random Forest Classification using GGE,
 
--   Replication of understand accuracy of the classier's perfromance, (20 classification results were obtained for each input feature set).
-
--   Performance evaluation of feature subsets through a comparison of classification results of different feature subsets against the original feature set from which they were derived in order to establish if feature reduction would significantly improve informal settlement identification or not.
-
--   Accuracy assessment to develop the relative comparative performances of different feature sets, against the benchmark experiment and was tested using Pixel-Based Accuracy Assessment and patch based.
-
--   Regression between Extracted Informal Settlement Areas and Ground Truth Data.
-
-It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seem immense. It would be great if there was a spatial application that allowed city governments to map slums in their city in an automated way or at least with less technical requirement. Ollie Ballinger actually managed to built an intresting Google Earth Engine Application to map slums in Dar es Salam in Tansania. It is different to the approach taken in Durban because he remove the formal buidlings and than works applies classification only on the remaining areas.
+https://www.iadb.org/en/who-we-are/topics/urban-development-and-housing/maiia
 
 **add image**
 
