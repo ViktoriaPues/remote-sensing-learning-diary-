@@ -38,7 +38,7 @@ As for many other technologies, remote sensing has its origin in the military an
 
 Below I discuss the use of Sentinel and Landsat data in the field of disaster risk reduction, more specifically flood risk management. Both Landsat and Sentinel data are being used for flood mapping. 
 
-### Approach to aaapping of flood areas using landsat
+### Approach to Mapping Flood Areas using Landsat
 Figure 3 provides an overview of a typical work flow for a flood risk mapping using Landsat Data. We will understand these steps better over the coming weeks. In short, Landsat 5, 7, and 8 images with low cloud cover are used to cover a longer period. A classifier that differentiates permanent water from temporary water (flood) is applied and vegetation and site specific other data (HAND) is masked (cut out) to leavev only a map of permanent and temporary water.The authors discuss that the accuracy of the classifier could be improved by training it on sentinel data. I think this may be due to the fact that sentinel data has a higher resolution (10m) than Landsat (30m).They also state that this map does not consider socio-demographic data to understand vulnerability. @mehmoodMappingFloodAreas2021 
 
 ```{r, message=FALSE, include_graphics3, out.width='100%', fig.cap='Figure 2: Workflow Flood Mapping', fig.scap='Image Source: Mehmood et.al.'}

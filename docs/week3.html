@@ -238,7 +238,7 @@ div.csl-indent {
 
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>This week had a lot of very technical content around the concepts of corrections, merging images and enhancement. Honestly, a bit overwhelming at first. The good news is that a lot of the methods covered this week are automated, when using tools like Google Earth Engine. Therefore, for me it is important to understand the broad concepts rather than how each method is exactly implemented. The table below provides short explanations for some of the concepts of this week. I used the lecture slides, the practical content and Chat GPT to compile this table.</p>
+<p>This week had a lot of very technical content around the concepts of corrections, merging images and enhancement. Honestly, a bit overwhelming at first. The good news is that a lot of the methods covered this week are automated, when using tools like Google Earth Engine. Therefore, for me it is important to understand the broad concepts rather than how each method is exactly implemented. To this end, the table below provides short explanations for some of the concepts of this week. I used the lecture slides, the practical content, Michael Hathorn’s Learning Diary, and Chat GPT to compile this table.</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'kableExtra' was built under R version 4.3.2</code></pre>
@@ -259,10 +259,10 @@ div.csl-indent {
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">Atmospheric Correction</td>
-<td style="text-align: left;">There are two sources of environmental attenuation: Atmospheric scattering and Topographic attenuation. Absorption and scattering crate atmospheric haze and makes pixels bleed into one another, which makes the image less clear (less contrast)</td>
+<td style="text-align: left;">Absorption and scattering crate atmospheric haze and makes pixels bleed into one another, which makes the image less clear (less contrast). There are two sources of environmental attenuation: Atmospheric scattering and topographic attenuation.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; font-weight: bold;">Orthorectification correction</td>
+<td style="text-align: left; font-weight: bold;">Orthorectification Correction</td>
 <td style="text-align: left;">Georectification = giving coordinates to an image Orthorectification = removing distortions... making the pixels viewed at nadir</td>
 </tr>
 <tr class="even">
@@ -271,11 +271,11 @@ div.csl-indent {
 </tr>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">Digital Number (DN)</td>
-<td style="text-align: left;">The raw number, or the value that the sensor sees.</td>
+<td style="text-align: left;">The raw number that the sensor stores, or the value that the sensor "sees" (no unit).</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">Radiance</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Radiance is derived from DN. DN to spectral radiance = radiometric calibration. It refers to the electromagnetic radiation emitted or reflected from the Earth's surface and recorded by the sensors/satellites (e.g., light reflected from a tree). It represents the intensity of radiation across different wavelengths or spectral bands. Is used as a measurement for understanding different materials on the earth surface (e.g., vegitation). Also called Top Of the Atmosphere Reflectance.</td>
 </tr>
 </tbody>
 </table>
@@ -287,8 +287,8 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
-<p>This week was very concept heavy. Therefore, I decided to use this week to engage with an application area of remote sensing that I have always been interested in (mapping informal settlements in cities) and see if I come across some of the concepts described above.</p>
-<p>Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructre or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest slums in the world right in the center of Mumbai (Figure 3).</p>
+<p>This week was very concept heavy. I decided to use this week and next to engage with an application area of remote sensing that I have always been interested in: mapping informal settlements in cities. I wanted to see if I come across some of the concepts described above, reading through the studies.</p>
+<p>Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructure or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest slums in the world right in the center of Mumbai (Figure 3).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w3p1.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -300,16 +300,16 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>I looked into a few studies that use remote sensing to map informal settlements and turns out its “a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytical processes.” <span class="citation" data-cites="matariraGoogleEarthEngine2022">Matarira, Mutanga, and Naidu (<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">2022</a>)</span></p>
-<p>It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. <span class="citation" data-cites="UsingOpenData"><span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement”</span> (<a href="references.html#ref-UsingOpenData" role="doc-biblioref">n.d.</a>)</span> More recently, researchers tried to find methods to work with openly available datasets such as Sentinel or Landsat to identify informal settlements.</p>
+<p>I looked into a few studies that use remote sensing to map informal settlements and turns out its “a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytically processes.” <span class="citation" data-cites="matariraGoogleEarthEngine2022">Matarira, Mutanga, and Naidu (<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">2022</a>)</span></p>
+<p>It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. <span class="citation" data-cites="UsingOpenData"><span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement”</span> (<a href="references.html#ref-UsingOpenData" role="doc-biblioref">n.d.</a>)</span> More recently, researchers tried to find methods to work with openly available data sets such as Sentinel or Landsat to identify informal settlements.</p>
 <p>I looked more closely at a study conducted in Durban South Africa. <span class="citation" data-cites="matariraGoogleEarthEngine2022">Matarira, Mutanga, and Naidu (<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">2022</a>)</span> The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings.The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy.</p>
 <p>The method used was pretty complex and I didn’t understand it fully. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:</p>
 <ul>
-<li>3 images were selceted to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing.</li>
+<li>3 images were selected to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing.</li>
 <li>Extraction of spectral and texture features from Sentinel 2A bands,</li>
 <li>Establishing different combinations of these feature types to be tested,</li>
-<li>Random Forest Classification using GGE,</li>
-<li>Replication of understand accuracy of the classier’s perfromance, (20 classification results were obtained for each input feature set).</li>
+<li>Random Forest Classification using GEE,</li>
+<li>Assessment of the classifer’s accuracy (20 classification results were obtained for each input feature set),</li>
 <li>Performance evaluation of feature subsets through a comparison of classification results of different feature subsets against the original feature set from which they were derived in order to establish if feature reduction would significantly improve informal settlement identification or not.</li>
 <li>Accuracy assessment to develop the relative comparative performances of different feature sets, against the benchmark experiment and was tested using Pixel-Based Accuracy Assessment and patch based.</li>
 <li>Regression between Extracted Informal Settlement Areas and Ground Truth Data.</li>
