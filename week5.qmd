@@ -1,0 +1,41 @@
+# An Introduction to Google Earth Engine
+
+## Summary
+
+This week, we finally started working with Google Earth Engine (GEE). I was excited about this because it is supposed to allow researchers and practitioners to cut straight to the interesting analytically steps of the work flow and make the downloading and (pre-) processing of the satellite data easier and faster. Great news for someone like me who is still a newbie to the whole coding and data science world.
+
+In summary, GEE is a cloud-based platform developed by Google that enables users to access and analyse huge amounts of satellite data. The main advantage is that, when we do analysis on GEE it's not running on our own machine. It is either running on the browser (client side) or on Google serves (server side). The GGE servers are very powerful and can compute huge amounts of data in seconds.
+
+**Add image of GGE environment.**
+
+Another great thing about GEE is its data catalog where a wide range of satellite data sets are stored. For example, it holds the entire Landsat Catalog. From the Catalog, data can be loaded directly into our project and the catalog even gives you the code to do so.
+
+**Link screenshot.**
+
+An Application Programming Interface (API) is a set of rules and tools that allows different software applications to talk to each other and share information or functionality. It's like the language we need to speak, so that a certain software can understand what we want. The GEE API supports Python and Java Script. However, Java Script was the first language used for GEE and therefore there is much more documentation for it. First, I was a little annoyed when I heard that next to Python, R, and SQL, I needed to learn yet another language. But turns out, the Java Script you need to know to use GEE is fairly simple. The main differences between Java script and R are:
+
+-   Variables (or objects) as defined with var..
+
+-   A specific part of your code ends with a ;
+
+-   Objects are dictionaries in Javascript.
+
+GEE allows very fast visualization during algorithm development as it deploys a pyramid of reduced resolution. This is a hierarchical structure of image tiles generated from original high-resolution imagery. This pyramid is created by systematically down scaling the resolution of the original images, producing a series of progressively lower-resolution versions. Each level of the pyramid represents a different level of detail, with the top level typically being the highest resolution and subsequent levels having progressively lower resolutions. This makes storages and retrieving images more efficient and also allows us to zoom in and out on the map and the resolution of pixels adjusting accordingly.
+
+## Application
+
+Application in urban environments
+
+## Reflection
+
+GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week:
+
+-   Limited storage of 250GB for each user and limited memory to train machine learning algorithms.
+
+-   No control over how computations are run in the back end, however, this is also why it is easy to use and fast.
+
+-   Interactive session limits and constraints on session duration and requests hinder flexibility. @amaniGoogleEarthEngine2020, @gorelickGoogleEarthEngine2017
+
+In addition to these technical issues, I could imagine that if you get started right away with GEE, you may lack some understanding of pre-processing of data and the decisions taken for corrections and enhancement, as well as the assumptions and mechanics of some of the classification models applied (more on this in the next 2 weeks). This may lead to misinterpretation of results.
+
+In my view another risk related to the proliferation of remote sensing in planning practice is that it may lead to a very dominantly technocratic approach to decision making. While this is of course helpful and important, it is not the only valuable way to understand cities. Cities are complex living organisms and often best understood through different analytically lenses. Understanding the lived experience of people, cultural meaning of places and practices or political agenda is equally important to fully understand how cities work. For example, it is really useful to understand where flood risk areas are in a city, and remote sensing is a great way to do so, but it is also important to understand why people decide to settle there and perhaps reject resettlement policies, stakeholder engagement is a good way to understand this.
