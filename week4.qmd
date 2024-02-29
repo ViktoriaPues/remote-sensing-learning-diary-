@@ -1,4 +1,4 @@
-# Policy 
+# Policy
 
 ## Summary
 
@@ -28,7 +28,7 @@ Remote sensing data could be used to improve the existing vulnerability assessme
 
 It is likely that Rajshahi does not have high resolution remote sensing data, such a Lidar data. Therefore, it is important to rely on publicly available data to ensure that the local government could reproduce the study. As demonstrated in a study conducted in Jakarta, Landsat 8, data can be used to identify informal settlements, despite lower resolution. A similar approach could be taken here.
 
-Several recent (e.g. from 2023) cloud-free images of the city should be obtained with a resolution of 30m. The relevant bands include: band 1-coastal aerosol, band 2-blue, band 3-green, band 4-red, band 5-near infrared (NIR), and bands 6 & 7-shortwave infrared (SWIR).   The classification of land cover types could be done using Random Forest (RF) classifier combined available survey data of the city\'s informal settlements and Open Street Map data. If no survey data exists, the local government could identify known informal areas. The sample should cover approximately 0.25% of the total study area to reach high accuracy.
+Several recent (e.g. from 2023) cloud-free images of the city should be obtained with a resolution of 30m. The relevant bands include: band 1-coastal aerosol, band 2-blue, band 3-green, band 4-red, band 5-near infrared (NIR), and bands 6 & 7-shortwave infrared (SWIR).   The classification of land cover types could be done using Random Forest (RF) classifier combined available survey data of the city's informal settlements and Open Street Map data. If no survey data exists, the local government could identify known informal areas. The sample should cover approximately 0.25% of the total study area to reach high accuracy.
 
 ## Reflection
 

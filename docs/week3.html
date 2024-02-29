@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -254,8 +288,18 @@ div.csl-indent {
 <section id="application" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
 <p>This week was very concept heavy. Therefore, I decided to use this week to engage with an application area of remote sensing that I have always been interested in (mapping informal settlements in cities) and see if I come across some of the concepts described above.</p>
-<p>Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructre or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest slums in the world right in the center of Mumbai (Figure 1).</p>
-<p><strong>add image</strong></p>
+<p>Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructre or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest slums in the world right in the center of Mumbai (Figure 3).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w3p1.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/w3p1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Figure 3:Darawi</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <p>I looked into a few studies that use remote sensing to map informal settlements and turns out its “a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytical processes.” <span class="citation" data-cites="matariraGoogleEarthEngine2022">Matarira, Mutanga, and Naidu (<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">2022</a>)</span></p>
 <p>It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. <span class="citation" data-cites="UsingOpenData"><span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement”</span> (<a href="references.html#ref-UsingOpenData" role="doc-biblioref">n.d.</a>)</span> More recently, researchers tried to find methods to work with openly available datasets such as Sentinel or Landsat to identify informal settlements.</p>
 <p>I looked more closely at a study conducted in Durban South Africa. <span class="citation" data-cites="matariraGoogleEarthEngine2022">Matarira, Mutanga, and Naidu (<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">2022</a>)</span> The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings.The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy.</p>
@@ -270,9 +314,20 @@ div.csl-indent {
 <li>Accuracy assessment to develop the relative comparative performances of different feature sets, against the benchmark experiment and was tested using Pixel-Based Accuracy Assessment and patch based.</li>
 <li>Regression between Extracted Informal Settlement Areas and Ground Truth Data.</li>
 </ul>
-<p>It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map slums in their city in an automated way or at least with less technical requirements. Ollie Ballinger actually managed to built an interesting Google Earth Engine Application to map slums in Dar es Salam in Tansania. It is different to the approach taken in Durban because he remove the formal buildings and than applies classification only on the remaining areas.</p>
+<p>It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map slums in their city in an automated way or at least with less technical requirements. Ollie Ballinger actually managed to built an interesting Google Earth Engine Application to map slums in Dar es Salam in Tansania. It is different to the approach taken in Durban because he remove the formal buildings and than applies classification only on the remaining areas. (Figure 4)</p>
 <p>https://www.iadb.org/en/who-we-are/topics/urban-development-and-housing/maiia</p>
-<p><strong>add image</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w3p2.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/w3p2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Figure 4: Informal Settlement Mapper</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>```</p>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
