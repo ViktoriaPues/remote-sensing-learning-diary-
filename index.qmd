@@ -14,12 +14,10 @@ From my experience, a key challenge in these projects is a lack of reliable data
 
 I am studying the remote sensing module because I believe that remote sensing and earth observation have great potential for closing this data gap and thereby improving urban planning, policy and investment decisions, especially in Low and Middle Income Countries. Within this industry, there seems to be a lot of talk around the potential of this technology but very few people who can actually do the analysis or run programmes where such analysis is done. I want to become one of the people who can put remote sensing into practice and make it work for the international development and humanitarian sector.
 
--   Therefore, i will relate the content covered in this module places and topics that are relevant within this sector. Some of the issues, I find interesting include:
+Therefore, i will relate the content covered in this module places and topics that are relevant within this sector. Some of the issues, I find interesting include:
 
 -   monitor informal urban growth to better plan for informal settlements,
 
--   monitoring conflict and assess damage as a baseline for reconstruction processes,
-
--   measuring drought to prevent famine,
+-   monitoring conflict and assess damage as a baseline for reconstruction processes, and
 
 -   understand climate change related risks in cities, especially heat and flooding.
