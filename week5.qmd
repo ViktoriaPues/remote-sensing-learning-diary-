@@ -6,7 +6,7 @@ This week, we finally started working with Google Earth Engine (GEE). I was exci
 
 In summary, GEE is a cloud-based platform developed by Google that enables users to access and analyse huge amounts of satellite data. The main advantage is that, when we do analysis on GEE it's not running on our own machine. It is either running on the browser (client side) or on Google serves (server side). The GGE servers are very powerful and can compute huge amounts of data in seconds.
 
-```{r, message=FALSE, include_graphics?, out.width='100%', fig.cap='Figure 4: Google Earth Engine User Interface', fig.scap='@amaniGoogleEarthEngine2020a'}
+```{r, message=FALSE, include_graphics4, out.width='100%', fig.cap='Figure 4: Google Earth Engine User Interface', fig.scap='@amaniGoogleEarthEngine2020a'}
 knitr::include_graphics('figures/w5p1.png')
 
 ```
@@ -49,11 +49,11 @@ I will look at three applications of NDVI here ranging from pretty simple to ver
 
 3\. predicting famine based on NDVI.
 
-### GEE NDVI Slider App 
+### GEE NDVI Slider App
 
 This app is a very intuitive introduction to NDVI. It is simply a base map of North Africa and South Asia with an NDVI layer. Different NDVI values are assigned 5 different colors to represent vegetation density/health. What's cool about this app is that you can choose different times for the left and right hand side of the screen and then drag the image between them. It allows you to visually detect vegetation change. In my case here, I looked at the Nile Delta Region between 2000 and 2023. You can see that vegetation increased in the west and some of the coastal areas. What makes this app great, is that it is really simple to use and allows to communicate differences in vegetation in a very powerful way. In my case, it could help visualize the success of irrigation policy in the Nile Delta over the past two decades.
 
-```{r, message=FALSE, include_graphics6, out.width='50%', fig.cap='Figure 5: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider'}
+```{r, message=FALSE, include_graphics5, out.width='50%', fig.cap='Figure 5: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider'}
 knitr::include_graphics('figures/w5p3.png')
 ```
 
@@ -61,7 +61,7 @@ knitr::include_graphics('figures/w5p3.png')
 knitr::include_graphics('figures/w5p4.png')
 ```
 
-### Detecting drought with NDVI 
+### Detecting drought
 
 NDVI can also be used to detect drought. Drought is one of the deadliest disasters that affect many regions of the world on a regular basis. In contrast to earth quakes or tsunamis, drought does not happen abruptly, but slowly develops overr time due to changes in the environment and climate. Monitoring these changes to alert to drought risk is therefore highly relevant in disaster risk management, e.g. to prevent famine (I will look more closely at famine in the next section.)
 
@@ -73,13 +73,13 @@ This study in interesting for comparing how severely different regions suffer fr
 knitr::include_graphics('figures/w5p5.png')
 ```
 
-### Predicting Famine 
+### Predicting Famine
 
 The worst impact related to drought is famine, but not every drought leads to famine. Famine, in contrast to drought however, is a man made disaster. As @alexdewaalMassStarvationHistory2017 argues, famine is driven by political conflict, embargoes and blockades, hostility against humanitarian principles and a volatile global economies or shocks. Therfore, understanding famine needs to combine data about drought with a range of other data sets on conflict, humanitarian access, population, food security, global value chains and so on.
 
 USAID has been running the Famine Early Earning System Network since 1980s and is one of the major providers for evidence based early warning information on current and future food insecurity. They developed a Acute Food Insecurity Area Classification Map. They use satellite data to understand drought but enrich this with a range of other analysis including conflict, migration, market and trade
 
-```{r, message=FALSE, include_graphics7, out.width='100%', fig.cap='Figure 6: Acute Food Insecurity Area Classification Map, fig.scap='Image Source: @https://fews.net/'}
+```{r, message=FALSE, include_graphics8, out.width='100%', fig.cap='Figure 7: Acute Food Insecurity Area Classification Map', fig.scap='Image Source: https://fews.net/ '}
 knitr::include_graphics('figures/w5p6.png')
 ```
 
@@ -99,4 +99,4 @@ In addition, to these technical issues, I could imagine that if you get started 
 
 In my view another risk related to the proliferation of remote sensing in planning practice is that it may lead to a very dominantly technocratic approach to decision making. While this is of course helpful and important, it is not the only valuable way to understand cities. Cities are complex living organisms and often best understood through different analytically lenses. Understanding the lived experience of people, cultural meaning of places and practices or political agenda is equally important to fully understand how cities work. For example, it is really useful to understand where flood risk areas are in a city, and remote sensing is a great way to do so, but it is also important to understand why people decide to settle there and perhaps reject resettlement policies, stakeholder engagement is a good way to understand this.
 
-# References 
+# Reference
