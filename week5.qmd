@@ -6,11 +6,12 @@ This week, we finally started working with Google Earth Engine (GEE). I was exci
 
 In summary, GEE is a cloud-based platform developed by Google that enables users to access and analyse huge amounts of satellite data. The main advantage is that, when we do analysis on GEE it's not running on our own machine. It is either running on the browser (client side) or on Google serves (server side). The GGE servers are very powerful and can compute huge amounts of data in seconds.
 
-**Add image of GGE environment.**
+```{r, message=FALSE, include_graphics?, out.width='100%', fig.cap='Figure 4: Google Earth Engine User Interface', fig.scap='@amaniGoogleEarthEngine2020a'}
+knitr::include_graphics('figures/w5p1.png')
+
+```
 
 Another great thing about GEE is its data catalog where a wide range of satellite data sets are stored. For example, it holds the entire Landsat Catalog. From the Catalog, data can be loaded directly into our project and the catalog even gives you the code to do so.
-
-**Link screenshot.**
 
 An Application Programming Interface (API) is a set of rules and tools that allows different software applications to talk to each other and share information or functionality. It's like the language we need to speak, so that a certain software can understand what we want. The GEE API supports Python and Java Script. However, Java Script was the first language used for GEE and therefore there is much more documentation for it. First, I was a little annoyed when I heard that next to Python, R, and SQL, I needed to learn yet another language. But turns out, the Java Script you need to know to use GEE is fairly simple. The main differences between Java script and R are:
 
