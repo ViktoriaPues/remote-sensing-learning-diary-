@@ -1,9 +1,9 @@
 ﻿Term ,Description 
-Geometric Correction ,"Remote sensed data often have image distortion issues due to the angle its taken from (off-nadir, meaning not directly down), the topography, or the rotation of the earth. This can be fixed by taking Ground Control Points (GPS) and matching them with known points in the image and a reference dataset (goldstandard, we know its corrrect) using different algorithms. 
+Geometric Correction ,"Remote sensing data often has image distortion issues due to the angle its taken from (e.g., off-nadir means  not directly down), the topography, or the rotation of the earth. This can be fixed by taking Ground Control Points (GPS) and matching them with known points in the image and a reference dataset (goldstandard, where we know its corrrect) using different algorithms. 
 "
-Atmospheric Correction,"Absorption and scattering crate atmospheric haze and makes pixels bleed into one another, which makes the image less clear (less contrast). There are two sources of environmental attenuation: Atmospheric scattering and topographic attenuation."
-Orthorectification Correction,"Georectification = giving coordinates to an image 
-Orthorectification = removing distortions... making the pixels viewed at nadir "
+Atmospheric Correction,Absorption and scattering create atmospheric haze and makes pixels bleed into one another. It makes the image less clear (less contrast). There are two sources of environmental attenuation: Atmospheric scattering and topographic attenuation.
+Orthorectification Correction,"Georectification means giving coordinates to an image. 
+Orthorectification means removing distortions by making the pixels viewed at nadir. "
 Dark Object Subtraction (DOS),"Method to correct for atmospheric effects and sensor-specific artifacts. In DOS, the darkest objects in an image, such as shadows or non-reflective surfaces, are identified and assumed to represent the true ""dark"" or background signal. The pixel values of these dark objects are then subtracted from the entire image, effectively normalizing the data and reducing atmospheric influence. DOS helps enhance the contrast and accuracy of satellite imagery, particularly in areas with varying atmospheric conditions or topography."
 Digital Number (DN),"The raw number that the sensor stores, or the value that the sensor ""sees"" (no unit)."
 Radiance,"Radiance is derived from DN. DN to spectral radiance = radiometric calibration. It refers to the electromagnetic radiation emitted or reflected from the Earth's surface and recorded by the sensors/satellites (e.g., light reflected from a tree). It represents the intensity of radiation across different wavelengths or spectral bands. Is used as a measurement for understanding different materials on the earth surface (e.g., vegitation). Also called Top Of the Atmosphere Reflectance. "
@@ -16,8 +16,8 @@ So going forward, we usually use:
 Collection=2
 Level=2
 Tier=1"
-Ratio ,
-Filtering ,
-Texture ,
-Data Fusion ,
+Ratio ,"Ratio enhancements use the different spectral signatures of different materials in spectral bands to exaggerate specific features. NDVI uses red and near-infrared spectral bands to draw out healthy vegetation, because healthy vegetation reflects highly in the near infrared wavelength and is absorbed in the red red one. Areas with a high NDVI index represent healthy vegetation. NDVI=NIR+Red/NIR−Red​
+"
+Texture ,"Essentially, it’s a measure of each pixel’s similarity (or difference) to the pixels around it. For example, the image below shows homogeneity for Cape Town. It’s calculated using a grey-level co-occurrence matrix (GLCM). This involves creating a matrix for all pixels and their neighbours in an image, and calculating how homogeneous (similar) each pixel is to its neighbours. In the image below, areas with high homogeneity (the ocean, stretches of agricultural land in the north) are white, while areas with significant contrast (such as the coastline) are dark, due to the high contrast between the ocean and beaches."
+Data Fusion ,"Data fusion in remote sensing refers to combining information from multiple sources or sensors to enhance understanding of the Earth's surface. This integration improves data quality and utility by leveraging the strengths of each source while compensating for their individual limitations. Techniques include merging spatial, spectral, and temporal data to create more detailed and accurate representations of land cover, environmental changes, and other phenomena. Data fusion enables better-informed decision-making in applications such as land management, disaster response, and environmental monitoring."
 Principal Component Analysis (PCA),"PCA is a statistical technique used for dimensionality reduction and feature extraction from multispectral or hyperspectral imagery. By transforming the original spectral bands into a smaller set of uncorrelated variables called principal components, PCA simplifies analysis tasks and aids in data compression. These components capture different aspects of variability in the imagery, such as brightness, texture, or spectral signatures, facilitating efficient storage, noise reduction, and visualization of remote sensing data."

@@ -28,7 +28,7 @@ This week was very concept heavy. I decided to use this week and next to engage 
 Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructure or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest slums in the world right in the center of Mumbai (Figure 3).
 
 ```{r, message=FALSE, include_graphics3, out.width='100%', fig.cap='Figure 3:Darawi', fig.scap='Image Source: Principles of Remote Sensing'}
-knitr::include_graphics('figures/w3p1.png')
+knitr::include_graphics('figures/w3p1a.png')
 ```
 
 I looked into a few studies that use remote sensing to map informal settlements and turns out its "a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytically processes." @matariraGoogleEarthEngine2022
