@@ -1,0 +1,49 @@
+# Classification I 
+
+## Summary 
+
+Images classification is one of the key outputs, we try to achieve when analysing satellite images. Classification turns a satellite image into a schematic map showing different land use or land cover types. Essentially, it means labelling each pixel of on the image\'s bands as a categorical variable.
+
+There are different types of classification that we will look at over this and next week: Classification can be supervised or unsupervised classification, or object-based. Object-based classification is covered next week.
+
+### **Supervised Classification** 
+
+In supervised classification a predefined training dataset is used where labels are known. The training data serves as a reference to train a classifier algorithm to recognize patterns in land cover or land use in the rest of the data set. Once trained it is tested on a subset of the data, the test data, to assess its accuracy. The workflow for supervised classification in GEE is broadly: 
+
+1\. Select an image.
+
+2\. Collect training data.
+
+3.Select and train a classifier using the training data.
+
+4.Classify the image using the selected lclassifier.
+
+@jeffreya.cardilleCloudBasedRemoteSensing
+
+Random Forest is a supervised machine learning algorithm used for classification and regression. It creates numerous decision trees during the training phase. Each decision tree is built using a random subset of the
+training data and a random subset of the input features. Each tree contributes to the final prediction of classes, and the mode or mean of these predictions is taken as the overall output. As decibed by @haMachineLearningRemote2022, its is this combination of different classification options that makes predictions robust. They explain that a random forest algorythm has four main steps:
+
+1.  randomly select the sample from the dataset;
+2.  construction of decision trees for each sample;
+3.  vote for the predictions;
+4.  determination of the decision trees with the most votes.
+
+### **Unsupervised Classification** 
+
+Unsupervised classification works the other way around. The classes are grouped first based on the data, using a self-taught algorithm, and then categorized into clusters. There is no reference data, where we know what category it is, in this case. The typical work flow us as follows:  
+
+1.   Assemble features with numeric properties in which to find clusters (training data).
+
+2.   Select and instantiate a clusterer.
+
+3.   Train the clusterer with the training data.
+
+4.   Apply the clusterer to the scene classification).
+
+5.   Label the clusters.
+
+@jeffreya.cardilleCloudBasedRemoteSensing
+
+## Application 
+
+## Reflection

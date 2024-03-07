@@ -42,7 +42,7 @@ Below I discuss the use of Sentinel and Landsat data in the field of disaster ri
 
 Figure 3 provides an overview of a typical work flow for a flood risk mapping using Landsat Data. We will understand these steps better over the coming weeks. In short, Landsat 5, 7, and 8 images with low cloud cover are used to cover a longer period. A classifier that differentiates permanent water from temporary water (flood) is applied and vegetation and site specific other data (HAND) is masked (cut out) to leavev only a map of permanent and temporary water.The authors discuss that the accuracy of the classifier could be improved by training it on sentinel data. I think this may be due to the fact that sentinel data has a higher resolution (10m) than Landsat (30m).They also state that this map does not consider socio-demographic data to understand vulnerability. @mehmoodMappingFloodAreas2021
 
-```{r, message=FALSE, include_graphics3, out.width='100%', fig.cap='Figure 2: Workflow Flood Mapping', fig.scap='Image Source: Mehmood et.al.'}
+```{r, message=FALSE, include_graphics3, out.width='100%', fig.cap='Figure 3: Workflow Flood Mapping', fig.scap='Image Source: Mehmood et.al.'}
 knitr::include_graphics('figures/w1f4.png')
 ```
 
@@ -54,7 +54,7 @@ Some of the image processing methods applied sound already somewhat familiar as 
 
 Something that I noticed is that the study only takes into account the growing population for forecasting but not the effects of climate change on the likelihood and intensity of tropical cyclones in the future.
 
-```{r, message=FALSE, include_graphics4, out.width='100%', fig.cap='Figure 3: Senitnel 2 image of Mosampique flooding including in Maputo', fig.scap='Image Source: Principles of Remote Sensing'}
+```{r, message=FALSE, include_graphics4, out.width='100%', fig.cap='Figure 4: Senitnel 2 image of Mosampique flooding including in Maputo', fig.scap='Image Source: Principles of Remote Sensing'}
 knitr::include_graphics('figures/w1p3.png')
 ```
 
