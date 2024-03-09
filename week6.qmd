@@ -40,7 +40,7 @@ Random Forest is a supervised machine learning algorithm used for classification
 
 
 ```{r message=FALSE, include_graphics14, out.width='100%', fig.cap='Figure 14: Random Forests', fig.scap='https://medium.com/analytics-vidhya/random-forest-classifier-and-its-hyperparameters-8467bec755f6'}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wo9vZccmqwc" frameborder="0" allowfullscreen></iframe>
+knitr::include_graphics('figures/w6p2.png')
 
 ```
 
