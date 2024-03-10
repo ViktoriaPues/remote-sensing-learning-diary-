@@ -40,7 +40,7 @@ The study discussed in week three used publicly available data (sentinel 2) and 
 
 This week, I am looking at a different study by the same authors, where @matariraObjectBasedInformalSettlement2022 use object based-classification to identify informal settlements also in Durban. The image below gives a good overview of the methodology. It uses both public medium resolution data sets (sentinel 1 and 2) as well as high resolution data (Planet). This method identified informal settlement with an accuracy of 87%, so a bit higher than the open data study.
 
-```{r, message=FALSE, include_graphics17, out.width='100%', fig.cap='Figure 17: 'Workflow mapping of informal settlements with object-based classification'', fig.scap='@matariraObjectBasedInformalSettlement2022'}
+```{r, message=FALSE, include_graphics18, out.width='100%', fig.cap='Figure 18: Workflow', fig.scap='@matariraObjectBasedInformalSettlement2022'}
 knitr::include_graphics('figures/w7p2.png')
 
 ```

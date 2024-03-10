@@ -292,7 +292,7 @@ window.Quarto = {
 <p>What happens if a classificaiton model doesn’t consider spatial autocorrelation ? The model will have better accuracy that it actually does</p>
 <section id="sub-pixel-based-analysis" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="sub-pixel-based-analysis"><span class="header-section-number">7.1.1</span> Sub-pixel-based Analysis</h3>
-<p>Sub-pixel analysis is useful when a pixel has more than one land cover type. A method that can be applied is Spectralmixture analysis (SMA). It is used to decompose the spectral reflectance within a pixel from surface reflectance from different material. “The mixing can be modeled as the sum of endmember reflectance multiplied by their fraction contribution to a best-fit mixed spectrum.” <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span> In short this means it determines the proportion of landcover per pixel.</p>
+<p>Sub-pixel analysis is useful when a pixel has more than one land cover type. A method that can be applied is Spectralmixture analysis (SMA). It is used to decompose the spectral reflectance within a pixel from surface reflectance from different material. “The mixing can be modeled as the sum of endmember reflectance multiplied by their fraction contribution to a best-fit mixed spectrum.” <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref"><strong>jensen2015?</strong></a>)</span> In short this means it determines the proportion of landcover per pixel.</p>
 </section>
 <section id="object-based-analysis" class="level3" data-number="7.1.2">
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="object-based-analysis"><span class="header-section-number">7.1.2</span> Object-based Analysis</h3>
@@ -306,7 +306,7 @@ window.Quarto = {
 <p>When ever we do a classification of a remote sensing image, we need to determine the accuracy of the classification meaning the probability that the model has classified a pixel or object correctly. There are different types of accuracy.</p>
 <ol type="1">
 <li>Producer Accuracy - the classification results meet the expectation of the model creator <span class="math inline">\(TP/TP+FN\)</span></li>
-<li>User's accuracy - pixels are incorrectly classified as a known class when they should have been classified as something else <span class="math inline">\(TP/TP+FP\)</span></li>
+<li>User’s accuracy - pixels are incorrectly classified as a known class when they should have been classified as something else <span class="math inline">\(TP/TP+FP\)</span></li>
 <li>Overall accuracy - represents the combined fraction of correctly classified pixels across all land cover types. <span class="math inline">\(TP+TN/TP+FP+FN+TN\)</span></li>
 </ol>
 <div class="cell">
@@ -324,17 +324,38 @@ window.Quarto = {
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+<p>I am looking again at informal settlements mapping because when I looked at the topic it in week three, I didn’t have enough content to really understand the method applied yet.</p>
+<p>The study discussed in week three used publicly available data (sentinel 2) and pixel based classification with a random forest algorithm <span class="citation" data-cites="matariraGoogleEarthEngine2022">(<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">Matarira, Mutanga, and Naidu 2022</a>)</span> to map informal settlements in Durban, South Africa. In this study, the focus is on exploring the potential of open data to map settlements. It was able to detect informal settlements with a overall accuracy of around 80%.</p>
+<p>This week, I am looking at a different study by the same authors, where <span class="citation" data-cites="matariraObjectBasedInformalSettlement2022">Matarira et al. (<a href="references.html#ref-matariraObjectBasedInformalSettlement2022" role="doc-biblioref">2022</a>)</span> use object based-classification to identify informal settlements also in Durban. The image below gives a good overview of the methodology. It uses both public medium resolution data sets (sentinel 1 and 2) as well as high resolution data (Planet). This method identified informal settlement with an accuracy of 87%, so a bit higher than the open data study.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w7p2.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/w7p2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Figure 18: Workflow</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<p>I personally feel like this lecture/ practical was a little rushed. I am starting to get a rough overrview on the different types of classifications. But the practical code is pretty complex. While it works when I copy it over to GEE and its cool to see how it builds up the maps step by step, I personally would need a bit more guidance and hand-holding to really put these concepts into practice.</p>
+<p>A resource that I started using and that I find really helpful is this online book: <a href="https://www.eefabook.org/" class="uri">https://www.eefabook.org/</a>. It has fantastic videos that guide you step by step through how to implement the different methods in GEE. I am working my way through but haven’t made it to bbject-based classification yet. The book and videos are a good addition to the lectures and practicals, which go deeper into the theory and are more critical on methods.</p>
+<p>Doing this module, I have been thinking a lot about how to find the right level of detail in all of this content for me. I’ve been thinking about what type of role I want to have after learning all of these new contents and skills. Do I want to do remote sensing analysis myself in my work going forward? Or, do I want to be in the position to work with people who do this? Or be able to procure such analysis? Finding answers to these question, over the summer perhaps, will be useful to be strategic in how I select courses for the remainder of the course and what content to really focus on.</p>
+<p>In any case, I feel like my brain has been expanding over the past few months (sometimes with a lot of growing pain). That in itself is great!</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-jeffreya.cardilleCloudBasedRemoteSensing" class="csl-entry" role="listitem">
 Jeffrey A. Cardille, Nick Clinton, Morgan Crowley, and David Saah. n.d. <em>Cloud-<span>Based Remote Sensing</span> with <span>Google Earth Engine</span></em>. <a href="https://www.eefabook.org/about.html">https://www.eefabook.org/about.html</a>.
 </div>
-<div id="ref-jensen2015" class="csl-entry" role="listitem">
-Jensen, J. R. 2015. <em>Introductory Digital Image Processing: A Remote Sensing Perspective</em>. Prentice-Hall Inc.
+<div id="ref-matariraGoogleEarthEngine2022" class="csl-entry" role="listitem">
+Matarira, Dadirai, Onisimo Mutanga, and Maheshvari Naidu. 2022. <span>“Google <span>Earth Engine</span> for <span>Informal Settlement Mapping</span>: <span>A Random Forest Classification Using Spectral</span> and <span>Textural Information</span>.”</span> <em>Remote Sensing</em> 14 (20, 20): 5130. <a href="https://doi.org/10.3390/rs14205130">https://doi.org/10.3390/rs14205130</a>.
+</div>
+<div id="ref-matariraObjectBasedInformalSettlement2022" class="csl-entry" role="listitem">
+Matarira, Dadirai, Onisimo Mutanga, Maheshvari Naidu, and Marco Vizzari. 2022. <span>“Object-<span>Based Informal Settlement Mapping</span> in <span>Google Earth Engine Using</span> the <span>Integration</span> of <span>Sentinel-1</span>, <span>Sentinel-2</span>, and <span>PlanetScope Satellite Data</span>.”</span> <em>Land</em> 12 (1): 99. <a href="https://doi.org/10.3390/land12010099">https://doi.org/10.3390/land12010099</a>.
 </div>
 </div>
 </section>
