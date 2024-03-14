@@ -22,7 +22,9 @@ In GEE different types of SAR data is available. Sentinel 1 is the most commonly
 
 ## Application
 
-Identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks -- as I discussed last week. There are a few problems with this approach: It's computationally and financially expensive. Another problem is that optical images are not always available, e.g. when there are clouds. Neuro Networks ..... Go back to min 01.02
+One of the application area SAR can be used for is identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks -- as I discussed last week.
+
+However, as discussed during the lecture, there are a few problems with this approach. For once, it's computationally and financially expensive. Another problem is that optical images are not always available, e.g. when there are clouds. Neural Networks dont generalize very well. Trained in one area, they don't train as well in different geographies.
 
 How do you differentiate between general change and building damage. Comparing it with the building footprint.
 

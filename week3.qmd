@@ -9,23 +9,26 @@ library(tidyverse)
 library(kableExtra)
 my_table <- read.csv("week3 overview.csv")
 
+num_rows_to_include <- 13
+
 my_table %>%
-  head() %>%
+  head(num_rows_to_include) %>%
   kable("html") %>%
   kable_styling(
     full_width = FALSE, # Adjust as needed
-    #bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
     position = "center" # Center the table on the slide
   ) %>%
   column_spec(1, bold = TRUE) # Make the first column bold
+  
 
 ```
 
 ## Application
 
-This week was very concept heavy. I decided to use this week and next to engage with an application area of remote sensing that I have always been interested in: mapping informal settlements in cities. I wanted to see if I come across some of the concepts described above, reading through the studies.
+This week, I explore an application area of remote sensing that I have always been interested in: mapping informal settlements in cities. I wanted to see, if I come across some of the concepts described above, reading through the studies.
 
-Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructure or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest slums in the world right in the center of Mumbai (Figure 3).
+Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructure or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest informal settlements in the world right in the center of Mumbai.
 
 ```{r, echo=FALSE, include_graphics5, out.width='100%', fig.cap='Figure 5:Darawi', fig.scap='Image Source: Principles of Remote Sensing', cache=FALSE}
 knitr::include_graphics('figures/w3p1a.png')
@@ -33,24 +36,19 @@ knitr::include_graphics('figures/w3p1a.png')
 
 I looked into a few studies that use remote sensing to map informal settlements and turns out its "a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytically processes." [@matariraGoogleEarthEngine2022]
 
-It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. [@UsingOpenData] More recently, researchers tried to find methods to work with openly available data sets such as Sentinel or Landsat to identify informal settlements.
+It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most informal settlements are. [@UsingOpenData] More recently, researchers tried to find methods to work with openly available data sets such as Sentinel or Landsat to identify informal settlements.
 
-I looked more closely at a study conducted in Durban South Africa. [@matariraGoogleEarthEngine2022] The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings.The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. Texture is used in this instance to better distinguish different types of built up areas from other classes. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy.
+@matariraGoogleEarthEngine2022 map informal settlements in Durban South Africa. The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings.The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. Texture is used in this instance to better distinguish different types of built up areas from other land cover types. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy. They also deploy data fusion. A composite was formed based on 3 images with low cloud cover and a median value calculated for each pixel. The resulting image was used for processing.
 
-The method used was pretty complex and I didn't understand it fully. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:
+The method for processing used was pretty complex and I didn't understand it fully. Classification will be covered later from week 6 onward. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:
 
--   3 images were selected to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing.
--   Extraction of spectral and texture features from Sentinel 2A bands,
+-   Select images with low cloud cover, calculate the median for each pixel to form a composite image used for processing.
+-   Extraction of spectral and texture features from different bands,
 -   Establishing different combinations of these feature types to be tested,
--   Random Forest Classification using GEE,
--   Assessment of the classifier's accuracy (20 classification results were obtained for each input feature set),
--   Performance evaluation of feature subsets through a comparison of classification results of different feature subsets against the original feature set from which they were derived in order to establish if feature reduction would significantly improve informal settlement identification or not.
--   Accuracy assessment to develop the relative comparative performances of different feature sets, against the benchmark experiment and was tested using Pixel-Based Accuracy Assessment and patch based.
--   Regression between Extracted Informal Settlement Areas and Ground Truth Data.
+-   Use a Random Forest Classification using GEE,
+-   Assessment of the classifier's accuracy.
 
-It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map slums in their city in an automated way or at least with less technical requirements. Ollie Ballinger actually managed to built an interesting Google Earth Engine Application to map slums in Dar es Salam in Tanzania. It is different to the approach taken in Durban because he removes the formal buildings and than applies classification only on the remaining areas. (Figure 4)
-
-https://www.iadb.org/en/who-we-are/topics/urban-development-and-housing/maiia
+It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map informal areas in their city in an automated way. Ollie Ballinger actually managed to built an interesting Google Earth Engine Application to map informal settlements in Dar es Salam in Tanzania. It is different to the approach taken in Durban because he removes the formal buildings and than applies classification only on the remaining areas.
 
 ```{r, echo=FALSE, include_graphics6, out.width='100%', fig.cap='Figure 6: Informal Settlement Mapper', fig.scap='Image Source: Principles of Remote Sensing', cache=FALSE}
 knitr::include_graphics('figures/w3p2.png')
@@ -58,6 +56,8 @@ knitr::include_graphics('figures/w3p2.png')
 
 ## Reflection
 
-This week was a little painful, both for me (difficult concepts) and my laptop (computational power needed for working with remote sensing data).It got me excited to get started on Google Earth Engine, where a lot of these processes are automated and run on a cloud. It sounds like that makes it easier to focus on the analysis and get to the fun and interesting bits more quickly, rather than spending a long time making corrections and enhancements to the data. Thank you Google...
+The lecture and practical content this week was a little painful, both for me (difficult concepts) and my laptop (computational power needed for working with remote sensing data). I made it even harder by choosing a difficult topic to explore for the learning diary.
 
-I was not aware how difficult it is to map informal settlements with remote sensing data. I actually assumed it would be one of the easier methods as it is so well known. I can't say that I completely understood the method used in Durban. However, it was still a worth wile exercise for me because it gave me a better idea of the workflow for remote sensing. It seems to be roughly: - Choose and download the images, - Make a composite, - Make corrections on it, - Identify the relevant features (spectral and texture), - Classification, - Validating and testing accuracy of classification, - Spatial analysis (e.g. regression).
+However, i got excited to get started on Google Earth Engine, where a lot of these processes are automated and run on a cloud. It sounds like that makes it easier to focus on the analysis and get to the fun and interesting bits more quickly, rather than spending a long time making corrections and enhancements to the data. Thank you Google...
+
+I was not aware how difficult it is to map informal settlements with remote sensing data. I actually assumed it would be one of the easier methods as it is so well known. I can't say that I completely understood the method used in Durban. However, it was still a worth wile exercise for me because it gave me a better idea of the workflow for remote sensing. I will keep going back to the topic of informal settlement detection as we go through the term to understand better as I understand more remote sensing concepts.
