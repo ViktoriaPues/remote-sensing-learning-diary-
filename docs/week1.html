@@ -199,8 +199,8 @@ div.csl-indent {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">1.2</span> Application</a>
   <ul class="collapse">
-  <li><a href="#approach-to-mapping-flood-areas-using-landsat" id="toc-approach-to-mapping-flood-areas-using-landsat" class="nav-link" data-scroll-target="#approach-to-mapping-flood-areas-using-landsat"><span class="header-section-number">1.2.1</span> Approach to Mapping Flood Areas using Landsat</a></li>
-  <li><a href="#flood-mapping-in-mozambique-using-copernicus-sentinel-2-satellite-data" id="toc-flood-mapping-in-mozambique-using-copernicus-sentinel-2-satellite-data" class="nav-link" data-scroll-target="#flood-mapping-in-mozambique-using-copernicus-sentinel-2-satellite-data"><span class="header-section-number">1.2.2</span> Flood Mapping in Mozambique using Copernicus Sentinel-2 Satellite Data</a></li>
+  <li><a href="#mapping-floods-with-landsat" id="toc-mapping-floods-with-landsat" class="nav-link" data-scroll-target="#mapping-floods-with-landsat"><span class="header-section-number">1.2.1</span> Mapping Floods with Landsat</a></li>
+  <li><a href="#mapping-floods-with-sentinel" id="toc-mapping-floods-with-sentinel" class="nav-link" data-scroll-target="#mapping-floods-with-sentinel"><span class="header-section-number">1.2.2</span> Mapping Floods with Sentinel</a></li>
   </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
   </ul>
@@ -231,16 +231,16 @@ div.csl-indent {
 <section id="summary" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
 <p>This week, I am covering the basics of what remote sensing is and will focus on how remote sensing is based on the electromagnetic field. Other topics this week included scattering, interaction with the earth surface, data formats, and resolution.</p>
-<p>Remote Sensing, also referred to as Earth Observation, is the process of collecting information about the Earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. <span class="citation" data-cites="bradyRemoteSensingDummies2021">(<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">Brady 2021</a>)</span></p>
-<p>The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency . Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For example, trees have a different electromagnetic signature than buildings or water bodies.<span class="citation" data-cites="bradyRemoteSensingDummies2021">(<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">Brady 2021</a>)</span></p>
+<p>Remote Sensing, also referred to as Earth Observation, is the process of collecting information about the earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing is electromagnetic radiation or more simply put, light reflected from objects. <span class="citation" data-cites="bradyRemoteSensingDummies2021">(<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">Brady 2021</a>)</span></p>
+<p>The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency. Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For example, trees have a different electromagnetic signature than buildings or water bodies.<span class="citation" data-cites="bradyRemoteSensingDummies2021">(<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">Brady 2021</a>)</span></p>
 <p>The images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called “bands”. The more bands, the higher the spectral resolution of the image.</p>
-<p>Generally, there are two types of sensors – active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).</p>
+<p>Generally, there are two types of sensors – active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/w1p1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Figure 1: Electric and magnetic waves in the electromagnetic field</figcaption>
+<figcaption>Figure 1: Electric and magnetic spectrum</figcaption>
 </figure>
 </div>
 </div>
@@ -258,7 +258,8 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
-<p>As for many other technologies, remote sensing has its origin in the military and defense sector. It was first invented to gather information about the enemy in war, e.g.&nbsp;troop deployment or battle territory <span class="citation" data-cites="bradyRemoteSensingDummies2021">Brady (<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">2021</a>)</span>. While still used in this sector, today remote sensing has been adopted in a range of other disciplines including:</p>
+<p>As for many other technologies, remote sensing has its origin in the military and defense sector. It was first invented to gather information about the enemy in war, e.g.&nbsp;troop deployment or battle territory. <span class="citation" data-cites="bradyRemoteSensingDummies2021">(<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">Brady 2021</a>)</span></p>
+<p>While still used in this sector, today remote sensing has been adopted in a range of other disciplines including:</p>
 <ul>
 <li><p>Climate science e.g., measuring changes in temperature over time,</p></li>
 <li><p>Disaster Risk Reduction and Management, e.g., mapping flood risks,</p></li>
@@ -267,10 +268,10 @@ div.csl-indent {
 <li><p>Urban Planning e.g., identifying informal settlements and monitoring urban growth,</p></li>
 <li><p>Conflict studies e.g., measuring destruction in battle</p></li>
 </ul>
-<p>Below I discuss the use of Sentinel and Landsat data in the field of disaster risk reduction, more specifically flood risk management. Both Landsat and Sentinel data are being used for flood mapping.</p>
-<section id="approach-to-mapping-flood-areas-using-landsat" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="approach-to-mapping-flood-areas-using-landsat"><span class="header-section-number">1.2.1</span> Approach to Mapping Flood Areas using Landsat</h3>
-<p>Figure 3 provides an overview of a typical work flow for a flood risk mapping using Landsat Data. We will understand these steps better over the coming weeks. In short, Landsat 5, 7, and 8 images with low cloud cover are used to cover a longer period. A classifier that differentiates permanent water from temporary water (flood) is applied and vegetation and site specific other data (HAND) is masked (cut out) to leavev only a map of permanent and temporary water.The authors discuss that the accuracy of the classifier could be improved by training it on sentinel data. I think this may be due to the fact that sentinel data has a higher resolution (10m) than Landsat (30m).They also state that this map does not consider socio-demographic data to understand vulnerability. <span class="citation" data-cites="mehmoodMappingFloodAreas2021">Mehmood, Conway, and Perera (<a href="references.html#ref-mehmoodMappingFloodAreas2021" role="doc-biblioref">2021</a>)</span></p>
+<p>Below I discuss the use of Sentinel data (from the European Space Agency) and Landsat data (from NASA) in the field of disaster risk reduction, more specifically flood risk management. Both Landsat and Sentinel data are open source data sets.</p>
+<section id="mapping-floods-with-landsat" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="mapping-floods-with-landsat"><span class="header-section-number">1.2.1</span> Mapping Floods with Landsat</h3>
+<p>Figure 3 provides an overview of a typical work flow for a flood risk mapping using Landsat Data. I will understand these steps better over the next weeks. In short, Landsat 5, 7, and 8 images with low cloud cover are used to cover a longer period. A classifier that differentiates permanent water (river, sea, lakes etc.) from temporary water (flood) is applied. Vegetation (NDVI) and site specific other data (HAND) is masked (which means its cut out) to leave only a map of permanent and temporary water.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -281,12 +282,13 @@ div.csl-indent {
 </div>
 </div>
 </div>
+<p><span class="citation" data-cites="mehmoodMappingFloodAreas2021">Mehmood, Conway, and Perera (<a href="references.html#ref-mehmoodMappingFloodAreas2021" role="doc-biblioref">2021</a>)</span> discuss that the accuracy of the classifier could be improved by training the same model on sentinel data. Sentinel data has a higher spatial resolution than landsat (10m vs.&nbsp;30m). Sentinel and Landset have different revisit periods. Using both data sources can increase the frequency of images of the same point over time. A weakness of the study is that it does not consider socio-demographic data to understand flood vulnerability.</p>
 </section>
-<section id="flood-mapping-in-mozambique-using-copernicus-sentinel-2-satellite-data" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="flood-mapping-in-mozambique-using-copernicus-sentinel-2-satellite-data"><span class="header-section-number">1.2.2</span> Flood Mapping in Mozambique using Copernicus Sentinel-2 Satellite Data</h3>
-<p><span class="citation" data-cites="twumasiFloodMappingMozambique2022">Twumasi et al. (<a href="references.html#ref-twumasiFloodMappingMozambique2022" role="doc-biblioref">2022</a>)</span>, do just that. They mapped inundation caused by tropical cyclones in Maputo and Beira using Sentinel 2 data and combined they findings with demographic data to understand the impact of these floods on people.</p>
+<section id="mapping-floods-with-sentinel" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="mapping-floods-with-sentinel"><span class="header-section-number">1.2.2</span> Mapping Floods with Sentinel</h3>
+<p><span class="citation" data-cites="twumasiFloodMappingMozambique2022">Twumasi et al. (<a href="references.html#ref-twumasiFloodMappingMozambique2022" role="doc-biblioref">2022</a>)</span>, do just that! They mapped inundation caused by tropical cyclones in Maputo and Beira using Sentinel 2 data and combined they findings with demographic data to understand the impact of these floods on people.</p>
 <p>Some of the image processing methods applied sound already somewhat familiar as we covered them in the lecture: “The images were geometrically corrected to remove, haze, scan lines and speckles, and then referenced to Mozambique ground-based Geographic: Lat/Lon coordinate system and WGS 84 Datum. Data from twelve spectral bands of Sentinel-2 satellite, covering the visible and near infrared sections of the electromagnetic spectrum, were further used in the analysis.” <span class="citation" data-cites="twumasiFloodMappingMozambique2022">Twumasi et al. (<a href="references.html#ref-twumasiFloodMappingMozambique2022" role="doc-biblioref">2022</a>)</span></p>
-<p>Something that I noticed is that the study only takes into account the growing population for forecasting but not the effects of climate change on the likelihood and intensity of tropical cyclones in the future.</p>
+<p>Something, that I noticed is that the study only takes into account the growing population for forecasting but not the effects of climate change on the likelihood and intensity of tropical cyclones in the future. Modeling climate change may be a useful to take this study forward and better understand future flood risk in Maputo and Beira.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -303,7 +305,7 @@ div.csl-indent {
 <h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
 <p>Next to learning about the electromagnetic field (something I hadn’t really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost.</p>
 <p>In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g.&nbsp;a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, already considered remote sensing as a low cost option for data collection in comparison to airborne or ground surveys in 1992. <span class="citation" data-cites="bhattRemoteSensingEconomic1992">(<a href="references.html#ref-bhattRemoteSensingEconomic1992" role="doc-biblioref">Bhatt 1992</a>)</span> Today, there is much more satellite images available and analysis has become easier, using applications like Google Earth Engine.</p>
-<p>Even though remote sensing is a low cost option for data collection, it is not yet applied yet in large scale in the area I work in (urban planning &amp; international development). According to a recent paper on the potential of remote sensing for the urban development sector, this may be due to limited capabilities in local governments and reluctance to change existing data collection and management systems. <span class="citation" data-cites="prakashOpenEarthObservations2020">(<a href="references.html#ref-prakashOpenEarthObservations2020" role="doc-biblioref">Prakash et al. 2020</a>)</span></p>
+<p>Even though remote sensing is a low cost option for data collection, it is not yet applied at scale in my field of work (urban planning &amp; international development). According to a recent paper on the potential of remote sensing for the urban development sector, this may be due to limited capabilities in local governments and reluctance to change existing data collection and management systems. <span class="citation" data-cites="prakashOpenEarthObservations2020">(<a href="references.html#ref-prakashOpenEarthObservations2020" role="doc-biblioref">Prakash et al. 2020</a>)</span> From my experience, this is a valid point. Data literacy in many local governments in LMIC is not high. Applying these new technologies is great, but they also need to be accessible to those that take decisions locally. Capacity building is therefore key.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

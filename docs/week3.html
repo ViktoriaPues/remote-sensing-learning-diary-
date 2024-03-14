@@ -234,7 +234,8 @@ div.csl-indent {
 <pre><code>Warning: package 'kableExtra' was built under R version 4.3.2</code></pre>
 </div>
 <div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Term</th>
@@ -266,8 +267,33 @@ div.csl-indent {
 <td style="text-align: left; font-weight: bold;">Radiance</td>
 <td style="text-align: left;">Radiance is derived from DN. DN to spectral radiance = radiometric calibration. It refers to the electromagnetic radiation emitted or reflected from the Earth's surface and recorded by the sensors/satellites (e.g., light reflected from a tree). It represents the intensity of radiation across different wavelengths or spectral bands. Is used as a measurement for understanding different materials on the earth surface (e.g., vegitation). Also called Top Of the Atmosphere Reflectance.</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Surface Reflectance</td>
+<td style="text-align: left;">Radiance after correction for atmospheric effects. Also called Bottom of Atmosphere Reflectance.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Collection, level and Tier</td>
+<td style="text-align: left;">Collection, Level and Tier help us decide what remote sensing data product to choose, when downloading data. Collection comes in 1 and 2 with a difference in how the data was collected. We always use 2 because it is the latest release. Levels refer to the quality of data and also comes in 1 and 2, where 1 = DN and 2=surface rediance. Tier refers to the quality of data, where 1 is the highest. So going forward, we usually use: Collection=2 Level=2 Tier=1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Ratio</td>
+<td style="text-align: left;">Ratio enhancements use the different spectral signatures of different materials in spectral bands to exaggerate specific features. NDVI uses red and near-infrared spectral bands to draw out healthy vegetation, because healthy vegetation reflects highly in the near infrared wavelength and is absorbed in the red red one. Areas with a high NDVI index represent healthy vegetation. NDVI=NIR+Red/NIR−Red​</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Texture</td>
+<td style="text-align: left;">Essentially, it’s a measure of each pixel’s similarity (or difference) to the pixels around it. For example, the image below shows homogeneity for Cape Town. It’s calculated using a grey-level co-occurrence matrix (GLCM). This involves creating a matrix for all pixels and their neighbours in an image, and calculating how homogeneous (similar) each pixel is to its neighbours. In the image below, areas with high homogeneity (the ocean, stretches of agricultural land in the north) are white, while areas with significant contrast (such as the coastline) are dark, due to the high contrast between the ocean and beaches.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Data Fusion</td>
+<td style="text-align: left;">Data fusion in remote sensing refers to combining information from multiple sources or sensors to enhance understanding of the Earth's surface. This integration improves data quality and utility by leveraging the strengths of each source while compensating for their individual limitations. Techniques include merging spatial, spectral, and temporal data to create more detailed and accurate representations of land cover, environmental changes, and other phenomena. Data fusion enables better-informed decision-making in applications such as land management, disaster response, and environmental monitoring.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">Principal Component Analysis (PCA)</td>
+<td style="text-align: left;">PCA is a statistical technique used for dimensionality reduction and feature extraction from multispectral or hyperspectral imagery. By transforming the original spectral bands into a smaller set of uncorrelated variables called principal components, PCA simplifies analysis tasks and aids in data compression. These components capture different aspects of variability in the imagery, such as brightness, texture, or spectral signatures, facilitating efficient storage, noise reduction, and visualization of remote sensing data.</td>
+</tr>
 </tbody>
 </table>
+</div>
 
 
 </div>
@@ -275,8 +301,8 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
-<p>This week was very concept heavy. I decided to use this week and next to engage with an application area of remote sensing that I have always been interested in: mapping informal settlements in cities. I wanted to see if I come across some of the concepts described above, reading through the studies.</p>
-<p>Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructure or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest slums in the world right in the center of Mumbai (Figure 3).</p>
+<p>This week, I explore an application area of remote sensing that I have always been interested in: mapping informal settlements in cities. I wanted to see, if I come across some of the concepts described above, reading through the studies.</p>
+<p>Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructure or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest informal settlements in the world right in the center of Mumbai.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -288,21 +314,17 @@ div.csl-indent {
 </div>
 </div>
 <p>I looked into a few studies that use remote sensing to map informal settlements and turns out its “a mammoth task due to the spatial heterogeneity of urban landscape components, requiring complex analytically processes.” <span class="citation" data-cites="matariraGoogleEarthEngine2022">(<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">Matarira, Mutanga, and Naidu 2022</a>)</span></p>
-<p>It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most slums are. <span class="citation" data-cites="UsingOpenData">(<a href="references.html#ref-UsingOpenData" role="doc-biblioref"><span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement”</span> n.d.</a>)</span> More recently, researchers tried to find methods to work with openly available data sets such as Sentinel or Landsat to identify informal settlements.</p>
-<p>I looked more closely at a study conducted in Durban South Africa. <span class="citation" data-cites="matariraGoogleEarthEngine2022">(<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">Matarira, Mutanga, and Naidu 2022</a>)</span> The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings.The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. Texture is used in this instance to better distinguish different types of built up areas from other classes. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy.</p>
-<p>The method used was pretty complex and I didn’t understand it fully. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:</p>
+<p>It seems that many studies use Very High Resolution (VHR) and High Resolution (HR) satellite imagery. Such data sets are expensive and therefore not accessible for local governments, especially in low and middle income countries, where most informal settlements are. <span class="citation" data-cites="UsingOpenData">(<a href="references.html#ref-UsingOpenData" role="doc-biblioref"><strong>UsingOpenData?</strong></a>)</span> More recently, researchers tried to find methods to work with openly available data sets such as Sentinel or Landsat to identify informal settlements.</p>
+<p><span class="citation" data-cites="matariraGoogleEarthEngine2022">Matarira, Mutanga, and Naidu (<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">2022</a>)</span> map informal settlements in Durban South Africa. The paper investigates different data input combinations in order to find the one that presents most accurate and reliable findings.The study uses Google Earth Engine to process Sentinel 2 images of the city of Durban integrating spectral and textural features in order to understand the extent and location of informal settlements. Texture is used in this instance to better distinguish different types of built up areas from other land cover types. The study found that a classification based on spectral bands and textural information has the highest accuracy. It was able to detect informal settlements with a 80% accuracy. They also deploy data fusion. A composite was formed based on 3 images with low cloud cover and a median value calculated for each pixel. The resulting image was used for processing.</p>
+<p>The method for processing used was pretty complex and I didn’t understand it fully. Classification will be covered later from week 6 onward. I still summarized the key steps below, which I found useful as it gave me a rough understanding of the workflow and effort of such an analysis. Broad steps of the method listed below:</p>
 <ul>
-<li>3 images were selected to form a composite, and a median value was assigned to each pixel, resulting in a single image used for processing.</li>
-<li>Extraction of spectral and texture features from Sentinel 2A bands,</li>
+<li>Select images with low cloud cover, calculate the median for each pixel to form a composite image used for processing.</li>
+<li>Extraction of spectral and texture features from different bands,</li>
 <li>Establishing different combinations of these feature types to be tested,</li>
-<li>Random Forest Classification using GEE,</li>
-<li>Assessment of the classifier’s accuracy (20 classification results were obtained for each input feature set),</li>
-<li>Performance evaluation of feature subsets through a comparison of classification results of different feature subsets against the original feature set from which they were derived in order to establish if feature reduction would significantly improve informal settlement identification or not.</li>
-<li>Accuracy assessment to develop the relative comparative performances of different feature sets, against the benchmark experiment and was tested using Pixel-Based Accuracy Assessment and patch based.</li>
-<li>Regression between Extracted Informal Settlement Areas and Ground Truth Data.</li>
+<li>Use a Random Forest Classification using GEE,</li>
+<li>Assessment of the classifier’s accuracy.</li>
 </ul>
-<p>It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map slums in their city in an automated way or at least with less technical requirements. Ollie Ballinger actually managed to built an interesting Google Earth Engine Application to map slums in Dar es Salam in Tanzania. It is different to the approach taken in Durban because he removes the formal buildings and than applies classification only on the remaining areas. (Figure 4)</p>
-<p>https://www.iadb.org/en/who-we-are/topics/urban-development-and-housing/maiia</p>
+<p>It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map informal areas in their city in an automated way. Ollie Ballinger actually managed to built an interesting Google Earth Engine Application to map informal settlements in Dar es Salam in Tanzania. It is different to the approach taken in Durban because he removes the formal buildings and than applies classification only on the remaining areas.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -316,16 +338,14 @@ div.csl-indent {
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>This week was a little painful, both for me (difficult concepts) and my laptop (computational power needed for working with remote sensing data).It got me excited to get started on Google Earth Engine, where a lot of these processes are automated and run on a cloud. It sounds like that makes it easier to focus on the analysis and get to the fun and interesting bits more quickly, rather than spending a long time making corrections and enhancements to the data. Thank you Google…</p>
-<p>I was not aware how difficult it is to map informal settlements with remote sensing data. I actually assumed it would be one of the easier methods as it is so well known. I can’t say that I completely understood the method used in Durban. However, it was still a worth wile exercise for me because it gave me a better idea of the workflow for remote sensing. It seems to be roughly: - Choose and download the images, - Make a composite, - Make corrections on it, - Identify the relevant features (spectral and texture), - Classification, - Validating and testing accuracy of classification, - Spatial analysis (e.g.&nbsp;regression).</p>
+<p>The lecture and practical content this week was a little painful, both for me (difficult concepts) and my laptop (computational power needed for working with remote sensing data). I made it even harder by choosing a difficult topic to explore for the learning diary.</p>
+<p>However, i got excited to get started on Google Earth Engine, where a lot of these processes are automated and run on a cloud. It sounds like that makes it easier to focus on the analysis and get to the fun and interesting bits more quickly, rather than spending a long time making corrections and enhancements to the data. Thank you Google…</p>
+<p>I was not aware how difficult it is to map informal settlements with remote sensing data. I actually assumed it would be one of the easier methods as it is so well known. I can’t say that I completely understood the method used in Durban. However, it was still a worth wile exercise for me because it gave me a better idea of the workflow for remote sensing. I will keep going back to the topic of informal settlement detection as we go through the term to understand better as I understand more remote sensing concepts.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-matariraGoogleEarthEngine2022" class="csl-entry" role="listitem">
 Matarira, Dadirai, Onisimo Mutanga, and Maheshvari Naidu. 2022. <span>“Google <span>Earth Engine</span> for <span>Informal Settlement Mapping</span>: <span>A Random Forest Classification Using Spectral</span> and <span>Textural Information</span>.”</span> <em>Remote Sensing</em> 14 (20, 20): 5130. <a href="https://doi.org/10.3390/rs14205130">https://doi.org/10.3390/rs14205130</a>.
-</div>
-<div id="ref-UsingOpenData" class="csl-entry" role="listitem">
-<span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement.”</span> n.d. Accessed February 7, 2024. <a href="https://www.tandfonline.com/doi/epdf/10.1080/20964471.2021.1948178?needAccess=true">https://www.tandfonline.com/doi/epdf/10.1080/20964471.2021.1948178?needAccess=true</a>.
 </div>
 </div>
 </section>

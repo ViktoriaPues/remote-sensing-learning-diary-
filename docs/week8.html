@@ -176,9 +176,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.0.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">8.1</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.2</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">8.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -204,8 +204,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary" class="level3" data-number="8.0.1">
-<h3 data-number="8.0.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.0.1</span> Summary</h3>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
 <p>In this lecture, we cover Syntactic Aperture Radar (SAR). Below I explain what it is and what kind of analysis it can be used for?</p>
 <p>In remote sensing there are passive and active sensor, where the former uses the sun as source of light and the latter provides their own illumination. We saw this in week 1. SAR is an active sensor. It works a bit like a bat. It sends out a radar signal. The signal meets an object and bounces back. The sensor “listens” to the reflected signal. The nature of the returning signal tells us information about the earth surface, about the object it bounced back from. Hence, SAR is generating information about the earth typology. The sea for example is a flat surface and, therefore, reflects the radar signal into space rather than towards the sensor. The sea therefore usually looks very dark on a radar image. SAR images can be used to detect floods (flat surface). Sentinel 1 is an example of SAR.</p>
 <p>Unlike optical sensors, which measure a wide range of electromagnetic waves across the spectrium using different bands, SAR sends out only very specific wavelengths (a narrow fraction of the electro magentic spectrum). In SAR sensors, different wavelengths are chosen to measure different things. The most common wavelength are C-Band radio magnetic waves.</p>
@@ -224,9 +224,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Interferometry is a SAR technique that combines multiple SAR images over the same region at different times to detect change in the earth surface. This is for example, very useful to detect movement on the ground surface for earth quake risk detection. However, sadly this is not stored in GEE.</p>
 <p>In GEE different types of SAR data is available. Sentinel 1 is the most commonly used. Power Scale is the raw data. DB scale (decibel scale) is the multiplying 10 times the Log10 value of the power scale value. DB scale is better for visualisation but needs to be treated differently in statistical analysis.</p>
 </section>
-<section id="application" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="application"><span class="header-section-number">8.1</span> Application</h2>
-<p>Identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks – as I discussed last week. There are a few problems with this approach: It’s computationally and financially expensive. Another problem is that optical images are not always available, e.g.&nbsp;when there are clouds. Neuro Networks ….. Go back to min 01.02</p>
+<section id="application" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<p>One of the application area SAR can be used for is identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks – as I discussed last week.</p>
+<p>However, as discussed during the lecture, there are a few problems with this approach. For once, it’s computationally and financially expensive. Another problem is that optical images are not always available, e.g.&nbsp;when there are clouds. Neural Networks dont generalize very well. Trained in one area, they don’t train as well in different geographies.</p>
 <p>How do you differentiate between general change and building damage. Comparing it with the building footprint.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -250,8 +251,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Also reference the economist fire method for detecting fighting.</p>
 </section>
-<section id="reflection" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.2</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
 
 
 </section>

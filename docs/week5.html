@@ -254,15 +254,15 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
-<p>In this week’s practical we calculated NDVI using Google Earth Engine. NDVI stands “<strong>normalized difference vegetation index”</strong> and it is used to quantify the health and density of vegetation. It is calculated from the red and near-infrared bands. The formula for NDVI is</p>
-<p>NDVI = NIR-Red/NIR+Red</p>
+<p>In this week’s practical we calculated NDVI using Google Earth Engine. NDVI stands for Normalized Difference Vegetation Index and it is used to quantify the health and density of vegetation. It is calculated from the red and near-infrared bands. The formula for NDVI is NDVI = NIR-Red/NIR+Red.</p>
 <p>Where:</p>
 <ul>
 <li><p>NIR represents the reflectance in the near-infrared spectral band.</p></li>
 <li><p>Red represents the reflectance in the red spectral band.</p></li>
 </ul>
 <p>NDVI values are normally between -1 to 1. Higher values indicate healthier or denser vegetation cover. In GEE calculating NDVI has its own function:</p>
-<pre><code>var NDVI_2 = clip.normalizedDifference([SR_B5, SR_B4])</code></pre>
+<pre><code>var NDVI_2 = clip.normalizedDifference([SR_B5, SR_B4])
+</code></pre>
 <p>I will look at three applications of NDVI here ranging from pretty simple to very complex with increasing usefulness for policy making as you go down the list:</p>
 <p>1. simple GEE engine app showing NDVI for Northern Africa</p>
 <p>2. study using NDVI and GEE to map drought</p>

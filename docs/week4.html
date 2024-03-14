@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -241,8 +221,8 @@ div.csl-indent {
 <h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
 <p>The Red Cross Climate Center study expands ICLEI’s work by looking more closely at urban heat in the city and mapping it spatially. The authors used Landsat images between 2010 to 2020 to map Land Surface Temperature in the city to identify heat hot spots and Normalised Difference Water Index (NDWI) and normalized difference vegetation index (NDVI) to analyse the relationship between land-cover changes and urban heat island effect (UHI). The findings are combined with demographic and socioeconomic data to understand vulnerability. However, the demographic and socioeconomic data sets from the national census are only available by ward. To develop specific actions for mitigating and adapting to the identified hotpots, we need data on the neighborhood, street and building level. The study presents some high level policy options for mitigation, including increasing green space, housing retrofit and street design.</p>
 <p>Remote sensing data could be used to improve the existing heat vulnerability assessment by identifying specific neighborhoods with poor housing conditions, such as slums, where residents are at higher risk of extreme indoor heat. This would take the Red Cross Climate Center to the next level.</p>
-<p>It is likely that Rajshahi does not have high resolution remote sensing data, such a LiDAR data. Therefore, it is important to rely on publicly available data to ensure that the local government could reproduce the study. As demonstrated in a study conducted in Jakarta, Landsat 8, data can be used to identify informal settlements, despite lower resolution. A similar approach could be taken here. <span class="citation" data-cites="UsingOpenData">(<a href="references.html#ref-UsingOpenData" role="doc-biblioref"><span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement”</span> n.d.</a>)</span></p>
-<p>Several recent (e.g.&nbsp;from 2023) cloud-free images of the city should be obtained with a resolution of 30m. The relevant bands include: band 1-coastal aerosol, band 2-blue, band 3-green, band 4-red, band 5-near infrared (NIR), and bands 6 &amp; 7-shortwave infrared (SWIR). The classification of land cover types could be done using Random Forest (RF) classifier combined available survey data of the city’s informal settlements and Open Street Map data. If no survey data exists, the local government could identify known informal areas that can be manually identified on the image and used for training the classifier. The sample should cover approximately 0.25% of the total study area to reach high accuracy. <span class="citation" data-cites="UsingOpenData">(<a href="references.html#ref-UsingOpenData" role="doc-biblioref"><span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement”</span> n.d.</a>)</span></p>
+<p>It is likely that Rajshahi does not have high resolution remote sensing data, such a LiDAR data. Therefore, it is important to rely on publicly available data to ensure that the local government could reproduce the study. As demonstrated in a study conducted in Jakarta, Landsat 8, data can be used to identify informal settlements, despite lower resolution. A similar approach could be taken here. <span class="citation" data-cites="UsingOpenData">(<a href="references.html#ref-UsingOpenData" role="doc-biblioref"><strong>UsingOpenData?</strong></a>)</span></p>
+<p>Several recent (e.g.&nbsp;from 2023) cloud-free images of the city should be obtained with a resolution of 30m. The relevant bands include: band 1-coastal aerosol, band 2-blue, band 3-green, band 4-red, band 5-near infrared (NIR), and bands 6 &amp; 7-shortwave infrared (SWIR). The classification of land cover types could be done using Random Forest (RF) classifier combined available survey data of the city’s informal settlements and Open Street Map data. If no survey data exists, the local government could identify known informal areas that can be manually identified on the image and used for training the classifier. The sample should cover approximately 0.25% of the total study area to reach high accuracy. <span class="citation" data-cites="UsingOpenData">(<a href="references.html#ref-UsingOpenData" role="doc-biblioref"><strong>UsingOpenData?</strong></a>)</span></p>
 </section>
 <section id="reflection" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
@@ -251,11 +231,6 @@ div.csl-indent {
 <p>The goal of planning decisions is usually to maximize the benefit of an investment while minimizing costs (cost benefit analysis). The next step after identifying where informal settlements are would be to understand benefits of specific interventions, e.g.&nbsp;by modelling the effects of tree planting in different locations.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-UsingOpenData" class="csl-entry" role="listitem">
-<span>“Using Open Data to Detect the Structure and Pattern of Informal Settlements: An Outset to Support Inclusive <span>SDGs</span>’ Achievement.”</span> n.d. Accessed February 7, 2024. <a href="https://www.tandfonline.com/doi/epdf/10.1080/20964471.2021.1948178?needAccess=true">https://www.tandfonline.com/doi/epdf/10.1080/20964471.2021.1948178?needAccess=true</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
