@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -210,6 +176,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -259,12 +231,11 @@ div.csl-indent {
 <section id="summary" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
 <p>This week, I am covering the basics of what remote sensing is and will focus on how remote sensing is based on the electromagnetic field. Other topics this week included scattering, interaction with the earth surface, data formats, and resolution.</p>
-<p>Remote Sensing, also referred to as Earth Observation, is the process of collecting information about the Earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. <span class="citation" data-cites="bradyRemoteSensingDummies2021">Brady (<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">2021</a>)</span></p>
-<p>The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency <span class="citation" data-cites="bradyRemoteSensingDummies2021">Brady (<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">2021</a>)</span>. Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For exmaple, trees have a different electromagnetic signature than buildings or water bodies.</p>
+<p>Remote Sensing, also referred to as Earth Observation, is the process of collecting information about the Earth’s surface from a distance. The information is obtained through aerial photography by airplanes or drones, or from satellite images. The foundation of Remote Sensing the electromagnetic radiation or more simply put light reflected from objects. <span class="citation" data-cites="bradyRemoteSensingDummies2021">(<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">Brady 2021</a>)</span></p>
+<p>The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency . Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For example, trees have a different electromagnetic signature than buildings or water bodies.<span class="citation" data-cites="bradyRemoteSensingDummies2021">(<a href="references.html#ref-bradyRemoteSensingDummies2021" role="doc-biblioref">Brady 2021</a>)</span></p>
 <p>The images taken through remote sensing include wavelengths beyond those that are visible to the human eye. Therefore, analysis of this information allows us to see much more than what would be possible to see on e.g., a simple photography. Sections on the electric magnetic spectrum are captured in so called “bands”. The more bands, the higher the spectral resolution of the image.</p>
 <p>Generally, there are two types of sensors – active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves (Slides).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w1p1.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -275,7 +246,6 @@ div.csl-indent {
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w1p2.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -302,11 +272,10 @@ div.csl-indent {
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="approach-to-mapping-flood-areas-using-landsat"><span class="header-section-number">1.2.1</span> Approach to Mapping Flood Areas using Landsat</h3>
 <p>Figure 3 provides an overview of a typical work flow for a flood risk mapping using Landsat Data. We will understand these steps better over the coming weeks. In short, Landsat 5, 7, and 8 images with low cloud cover are used to cover a longer period. A classifier that differentiates permanent water from temporary water (flood) is applied and vegetation and site specific other data (HAND) is masked (cut out) to leavev only a map of permanent and temporary water.The authors discuss that the accuracy of the classifier could be improved by training it on sentinel data. I think this may be due to the fact that sentinel data has a higher resolution (10m) than Landsat (30m).They also state that this map does not consider socio-demographic data to understand vulnerability. <span class="citation" data-cites="mehmoodMappingFloodAreas2021">Mehmood, Conway, and Perera (<a href="references.html#ref-mehmoodMappingFloodAreas2021" role="doc-biblioref">2021</a>)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w1f4.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/w1f4.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="figures/w1p4.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Figure 3: Workflow Flood Mapping</figcaption>
 </figure>
 </div>
@@ -319,7 +288,6 @@ div.csl-indent {
 <p>Some of the image processing methods applied sound already somewhat familiar as we covered them in the lecture: “The images were geometrically corrected to remove, haze, scan lines and speckles, and then referenced to Mozambique ground-based Geographic: Lat/Lon coordinate system and WGS 84 Datum. Data from twelve spectral bands of Sentinel-2 satellite, covering the visible and near infrared sections of the electromagnetic spectrum, were further used in the analysis.” <span class="citation" data-cites="twumasiFloodMappingMozambique2022">Twumasi et al. (<a href="references.html#ref-twumasiFloodMappingMozambique2022" role="doc-biblioref">2022</a>)</span></p>
 <p>Something that I noticed is that the study only takes into account the growing population for forecasting but not the effects of climate change on the likelihood and intensity of tropical cyclones in the future.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w1p3.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -335,7 +303,7 @@ div.csl-indent {
 <h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
 <p>Next to learning about the electromagnetic field (something I hadn’t really thought about since 8th grade physics lessons) an issue that was interesting to me this week, was the range of different satellites available delivering imagery at different quality and cost.</p>
 <p>In my work in the international development sector, we are often constraint to using publicly available data. This is due to tight project budgets but also because work done by external consultants should be reproducible by the beneficiary themselves, e.g.&nbsp;a local government. I wonder to what extend this presents a barrier for using remote sensing in the development and humanitarian sector. In fact, it seems that many of the free resources of satellite images provide good enough resolution for many planning and policy decisions. The International Monetary Fund for example, already considered remote sensing as a low cost option for data collection in comparison to airborne or ground surveys in 1992. <span class="citation" data-cites="bhattSateEteRemoteSensing1992">(<a href="references.html#ref-bhattSateEteRemoteSensing1992" role="doc-biblioref"><strong>bhattSateEteRemoteSensing1992?</strong></a>)</span> Today, there is much more satellite images available and analysis has become easier, using applications like Google Earth Engine.</p>
-<p>Even though remote sensing is a low cost option for data collection, it is not yet applied yet in large scale in the area I work in (urban planning &amp; international development). According to a recent paper on the potential of remote sensing for the urban development sector, this may be due to limited capabilities in local governments and reluctance to change existing data collection and management systems. <span class="citation" data-cites="prakashOpenEarthObservations2020">Prakash et al. (<a href="references.html#ref-prakashOpenEarthObservations2020" role="doc-biblioref">2020</a>)</span></p>
+<p>Even though remote sensing is a low cost option for data collection, it is not yet applied yet in large scale in the area I work in (urban planning &amp; international development). According to a recent paper on the potential of remote sensing for the urban development sector, this may be due to limited capabilities in local governments and reluctance to change existing data collection and management systems. <span class="citation" data-cites="prakashOpenEarthObservations2020">(<a href="references.html#ref-prakashOpenEarthObservations2020" role="doc-biblioref">Prakash et al. 2020</a>)</span></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

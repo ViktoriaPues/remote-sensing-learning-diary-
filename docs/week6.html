@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -210,6 +176,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -280,21 +252,19 @@ div.csl-indent {
 </ul>
 <section id="supervised-classification" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="supervised-classification"><span class="header-section-number">6.1.1</span> Supervised Classification</h3>
-<p>In supervised classification a predefined training data set is used where labels are known. The training data serves as a reference to train a classifier algorithm to recognize patterns in land cover or land use in the rest of the data set. Once trained it is tested on a subset of the data, the test data, to assess its accuracy. The workflow for supervised classification in GEE is broadly:&nbsp;</p>
+<p>In supervised classification a predefined training data set is used where labels are known. The training data serves as a reference to train a classifier algorithm to recognize patterns in land cover or land use in the rest of the data set. Once trained it is tested on a subset of the data, the test data, to assess its accuracy. According to <span class="citation" data-cites="jeffreya.cardilleCloudBasedRemoteSensing">Jeffrey A. Cardille et al. (<a href="references.html#ref-jeffreya.cardilleCloudBasedRemoteSensing" role="doc-biblioref">n.d.</a>)</span>, the workflow for supervised classification in GEE is broadly:&nbsp;</p>
 <p>1. Select an image.</p>
 <p>2. Collect training data.</p>
 <p>3.Select and train a classifier using the training data.</p>
 <p>4.Classify the image using the selected classifier.</p>
-<p><span class="citation" data-cites="jeffreya.cardilleCloudBasedRemoteSensing">Jeffrey A. Cardille et al. (<a href="references.html#ref-jeffreya.cardilleCloudBasedRemoteSensing" role="doc-biblioref">n.d.</a>)</span></p>
-<p>Random Forest is a supervised machine learning algorithm used for classification and regression. It creates numerous decision trees during the training phase. Each decision tree is built using a random subset of the training data and a random subset of the input features. Each tree contributes to the final prediction of classes, and the mode or mean of these predictions is taken as the overall output. As descibed by <span class="citation" data-cites="haMachineLearningRemote2022">Ha et al. (<a href="references.html#ref-haMachineLearningRemote2022" role="doc-biblioref">2022</a>)</span>, its is this combination of different classification options that makes predictions robust. They explain that a random forest algorithm has four main steps:</p>
+<p>Random Forest is a supervised machine learning algorithm used for classification and regression. It creates numerous decision trees during the training phase. Each decision tree is built using a random subset of the training data and a random subset of the input features. Each tree contributes to the final prediction of classes, and the mode or mean of these predictions is taken as the overall output. As described by <span class="citation" data-cites="haMachineLearningRemote2022">Ha et al. (<a href="references.html#ref-haMachineLearningRemote2022" role="doc-biblioref">2022</a>)</span>, its is this combination of different classification options that makes predictions robust. They explain that a random forest algorithm has four main steps:</p>
 <ol type="1">
-<li><p>randomly select the sample from the dataset;</p></li>
+<li><p>randomly select the sample from the data set;</p></li>
 <li><p>construction of decision trees for each sample;</p></li>
 <li><p>vote for the predictions;</p></li>
 <li><p>determination of the decision trees with the most votes.</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w6p2.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -307,7 +277,7 @@ div.csl-indent {
 </section>
 <section id="unsupervised-classification" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="unsupervised-classification"><span class="header-section-number">6.1.2</span> Unsupervised Classification</h3>
-<p>Unsupervised classification works the other way around. The classes are grouped first based on the data, using a self-taught algorithm, and then categorized into clusters. There is no reference data, where we know what category it is, in this case. The typical work flow us as follows: &nbsp;</p>
+<p>Unsupervised classification works the other way around. The classes are grouped first based on the data, using a self-taught algorithm, and then categorized into clusters. There is no reference data, where we know what category it is, in this case. According to <span class="citation" data-cites="jeffreya.cardilleCloudBasedRemoteSensing">Jeffrey A. Cardille et al. (<a href="references.html#ref-jeffreya.cardilleCloudBasedRemoteSensing" role="doc-biblioref">n.d.</a>)</span>, the typical work flow us as follows: &nbsp;</p>
 <ol type="1">
 <li><p>Assemble features with numeric properties in which to find clusters (training data).</p></li>
 <li><p>Select and instantiate a clusterer.</p></li>
@@ -315,20 +285,18 @@ div.csl-indent {
 <li><p>Apply the clusterer to the scene (classification).</p></li>
 <li><p>Label the clusters.</p></li>
 </ol>
-<p><span class="citation" data-cites="jeffreya.cardilleCloudBasedRemoteSensing">Jeffrey A. Cardille et al. (<a href="references.html#ref-jeffreya.cardilleCloudBasedRemoteSensing" role="doc-biblioref">n.d.</a>)</span></p>
 </section>
 </section>
 <section id="application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
-<p>This week, I explored the application of remote sensing analysis in damage assessment in war. The damage of buildings and civil infrastructure is a specific form of violence in war, often deployed strategically, with devastating impact on civilian populations. With family members killed or injured, homes and livelihoods destroyed, commnity and public service infrastrcutre spaces damaged, people are often left with no other choice than to flee. Monitoring destruction of buildings is therefore important for understanding the dynamics of war, detecting war crimes, providing targeted humanitarian assistance and preparing for reconstruction and recovery.</p>
-<p>Traditionally, damage assessments are conducted through a mix of ground observation and testimony and manual visual classification from high resolution satellite images. This is cost, labor and time intensive. Current research explores (1) how to use machine learning based classification and (2) how to use publicly available data sources for detecting building damage in conflict zones to offer approaches that are faster, more accessible and simplementable at scale. One of the key methodological challenges is that classes (no damage vs damage) are really unbalanced because even after intense attacks, only very few show damage even after a large scale attack and that destruction occurs over time. <span class="citation" data-cites="MonitoringWarDestructiona">(<a href="references.html#ref-MonitoringWarDestructiona" role="doc-biblioref"><span>“Monitoring War Destruction from Space Using Machine Learning”</span> n.d.</a>)</span></p>
+<p>This week, I explored the application of remote sensing analysis in damage assessment in war. The damage of buildings and civil infrastructure is a specific form of violence in war, often deployed strategically, with devastating impact on civilian populations. With family members killed or injured, homes and livelihoods destroyed, community and public service infrastructure spaces damaged, people are often left with no other choice than to flee. Monitoring destruction of buildings is therefore important for understanding the dynamics of war, detecting war crimes, providing targeted humanitarian assistance and preparing for reconstruction and recovery.</p>
+<p>Traditionally, damage assessments are conducted through a mix of ground observation and testimony and manual visual classification from high resolution satellite images. This is cost, labor and time intensive. Current research explores (1) how to use machine learning based classification and (2) how to use publicly available data sources for detecting building damage in conflict zones to offer approaches that are faster, more accessible and implementable at scale. One of the key methodological challenges is that classes (no damage vs damage) are really unbalanced because even after intense attacks, only very few show damage even after a large scale attack and that destruction occurs over time. <span class="citation" data-cites="MonitoringWarDestructiona">(<a href="references.html#ref-MonitoringWarDestructiona" role="doc-biblioref"><span>“Monitoring War Destruction from Space Using Machine Learning”</span> n.d.</a>)</span></p>
 <p>Let’s look at two recent studies from Syria and Ukraine.</p>
 <section id="damage-assessment-in-syria-using-machine-learning" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="damage-assessment-in-syria-using-machine-learning"><span class="header-section-number">6.2.1</span> Damage Assessment in Syria using machine learning</h3>
-<p><span class="citation" data-cites="MonitoringWarDestructiona"><span>“Monitoring War Destruction from Space Using Machine Learning”</span> (<a href="references.html#ref-MonitoringWarDestructiona" role="doc-biblioref">n.d.</a>)</span> use high resolution data of three Syrian cities and applies machine learning technique to detect building damage over time. They use a two stage classification process which feeds data first to a Convolutional Neural Networks (CNN) and then passes it through a random forest. To get a rough understanding of CNN, watch the video linked below. The CNN generates labels and predicted values for each pixel that are then used to train a RF model to generate a prediction for the test sample. The two steps are needed because building damage is both spatially as well as structurally auto-correlated and hence using just a RF would lead to over fitting of the model. While this approach is techncially quite complex, it is very useful because the machine learning approach makes it applicable in conflict regions anywhere and scaling it doesnt come with significant extra costs.</p>
+<p><span class="citation" data-cites="MonitoringWarDestructiona"><span>“Monitoring War Destruction from Space Using Machine Learning”</span> (<a href="references.html#ref-MonitoringWarDestructiona" role="doc-biblioref">n.d.</a>)</span> use high resolution data of three Syrian cities and applies machine learning technique to detect building damage over time. They use a two stage classification process which feeds data first to a Convolutional Neural Networks (CNN) and then passes it through a random forest. To get a rough understanding of CNN, watch the video linked below. The CNN generates labels and predicted values for each pixel that are then used to train a RF model to generate a prediction for the test sample. The two steps are needed because building damage is both spatially as well as structurally auto-correlated and hence using just a RF would lead to over fitting of the model. While this approach is technically quite complex, it is very useful because the machine learning approach makes it applicable in conflict regions anywhere and scaling it doesn’t come with significant extra costs.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vJiZqZRkIg8" frameborder="0" allowfullscreen=""></iframe>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w6p3.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -338,15 +306,14 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>However, a major issue with this approach is that it may be overfitting. When they are doing the test / train split, they are doing this within each of the 6 Syrian cities. This is not how a model would be used in practice. What is more likely is that a model is trained on a specific city in Syria and then used in a new city, e.g.&nbsp;Gaza. The model performs well because a test point and a training point in the same city will be very similar. This has been discussed in the lecture 10 and we will look at a different approach in week 10 using SAR data.</p>
+<p>However, a major issue with this approach is that it may be over fitting. When they are doing the test / train split, they are doing this within each of the 6 Syrian cities. This is not how a model would be used in practice. What is more likely is that a model is trained on a specific city in Syria and then used in a new city, e.g.&nbsp;Gaza. The model performs well because a test point and a training point in the same city will be very similar. This has been discussed in the lecture 10 and we will look at a different approach in week 10 using SAR data.</p>
 </section>
 <section id="damage-assessment-in-ukraine-using-public-data-sources" class="level3" data-number="6.2.2">
 <h3 data-number="6.2.2" class="anchored" data-anchor-id="damage-assessment-in-ukraine-using-public-data-sources"><span class="header-section-number">6.2.2</span> Damage Assessment in Ukraine using public data sources</h3>
-<p><span class="citation" data-cites="aimaitiWarRelatedBuilding2022">Aimaiti et al. (<a href="references.html#ref-aimaitiWarRelatedBuilding2022" role="doc-biblioref">2022</a>)</span> use a completely different approach for detecting buidling distruction in Kyiv Ukraine. The focus of their methodology is on testing how useful publicly available sattelite data can be for damage assessment.</p>
+<p><span class="citation" data-cites="aimaitiWarRelatedBuilding2022">Aimaiti et al. (<a href="references.html#ref-aimaitiWarRelatedBuilding2022" role="doc-biblioref">2022</a>)</span> use a completely different approach for detecting building destruction in Kyiv Ukraine. The focus of their methodology is on testing how useful publicly available satellite data can be for damage assessment.</p>
 <p>The study tests two different approaches: 1. Sentinel 1 data applying a SAR log ratio of intensity (SAR = Synthetic Aperture Radar is a remote sensing technology that uses microwave radar to create high-resolution images of the Earth’s surface, regardless of weather conditions or time of day.) 2. Sentinel 2 data applying texture analysis</p>
-<p>To support this approach, changes in other other land covers (e.g., forest) are suppresed using a mask for buit up areas based on OpenStreetMap building footprints and World Settlement Footprint (WSF). For assessing the accuracy of the approach the classification was manually verified by comparing findings with the official United Nations Satellite Center (UNOSAT) damage assessment map. The classification (combined from the two appriaches) achieved accuracy of 58%.</p>
+<p>To support this approach, changes in other other land covers (e.g., forest) are suppressed using a mask for built up areas based on OpenStreetMap building footprints and World Settlement Footprint (WSF). For assessing the accuracy of the approach the classification was manually verified by comparing findings with the official United Nations Satellite Center (UNOSAT) damage assessment map. The classification (combined from the two approaches) achieved accuracy of 58%.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w6p4.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

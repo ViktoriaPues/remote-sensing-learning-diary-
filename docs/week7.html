@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -84,7 +50,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./week8.html" rel="next">
 <link href="./week6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -239,6 +205,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -288,16 +260,16 @@ window.Quarto = {
 
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
-<p>This week we continued working on classifications. I will cover sub-pixel-based analysis, object-based analysis and accuracy below. The main take away this week is this: <strong>When classification models do not consider spatial autocorrelation (a measure of similarity between nearby data), it will likely lead to overly obtimistic accuracy levels.</strong></p>
-<p>What happens if a classificaiton model doesn’t consider spatial autocorrelation ? The model will have better accuracy that it actually does</p>
+<p>This week we continued working on classifications. I will cover sub-pixel-based analysis, object-based analysis and accuracy below. The main take away this week is this: <strong>When classification models do not consider spatial autocorrelation (a measure of similarity between nearby data), it will likely lead to overly optimistic accuracy levels.</strong></p>
+<p>What happens if a classification model doesn’t consider spatial autocorrelation ? The model will have better accuracy that it actually does</p>
 <section id="sub-pixel-based-analysis" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="sub-pixel-based-analysis"><span class="header-section-number">7.1.1</span> Sub-pixel-based Analysis</h3>
-<p>Sub-pixel analysis is useful when a pixel has more than one land cover type. A method that can be applied is Spectralmixture analysis (SMA). It is used to decompose the spectral reflectance within a pixel from surface reflectance from different material. “The mixing can be modeled as the sum of endmember reflectance multiplied by their fraction contribution to a best-fit mixed spectrum.” <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref"><strong>jensen2015?</strong></a>)</span> In short this means it determines the proportion of landcover per pixel.</p>
+<p>Sub-pixel analysis is useful when a pixel has more than one land cover type. A method that can be applied is Spectralmixture analysis (SMA). It is used to decompose the spectral reflectance within a pixel from surface reflectance from different material. “The mixing can be modeled as the sum of end member reflectance multiplied by their fraction contribution to a best-fit mixed spectrum.” <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref"><strong>jensen2015?</strong></a>)</span> In short this means it determines the proportion of land cover per pixel.</p>
 </section>
 <section id="object-based-analysis" class="level3" data-number="7.1.2">
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="object-based-analysis"><span class="header-section-number">7.1.2</span> Object-based Analysis</h3>
 <p>Object-based image analysis (OBIA) is the counterpart to pixel-based analysis. Rather than classifying each pixel OBIA, detects meaningful objects in groups of nearby pixels to classify and image. OBIA follows a two step process:</p>
-<p>1.Segmentation of the image into objects based on spectral and spatial characteristics of neighbouring pixels using a segmentation algorithm, and</p>
+<p>1.Segmentation of the image into objects based on spectral and spatial characteristics of neighboring pixels using a segmentation algorithm, and</p>
 <p>2.Classification of objects using either supervised or unsupervised approaches.</p>
 <p>There are different segmentation algorithms that can be used. The most common on is the Simple Non-Iterative Clustering (SNIC). SNIC assembles clusters from neighboring pixels based on three parameters of compactness, connectivity, and neighborhood size. <span class="citation" data-cites="jeffreya.cardilleCloudBasedRemoteSensing">(<a href="references.html#ref-jeffreya.cardilleCloudBasedRemoteSensing" role="doc-biblioref">Jeffrey A. Cardille et al., n.d.</a>)</span></p>
 </section>
@@ -310,7 +282,6 @@ window.Quarto = {
 <li>Overall accuracy - represents the combined fraction of correctly classified pixels across all land cover types. <span class="math inline">\(TP+TN/TP+FP+FN+TN\)</span></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w7p1.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -328,7 +299,6 @@ window.Quarto = {
 <p>The study discussed in week three used publicly available data (sentinel 2) and pixel based classification with a random forest algorithm <span class="citation" data-cites="matariraGoogleEarthEngine2022">(<a href="references.html#ref-matariraGoogleEarthEngine2022" role="doc-biblioref">Matarira, Mutanga, and Naidu 2022</a>)</span> to map informal settlements in Durban, South Africa. In this study, the focus is on exploring the potential of open data to map settlements. It was able to detect informal settlements with a overall accuracy of around 80%.</p>
 <p>This week, I am looking at a different study by the same authors, where <span class="citation" data-cites="matariraObjectBasedInformalSettlement2022">Matarira et al. (<a href="references.html#ref-matariraObjectBasedInformalSettlement2022" role="doc-biblioref">2022</a>)</span> use object based-classification to identify informal settlements also in Durban. The image below gives a good overview of the methodology. It uses both public medium resolution data sets (sentinel 1 and 2) as well as high resolution data (Planet). This method identified informal settlement with an accuracy of 87%, so a bit higher than the open data study.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w7p2.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -341,8 +311,8 @@ window.Quarto = {
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>I personally feel like this lecture/ practical was a little rushed. I am starting to get a rough overrview on the different types of classifications. But the practical code is pretty complex. While it works when I copy it over to GEE and its cool to see how it builds up the maps step by step, I personally would need a bit more guidance and hand-holding to really put these concepts into practice.</p>
-<p>A resource that I started using and that I find really helpful is this online book: <a href="https://www.eefabook.org/" class="uri">https://www.eefabook.org/</a>. It has fantastic videos that guide you step by step through how to implement the different methods in GEE. I am working my way through but haven’t made it to bbject-based classification yet. The book and videos are a good addition to the lectures and practicals, which go deeper into the theory and are more critical on methods.</p>
+<p>I personally feel like this lecture/ practical was a little rushed. I am starting to get a rough overview on the different types of classifications. But the practical code is pretty complex. While it works when I copy it over to GEE and its cool to see how it builds up the maps step by step, I personally would need a bit more guidance and hand-holding to really put these concepts into practice.</p>
+<p>A resource that I started using and that I find really helpful is this online book: <a href="https://www.eefabook.org/" class="uri">https://www.eefabook.org/</a>. It has fantastic videos that guide you step by step through how to implement the different methods in GEE. I am working my way through but haven’t made it to object-based classification yet. The book and videos are a good addition to the lectures and practicals, which go deeper into the theory and are more critical on methods.</p>
 <p>Doing this module, I have been thinking a lot about how to find the right level of detail in all of this content for me. I’ve been thinking about what type of role I want to have after learning all of these new contents and skills. Do I want to do remote sensing analysis myself in my work going forward? Or, do I want to be in the position to work with people who do this? Or be able to procure such analysis? Finding answers to these question, over the summer perhaps, will be useful to be strategic in how I select courses for the remainder of the course and what content to really focus on.</p>
 <p>In any case, I feel like my brain has been expanding over the past few months (sometimes with a lot of growing pain). That in itself is great!</p>
 
@@ -755,8 +725,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week8.html" class="pagination-link" aria-label="<span class='chapter-number'>8</span>&nbsp; <span class='chapter-title'>Syntactic Aperture Radar</span>">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

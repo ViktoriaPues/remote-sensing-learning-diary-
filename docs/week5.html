@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -210,6 +176,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -262,7 +234,6 @@ div.csl-indent {
 <p>This week, we finally started working with Google Earth Engine (GEE). I was excited about this because it is supposed to allow researchers and practitioners to cut straight to the interesting analytically steps of the work flow and make the downloading and (pre-) processing of the satellite data easier and faster. Great news for someone like me who is still a newbie to the whole coding and data science world.</p>
 <p>In summary, GEE is a cloud-based platform developed by Google that enables users to access and analyse huge amounts of satellite data. The main advantage is that, when we do analysis on GEE it’s not running on our own machine. It is either running on the browser (client side) or on Google serves (server side). The GGE servers are very powerful and can compute huge amounts of data in seconds.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w5p1.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -279,11 +250,11 @@ div.csl-indent {
 <li><p>A specific part of your code ends with a ;</p></li>
 <li><p>Objects are dictionaries in Javascript.</p></li>
 </ul>
-<p>GEE allows very fast visualization during algorithm development as it deploys a pyramid of reduced resolution. This is a hierarchical structure of image tiles generated from original high-resolution imagery. This pyramid is created by systematically down scaling the resolution of the original images, producing a series of progressively lower-resolution versions. Each level of the pyramid represents a different level of detail, with the top level typically being the highest resolution and subsequent levels having progressively lower resolutions. This makes storages and retrieving images more efficient and also allows us to zoom in and out on the map and the resolution of pixels adjusting accordingly.</p>
+<p>GEE allows very fast visualization during algorithm development as it deploys a pyramid of reduced resolution. This is a hierarchical structure of image tiles generated from original high-resolution imagery. This pyramid is created by systematically down scaling the resolution of the original images, producing a series of progressively lower-resolution versions. Each level of the pyramid represents a different level of detail, with the top level typically being the highest resolution and subsequent levels having progressively lower resolutions. This makes storage and retrieving images more efficient and also allows us to zoom in and out on the map and the resolution of pixels adjusting accordingly.</p>
 </section>
 <section id="application" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
-<p>In this week’s practical we calculated NDVI using Google Earth Engine. NDVI stands “<strong>normalized difference vegetation index”</strong> and it is used to quantify the health and density of vegitation. It is calculated from the red and near-infrared bands. The formula for NDVI is</p>
+<p>In this week’s practical we calculated NDVI using Google Earth Engine. NDVI stands “<strong>normalized difference vegetation index”</strong> and it is used to quantify the health and density of vegetation. It is calculated from the red and near-infrared bands. The formula for NDVI is</p>
 <p>NDVI = NIR-Red/NIR+Red</p>
 <p>Where:</p>
 <ul>
@@ -300,7 +271,6 @@ div.csl-indent {
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="gee-ndvi-slider-app"><span class="header-section-number">5.2.1</span> GEE NDVI Slider App</h3>
 <p>This app is a very intuitive introduction to NDVI. It is simply a base map of North Africa and South Asia with an NDVI layer. Different NDVI values are assigned 5 different colors to represent vegetation density/health. What’s cool about this app is that you can choose different times for the left and right hand side of the screen and then drag the image between them. It allows you to visually detect vegetation change. In my case here, I looked at the Nile Delta Region between 2000 and 2023. You can see that vegetation increased in the west and some of the coastal areas. What makes this app great, is that it is really simple to use and allows to communicate differences in vegetation in a very powerful way. In my case, it could help visualize the success of irrigation policy in the Nile Delta over the past two decades.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w5p3.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -311,7 +281,6 @@ div.csl-indent {
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w5p4.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -328,7 +297,6 @@ div.csl-indent {
 <p><span class="citation" data-cites="khanGlobalDroughtMonitoring2021">Khan and Gilani (<a href="references.html#ref-khanGlobalDroughtMonitoring2021" role="doc-biblioref">2021</a>)</span> developed a global Drought Severity Index (DSI) using Google Earth Engine. The study uses MODIS terra data. The parameters used to develop the index are NDVI combined with evapotranspiration (ET) and potential evapotranspiration (PET). Evapotranspiration (ET) and Potential Evapotranspiration (PET) are indicate how much water is transferred from the earth to the atmosphere through evaporation from soil and transpiration from vegetation. ET and PET data sets are in the GEE catalog from 2001 to to now. The study develops annual DSI maps using the median DSI value.</p>
 <p>This study in interesting for comparing how severely different regions suffer from drough and if we can defect changes over time. However, it says nothing about the impact of drought on people.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w5p5.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -344,7 +312,6 @@ div.csl-indent {
 <p>The worst impact related to drought is famine, but not every drought leads to famine. Famine, in contrast to drought however, is a man made disaster. As <span class="citation" data-cites="alexdewaalMassStarvationHistory2017">Alex De Waal (<a href="references.html#ref-alexdewaalMassStarvationHistory2017" role="doc-biblioref">2017</a>)</span> argues, famine is driven by political conflict, embargoes and blockades, hostility against humanitarian principles and a volatile global economies or shocks. Therfore, understanding famine needs to combine data about drought with a range of other data sets on conflict, humanitarian access, population, food security, global value chains and so on.</p>
 <p>USAID has been running the Famine Early Earning System Network since 1980s and is one of the major providers for evidence based early warning information on current and future food insecurity. They developed a Acute Food Insecurity Area Classification Map. They use satellite data to understand drought but enrich this with a range of other analysis including conflict, migration, market and trade</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">'figures/w5p6.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -359,11 +326,11 @@ div.csl-indent {
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
-<p>GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week. Some of the limitation include:</p>
+<p>GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week. According to <span class="citation" data-cites="amaniGoogleEarthEngine2020">(<a href="references.html#ref-amaniGoogleEarthEngine2020" role="doc-biblioref"><strong>amaniGoogleEarthEngine2020?</strong></a>)</span>, <span class="citation" data-cites="gorelickGoogleEarthEngine2017">Gorelick et al. (<a href="references.html#ref-gorelickGoogleEarthEngine2017" role="doc-biblioref">2017</a>)</span>, some of the limitation include:</p>
 <ul>
 <li><p>Limited storage of 250GB for each user and limited memory to train machine learning algorithms.</p></li>
 <li><p>No control over how computations are run in the back end, however, this is also why it is easy to use and fast.</p></li>
-<li><p>Interactive session limits and constraints on session duration and requests hinder flexibility. <span class="citation" data-cites="amaniGoogleEarthEngine2020">(<a href="references.html#ref-amaniGoogleEarthEngine2020" role="doc-biblioref"><strong>amaniGoogleEarthEngine2020?</strong></a>)</span>, <span class="citation" data-cites="gorelickGoogleEarthEngine2017">Gorelick et al. (<a href="references.html#ref-gorelickGoogleEarthEngine2017" role="doc-biblioref">2017</a>)</span></p></li>
+<li><p>Interactive session limits and constraints on session duration and requests hinder flexibility.</p></li>
 </ul>
 <p>In addition, to these technical issues, I could imagine that if you get started right away with GEE, you may lack some understanding of pre-processing of data and the decisions taken for corrections and enhancement, as well as the assumptions and mechanics of some of the classification models applied (more on this in the next 2 weeks). This may lead to misinterpretation of results.</p>
 <p>In my view another risk related to the proliferation of remote sensing in planning practice is that it may lead to a very dominantly technocratic approach to decision making. While this is of course helpful and important, it is not the only valuable way to understand cities. Cities are complex living organisms and often best understood through different analytically lenses. Understanding the lived experience of people, cultural meaning of places and practices or political agenda is equally important to fully understand how cities work. For example, it is really useful to understand where flood risk areas are in a city, and remote sensing is a great way to do so, but it is also important to understand why people decide to settle there and perhaps reject resettlement policies, stakeholder engagement is a good way to understand this.</p>

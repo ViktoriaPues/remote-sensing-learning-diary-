@@ -70,7 +70,6 @@ Let's look at two recent studies from Syria and Ukraine.
 ```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vJiZqZRkIg8" frameborder="0" allowfullscreen></iframe>
 ```
-
 ```{r, echo=FALSE, include_graphics15, out.width='100%', fig.cap='Figure 15: Damange Assessment Allepo', fig.scap='[@MonitoringWarDestructiona]', cache=FALSE}
 knitr::include_graphics('figures/w6p3.png')
 ```
