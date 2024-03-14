@@ -4,7 +4,7 @@
 
 Images classification is one of the main outputs, we try to achieve when analysing satellite images. Classification turns a satellite image into a schematic map showing different land use or land cover types. Essentially, it means labeling each pixel of the selected image bands as a categorical variable.
 
-```{r, message=FALSE, include_graphics13, out.width='100%', fig.cap='Figure 13: Classification', fig.scap='jeffreya.cardilleCloudBasedRemoteSensing'}
+```{r, message=FALSE, include_graphics13, out.width='100%', fig.cap='Figure 13: Classification', fig.scap='jeffreya.cardilleCloudBasedRemoteSensing', cache=FALSE}
 knitr::include_graphics('figures/w6p1.png')
 ```
 
