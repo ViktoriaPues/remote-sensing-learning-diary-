@@ -6,7 +6,7 @@ This week, we finally started working with Google Earth Engine (GEE). I was exci
 
 In summary, GEE is a cloud-based platform developed by Google that enables users to access and analyse huge amounts of satellite data. The main advantage is that, when we do analysis on GEE it's not running on our own machine. It is either running on the browser (client side) or on Google serves (server side). The GGE servers are very powerful and can compute huge amounts of data in seconds.
 
-```{r, message=FALSE, include_graphics8, out.width='100%', fig.cap='Figure 8: Google Earth Engine User Interface', fig.scap='@amaniGoogleEarthEngine2020a'}
+```{r, echo=FALSE, include_graphics8, out.width='100%', fig.cap='Figure 8: Google Earth Engine User Interface', fig.scap='@amaniGoogleEarthEngine2020a', cache=FALSE}
 knitr::include_graphics('figures/w5p1.png')
 
 ```
@@ -21,11 +21,11 @@ An Application Programming Interface (API) is a set of rules and tools that allo
 
 -   Objects are dictionaries in Javascript.
 
-GEE allows very fast visualization during algorithm development as it deploys a pyramid of reduced resolution. This is a hierarchical structure of image tiles generated from original high-resolution imagery. This pyramid is created by systematically down scaling the resolution of the original images, producing a series of progressively lower-resolution versions. Each level of the pyramid represents a different level of detail, with the top level typically being the highest resolution and subsequent levels having progressively lower resolutions. This makes storages and retrieving images more efficient and also allows us to zoom in and out on the map and the resolution of pixels adjusting accordingly.
+GEE allows very fast visualization during algorithm development as it deploys a pyramid of reduced resolution. This is a hierarchical structure of image tiles generated from original high-resolution imagery. This pyramid is created by systematically down scaling the resolution of the original images, producing a series of progressively lower-resolution versions. Each level of the pyramid represents a different level of detail, with the top level typically being the highest resolution and subsequent levels having progressively lower resolutions. This makes storage and retrieving images more efficient and also allows us to zoom in and out on the map and the resolution of pixels adjusting accordingly.
 
 ## Application
 
-In this week's practical we calculated NDVI using Google Earth Engine. NDVI stands "**normalized difference vegetation index"** and it is used to quantify the health and density of vegitation. It is calculated from the red and near-infrared bands. The formula for NDVI is
+In this week's practical we calculated NDVI using Google Earth Engine. NDVI stands "**normalized difference vegetation index"** and it is used to quantify the health and density of vegetation. It is calculated from the red and near-infrared bands. The formula for NDVI is
 
 NDVI = NIR-Red/NIR+Red
 
@@ -53,11 +53,11 @@ I will look at three applications of NDVI here ranging from pretty simple to ver
 
 This app is a very intuitive introduction to NDVI. It is simply a base map of North Africa and South Asia with an NDVI layer. Different NDVI values are assigned 5 different colors to represent vegetation density/health. What's cool about this app is that you can choose different times for the left and right hand side of the screen and then drag the image between them. It allows you to visually detect vegetation change. In my case here, I looked at the Nile Delta Region between 2000 and 2023. You can see that vegetation increased in the west and some of the coastal areas. What makes this app great, is that it is really simple to use and allows to communicate differences in vegetation in a very powerful way. In my case, it could help visualize the success of irrigation policy in the Nile Delta over the past two decades.
 
-```{r, message=FALSE, include_graphics9, out.width='100%', fig.cap='Figure 9: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider'}
+```{r, echo=FALSE, include_graphics9, out.width='100%', fig.cap='Figure 9: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider', cache=FALSE}
 knitr::include_graphics('figures/w5p3.png')
 ```
 
-```{r, message=FALSE, include_graphics10, out.width='100%', fig.cap='Figure 10: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider'}
+```{r, echo=FALSE, include_graphics10, out.width='100%', fig.cap='Figure 10: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider', cache=FALSE}
 knitr::include_graphics('figures/w5p4.png')
 ```
 
@@ -69,7 +69,7 @@ NDVI can also be used to detect drought. Drought is one of the deadliest disaste
 
 This study in interesting for comparing how severely different regions suffer from drough and if we can defect changes over time. However, it says nothing about the impact of drought on people.
 
-```{r, message=FALSE, include_graphics11, out.width='100%', fig.cap='Figure 11: Global Drought Severity Index', fig.scap='Image Source: @khanGlobalDroughtMonitoring2021 '}
+```{r, echo=FALSE, include_graphics11, out.width='100%', fig.cap='Figure 11: Global Drought Severity Index', fig.scap='Image Source: @khanGlobalDroughtMonitoring2021 ', cache=FALSE}
 knitr::include_graphics('figures/w5p5.png')
 ```
 
@@ -79,7 +79,7 @@ The worst impact related to drought is famine, but not every drought leads to fa
 
 USAID has been running the Famine Early Earning System Network since 1980s and is one of the major providers for evidence based early warning information on current and future food insecurity. They developed a Acute Food Insecurity Area Classification Map. They use satellite data to understand drought but enrich this with a range of other analysis including conflict, migration, market and trade
 
-```{r, message=FALSE, include_graphics12, out.width='100%', fig.cap='Figure 12: Acute Food Insecurity Area Classification Map', fig.scap='Image Source: https://fews.net/ '}
+```{r, echo=FALSE, include_graphics12, out.width='100%', fig.cap='Figure 12: Acute Food Insecurity Area Classification Map', fig.scap='Image Source: https://fews.net/ ', cache=FALSE}
 knitr::include_graphics('figures/w5p6.png')
 ```
 
@@ -87,13 +87,13 @@ This is a good example that remote sensing analysis is often most powerful for d
 
 ## Reflection
 
-GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week. Some of the limitation include:
+GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week. According to @amaniGoogleEarthEngine2020, @gorelickGoogleEarthEngine2017, some of the limitation include:
 
 -   Limited storage of 250GB for each user and limited memory to train machine learning algorithms.
 
 -   No control over how computations are run in the back end, however, this is also why it is easy to use and fast.
 
--   Interactive session limits and constraints on session duration and requests hinder flexibility. @amaniGoogleEarthEngine2020, @gorelickGoogleEarthEngine2017
+-   Interactive session limits and constraints on session duration and requests hinder flexibility.
 
 In addition, to these technical issues, I could imagine that if you get started right away with GEE, you may lack some understanding of pre-processing of data and the decisions taken for corrections and enhancement, as well as the assumptions and mechanics of some of the classification models applied (more on this in the next 2 weeks). This may lead to misinterpretation of results.
 
