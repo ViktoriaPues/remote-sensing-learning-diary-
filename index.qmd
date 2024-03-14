@@ -6,7 +6,7 @@ This is a Quarto book. To learn more about Quarto books visit <https://quarto.or
 
 Hi there! I'm Viktoria. On the following pages you'll find my learning diary for the module Remote Sensing, which is part of the MSc Urban Spatial Science at the CASA, the Centre for Advanced Spatial Analysis at the University College London. For each week, you'll find a short summary of the concepts covered that week, some examples of how they are applied and some personal reflections.
 
-I am a part time student. When I'm not studying, I work as an urban planner in the international development sector. I have been working in this field for the past 5 years in different roles - as an urban development consultant for a multidisciplinary built environment consultancy (Atkins) and as a policy advisor to the Ministry for International Development in Germany. Over the years, I worked on the design and implementation of urban development projects and programmes, mainly linked to climate change and urban resilience as well as reconstruction in a range of cities in Low and Middle Income Countries, including Gyumri in Armenia, Kharkiv in Ukraine, Rasjahi in Bangladesh, Mandera in Kenya, Alexandria in Egypt.
+I am a part time student. When I'm not studying, I work as an urban planner in the international development sector. I have been working in this field for the past 5 years in different roles - as an urban development consultant for a multidisciplinary built environment consultancy (AtkinsRealis) and as a policy advisor to the Ministry for International Development in Germany. Over the years, I worked on the design and implementation of urban development projects and programmes, mainly linked to climate change and urban resilience as well as reconstruction in a range of cities in Low and Middle Income Countries, including Gyumri in Armenia, Kharkiv in Ukraine, Rasjahi in Bangladesh, Mandera in Kenya, Alexandria in Egypt.
 
 From my experience, a key challenge in these projects is a lack of reliable data on the urban systems that can serve as a baseline for policy making and investment planning. This challenge is particularly acute in small cities in Africa and Asia, where the majority of urbanisation is predicted to take place in the future.
 
@@ -19,3 +19,10 @@ Therefore, i will relate the content covered in this module to places and topics
 -   monitor conflict and assess damage as a baseline for reconstruction processes, and
 
 -   analyse climate change related risks in cities, especially heat, drought and flooding.
+
+Here is an image of me in space in the Kusama exhibition at Tate Modern.
+
+```{r, echo=FALSE, include_graphics0, out.width='100%', cache=FALSE}
+knitr::include_graphics('figures/IMG_4074.jpg')
+```
+

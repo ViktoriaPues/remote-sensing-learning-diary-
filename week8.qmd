@@ -1,6 +1,6 @@
-## Syntactic Aperture Radar 
+## Syntactic Aperture Radar
 
-### Summary 
+## Summary
 
 In this lecture, we cover Syntactic Aperture Radar (SAR). Below I explain what it is and what kind of analysis it can be used for?
 
@@ -22,7 +22,7 @@ In GEE different types of SAR data is available. Sentinel 1 is the most commonly
 
 ## Application
 
-Identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks -- as I discussed last week. There are a few problems with this approach: It\'s computationally and financially expensive. Another problem is that optical images are not always available, e.g. when there are clouds. Neuro Networks ..... Go back to min 01.02
+Identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks -- as I discussed last week. There are a few problems with this approach: It's computationally and financially expensive. Another problem is that optical images are not always available, e.g. when there are clouds. Neuro Networks ..... Go back to min 01.02
 
 How do you differentiate between general change and building damage. Comparing it with the building footprint.
 
@@ -36,4 +36,4 @@ knitr::include_graphics('figures/w8p3.png')
 
 Also reference the economist fire method for detecting fighting.
 
-## Reflection 
+## Reflection

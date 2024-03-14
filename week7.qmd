@@ -8,7 +8,7 @@ What happens if a classification model doesn't consider spatial autocorrelation 
 
 ### Sub-pixel-based Analysis
 
-Sub-pixel analysis is useful when a pixel has more than one land cover type. A method that can be applied is Spectralmixture analysis (SMA). It is used to decompose the spectral reflectance within a pixel from surface reflectance from different material. "The mixing can be modeled as the sum of end member reflectance multiplied by their fraction contribution to a best-fit mixed spectrum." [@jensen2015] In short this means it determines the proportion of land cover per pixel.
+Sub-pixel analysis is useful when a pixel has more than one land cover type. A method that can be applied is Spectralmixture analysis (SMA). It is used to decompose the spectral reflectance within a pixel from surface reflectance from different material. "The mixing can be modeled as the sum of end member reflectance multiplied by their fraction contribution to a best-fit mixed spectrum." [@jensenIntroductoryDigitalImage2015] In short this means it determines the proportion of land cover per pixel.
 
 ### Object-based Analysis
 

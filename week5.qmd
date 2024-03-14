@@ -87,7 +87,7 @@ This is a good example that remote sensing analysis is often most powerful for d
 
 ## Reflection
 
-GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week. According to @amaniGoogleEarthEngine2020, @gorelickGoogleEarthEngine2017, some of the limitation include:
+GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week. According to @amaniGoogleEarthEngine2020a, @gorelickGoogleEarthEngine2017, some of the limitation include:
 
 -   Limited storage of 250GB for each user and limited memory to train machine learning algorithms.
 
