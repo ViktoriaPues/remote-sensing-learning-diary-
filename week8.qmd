@@ -18,24 +18,32 @@ knitr::include_graphics('figures/w8p1.png')
 
 Interferometry is a SAR technique that combines multiple SAR images over the same region at different times to detect change in the earth surface. This is for example, very useful to detect movement on the ground surface for earth quake risk detection. However, sadly this is not stored in GEE.
 
-In GEE different types of SAR data is available. Sentinel 1 is the most commonly used. Power Scale is the raw data. DB scale (decibel scale) is the multiplying 10 times the Log10 value of the power scale value. DB scale is better for visualisation but needs to be treated differently in statistical analysis.
+In GEE different types of SAR data is available. Sentinel 1 is the most commonly used. Power Scale is the raw data. DB scale (decibel scale) is the multiplying 10 times the Log10 value of the power scale value. DB scale is better for visualization but needs to be treated differently in statistical analysis.
 
 ## Application
 
-One of the application area SAR can be used for is identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks -- as I discussed last week.
+SAR is very useful for change detection. One of the application areas is therefore damage assessment - in conflict but also natural disaster.
 
-However, as discussed during the lecture, there are a few problems with this approach. For once, it's computationally and financially expensive. Another problem is that optical images are not always available, e.g. when there are clouds. Neural Networks dont generalize very well. Trained in one area, they don't train as well in different geographies.
+Ollie (Ballinger) is working on an approach for using SAR data for identifying buildings that have been damaged in conflict due to fighting. The current state of the art to do this is using High Resolution Images and Neural Networks -- as I discussed last week. However, as discussed during the lecture, there are a few problems with this approach. For once, it's computationally and financially expensive. Another problem is that optical images are not always available, e.g. when there are clouds. Neural Networks don't generalize very well. Trained in one area, they don't work as well in a different geography.
 
-How do you differentiate between general change and building damage. Comparing it with the building footprint.
+So the method that Ollie is working on, and presented in the lecture, uses pre- and post-disater images and applies a simple t-test to calculate the ratio in change in amplitude to general pixel variance. Damage to a buildings leads to a change in backscatter amplitude from the pre to post disaster image. In order to differentiate between a building damage and normal changes the results need to be compared with the building footprint. There is always a little bit of variation, e.g. because of rain or snow. In the image below you can see the difference between double bounce scattering (building) and rough surface scattering (rubble). The variation within pre and post scattering is fairly low, because both the pre and post war structure is static.
 
 ```{r, echo=FALSE, include_graphics20, out.width='100%', fig.cap='Figure 18: Damage Assessment Ukraine 1', fig.scap='Lecture Slides', cache=FALSE}
 knitr::include_graphics('figures/w8p2.png')
 ```
 
+So essentially, we check if there is a significant difference between the means of the pre disaster and post disaster pixels. So for this to work you need a clear pre and post image. That is not always the case. In some instances, for example in Gaza, there is continuous or repeated destruction. In other instances, not SAR data may be available pre disaster.
+
 ```{r, echo=FALSE, include_graphics21, out.width='100%', fig.cap='Figure 18: Damage Assessment Ukraine 2', fig.scap='Lecture Slides', cache=FALSE}
 knitr::include_graphics('figures/w8p3.png')
 ```
 
-Also reference the economist fire method for detecting fighting.
+@geReviewSyntheticAperture2020 explain that building damage assessments can also be done based only on post disaster SAR images using texture-based approaches in combination with machine learning classifiers, such as random forest. This method has been used for mapping damage after the 2015 Nepal earth quake. I wonder if such approaches are still being used today, where pre and post disaster SAR data should be publicly available from Sentinel 1, which has a revisit time of 12 days.
 
 ## Reflection
+
+Across this week and week 6, we've looked at different approaches for detecting building damage. What stands out to me is that neither of them are applied at scale in practice. In fact, the UN conducts damage assessment manually.
+
+UNOSAT is the UN Satellite Centre. They conduct damage assessment for conflicts around the world. The image below shows a damage assessment of Gaza. The methodology is described as: "Analysts closely review satellite imagery, often comparing two or more images together, and determine notable changes between the images. For damage assessments, refugee or IDP assessments, and similar analyses, these changes are then manually documented in the vector data by the analyst." [@UNOSATNorthGaza] This must be a really labor, cost and time intensive process.
+
+For me, it is really interesting to see the gap between research and practice when it comes to remote sensing. I wonder what is needed to bridge this gaps and make remote sensing really work for the development and humanitarian sector. There is probably loads of reasons or a combination of reasons for this. I personally feel like quite a big one is, that the system of academia and the system of let's say the UN function completely differently . The mechanics of these systems, the structures people work and the languages they use and the goals they work towards are different, which makes communication unlikely. This brings me back to Niklas Luhmann and his system's theory, which haunted me my whole undergrad studies.
