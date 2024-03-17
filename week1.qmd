@@ -20,7 +20,7 @@ Generally, there are two types of sensors -- active and passive ones. Passive se
 knitr::include_graphics('figures/w1p1.png')
 ```
 
-```{}
+```         
 ```
 
 ## Application
