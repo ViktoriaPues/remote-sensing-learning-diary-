@@ -261,8 +261,7 @@ div.csl-indent {
 <li><p>Red represents the reflectance in the red spectral band.</p></li>
 </ul>
 <p>NDVI values are normally between -1 to 1. Higher values indicate healthier or denser vegetation cover. In GEE calculating NDVI has its own function:</p>
-<pre><code>var NDVI_2 = clip.normalizedDifference([SR_B5, SR_B4])
-</code></pre>
+<pre><code>var NDVI_2 = clip.normalizedDifference([SR_B5, SR_B4])</code></pre>
 <p>I will look at three applications of NDVI here ranging from pretty simple to very complex with increasing usefulness for policy making as you go down the list:</p>
 <p>1. simple GEE engine app showing NDVI for Northern Africa</p>
 <p>2. study using NDVI and GEE to map drought</p>
@@ -293,9 +292,9 @@ div.csl-indent {
 </section>
 <section id="detecting-drought" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="detecting-drought"><span class="header-section-number">5.2.2</span> Detecting drought</h3>
-<p>NDVI can also be used to detect drought. Drought is one of the deadliest disasters that affect many regions of the world on a regular basis. In contrast to earth quakes or tsunamis, drought does not happen abruptly, but slowly develops overr time due to changes in the environment and climate. Monitoring these changes to alert to drought risk is therefore highly relevant in disaster risk management, e.g.&nbsp;to prevent famine (I will look more closely at famine in the next section.)</p>
+<p>NDVI can also be used to detect drought. Drought is one of the deadliest disasters that affect many regions of the world on a regular basis. In contrast to earth quakes or tsunamis, drought does not happen abruptly, but slowly develops over time due to changes in the environment and climate. Monitoring these changes to alert to drought risk is therefore highly relevant in disaster risk management, e.g.&nbsp;to prevent famine (I will look more closely at famine in the next section.)</p>
 <p><span class="citation" data-cites="khanGlobalDroughtMonitoring2021">Khan and Gilani (<a href="references.html#ref-khanGlobalDroughtMonitoring2021" role="doc-biblioref">2021</a>)</span> developed a global Drought Severity Index (DSI) using Google Earth Engine. The study uses MODIS terra data. The parameters used to develop the index are NDVI combined with evapotranspiration (ET) and potential evapotranspiration (PET). Evapotranspiration (ET) and Potential Evapotranspiration (PET) are indicate how much water is transferred from the earth to the atmosphere through evaporation from soil and transpiration from vegetation. ET and PET data sets are in the GEE catalog from 2001 to to now. The study develops annual DSI maps using the median DSI value.</p>
-<p>This study in interesting for comparing how severely different regions suffer from drough and if we can defect changes over time. However, it says nothing about the impact of drought on people.</p>
+<p>This study in interesting for comparing how severely different regions suffer from drought and if we can defect changes over time. However, it says nothing about the impact of drought on people.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -309,8 +308,8 @@ div.csl-indent {
 </section>
 <section id="predicting-famine" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="predicting-famine"><span class="header-section-number">5.2.3</span> Predicting Famine</h3>
-<p>The worst impact related to drought is famine, but not every drought leads to famine. Famine, in contrast to drought however, is a man made disaster. As <span class="citation" data-cites="alexdewaalMassStarvationHistory2017">Alex De Waal (<a href="references.html#ref-alexdewaalMassStarvationHistory2017" role="doc-biblioref">2017</a>)</span> argues, famine is driven by political conflict, embargoes and blockades, hostility against humanitarian principles and a volatile global economies or shocks. Therfore, understanding famine needs to combine data about drought with a range of other data sets on conflict, humanitarian access, population, food security, global value chains and so on.</p>
-<p>USAID has been running the Famine Early Earning System Network since 1980s and is one of the major providers for evidence based early warning information on current and future food insecurity. They developed a Acute Food Insecurity Area Classification Map. They use satellite data to understand drought but enrich this with a range of other analysis including conflict, migration, market and trade</p>
+<p>The worst impact related to drought is famine, but not every drought leads to famine. Famine, in contrast to drought is a man made disaster. As <span class="citation" data-cites="alexdewaalMassStarvationHistory2017">Alex De Waal (<a href="references.html#ref-alexdewaalMassStarvationHistory2017" role="doc-biblioref">2017</a>)</span> argues, famine is driven by political conflict, embargoes and blockades, hostility against humanitarian principles and a volatile global economies or shocks. Therfore, understanding famine needs to combine data about drought with a range of other data sets on conflict, humanitarian access, population, food security, global value chains and so on.</p>
+<p>USAID has been running the Famine Early Earning System Network since 1980s and is one of the major providers for evidence based early warning information on current and future food insecurity. They developed the Acute Food Insecurity Area Classification Map. They use satellite data to understand drought but enrich this with a range of other analysis including conflict, migration, market and trade</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -321,11 +320,12 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>This is a good example that remote sensing analysis is often most powerful for decision making when it is combined with other data sets. Its really cool that GEE allows you to do analysis at global scale and then zoom in on specific countries or regions. But the last example, shows how important it is to not overestimate the power of remote sensing. Often, it needs to be combined with other contextual data sets in order to make to most useful for e.g.&nbsp;planning a humanitarian response programme.</p>
+<p>This is a good example that remote sensing analysis is often most powerful for decision making when it is combined with other data sets.</p>
 </section>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>It’s really cool that GEE allows you to do analysis at global scale and then zoom in on specific countries or regions. But the last example on famine, shows how important it is to not overestimate the power of remote sensing. Often, it needs to be combined with other contextual data sets in order to make it more useful for decision making, e.g.&nbsp;planning a humanitarian response.</p>
 <p>GEE almost sounds a bit too good to be true, especially because it is free to use, at least for non-commercial purposes. I was curious to understand some of the issues or challenges related to GEE and had a look through the literature of this week. According to <span class="citation" data-cites="amaniGoogleEarthEngine2020a">Amani et al. (<a href="references.html#ref-amaniGoogleEarthEngine2020a" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="gorelickGoogleEarthEngine2017">Gorelick et al. (<a href="references.html#ref-gorelickGoogleEarthEngine2017" role="doc-biblioref">2017</a>)</span>, some of the limitation include:</p>
 <ul>
 <li><p>Limited storage of 250GB for each user and limited memory to train machine learning algorithms.</p></li>
@@ -333,7 +333,7 @@ div.csl-indent {
 <li><p>Interactive session limits and constraints on session duration and requests hinder flexibility.</p></li>
 </ul>
 <p>In addition, to these technical issues, I could imagine that if you get started right away with GEE, you may lack some understanding of pre-processing of data and the decisions taken for corrections and enhancement, as well as the assumptions and mechanics of some of the classification models applied (more on this in the next 2 weeks). This may lead to misinterpretation of results.</p>
-<p>In my view another risk related to the proliferation of remote sensing in planning practice is that it may lead to a very dominantly technocratic approach to decision making. While this is of course helpful and important, it is not the only valuable way to understand cities. Cities are complex living organisms and often best understood through different analytically lenses. Understanding the lived experience of people, cultural meaning of places and practices or political agenda is equally important to fully understand how cities work. For example, it is really useful to understand where flood risk areas are in a city, and remote sensing is a great way to do so, but it is also important to understand why people decide to settle there and perhaps reject resettlement policies, stakeholder engagement is a good way to understand this.</p>
+<p>In my view another risk related to the proliferation of remote sensing in planning practice is that it may lead to a very dominantly technocratic approach to decision making. While this is of course helpful and important, it is not the only valuable way to understand cities. Cities are complex living organisms and often best understood through different analytically lenses. Understanding the lived experience of people, cultural meaning of places and practices or political agenda is equally important to fully understand how cities work. For example, it is really useful to understand where flood risk areas are in a city, and remote sensing is a great way to do so, but it is also important to understand why people decide to settle there and perhaps reject resettlement policies. Stakeholder engagement is a good way to understand this.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

@@ -26,7 +26,7 @@ In supervised classification a predefined training data set is used where labels
 
 4.Classify the image using the selected classifier.
 
-Random Forest is a supervised machine learning algorithm used for classification and regression. It creates numerous decision trees during the training phase. Each decision tree is built using a random subset of the training data and a random subset of the input features. Each tree contributes to the final prediction of classes, and the mode or mean of these predictions is taken as the overall output. As described by @haMachineLearningRemote2022, its is this combination of different classification options that makes predictions robust. They explain that a random forest algorithm has four main steps:
+Random Forest is a supervised machine learning algorithm used for classification and regression. It creates numerous decision trees during the training phase. Each decision tree is built using a random subset of the training data and a random subset of the input features. Each tree contributes to the final prediction of classes, and the mode or mean of these predictions is taken as the overall output. As described by @haMachineLearningRemote2022, it is this combination of different classification options that makes predictions robust. They explain that a random forest algorithm has four main steps:
 
 1.  randomly select the sample from the data set;
 
@@ -43,7 +43,7 @@ knitr::include_graphics('figures/w6p2.png')
 
 ### Unsupervised Classification
 
-Unsupervised classification works the other way around. The classes are grouped first based on the data, using a self-taught algorithm, and then categorized into clusters. There is no reference data, where we know what category it is, in this case. According to @jeffreya.cardilleCloudBasedRemoteSensing, the typical work flow us as follows:  
+Unsupervised classification works the other way around. The classes are grouped first based on the data, using a self-taught algorithm, and then categorized into clusters. In this case, there is no reference data, where we know what category it is. According to @jeffreya.cardilleCloudBasedRemoteSensing, the typical work flow us as follows:  
 
 1.  Assemble features with numeric properties in which to find clusters (training data).
 
@@ -59,30 +59,28 @@ Unsupervised classification works the other way around. The classes are grouped 
 
 This week, I explored the application of remote sensing analysis in damage assessment in war. The damage of buildings and civil infrastructure is a specific form of violence in war, often deployed strategically, with devastating impact on civilian populations. With family members killed or injured, homes and livelihoods destroyed, community and public service infrastructure spaces damaged, people are often left with no other choice than to flee. Monitoring destruction of buildings is therefore important for understanding the dynamics of war, detecting war crimes, providing targeted humanitarian assistance and preparing for reconstruction and recovery.
 
-Traditionally, damage assessments are conducted through a mix of ground observation and testimony and manual visual classification from high resolution satellite images. This is cost, labor and time intensive. Current research explores (1) how to use machine learning based classification and (2) how to use publicly available data sources for detecting building damage in conflict zones to offer approaches that are faster, more accessible and implementable at scale. One of the key methodological challenges is that classes (no damage vs damage) are really unbalanced because even after intense attacks, only very few show damage even after a large scale attack and that destruction occurs over time. [@MonitoringWarDestructiona]
+Traditionally, damage assessments are conducted through a mix of ground observation and testimony and manual visual classification from high resolution satellite images. This is cost, labor and time intensive. Current research explores (1) how to use machine learning based classification and (2) how to use publicly available data sources for detecting building damage in conflict zones to offer approaches that are faster, more accessible and implementable at scale. Classification of damage in urban settings is difficult because classes (no damage vs damage) are usually very unbalanced. [@hansmullerMonitoringWarDestruction]
 
 Let's look at two recent studies from Syria and Ukraine.
 
 ### Damage Assessment in Syria using machine learning
 
-@MonitoringWarDestructiona use high resolution data of three Syrian cities and applies machine learning technique to detect building damage over time. They use a two stage classification process which feeds data first to a Convolutional Neural Networks (CNN) and then passes it through a random forest. To get a rough understanding of CNN, watch the video linked below. The CNN generates labels and predicted values for each pixel that are then used to train a RF model to generate a prediction for the test sample. The two steps are needed because building damage is both spatially as well as structurally auto-correlated and hence using just a RF would lead to over fitting of the model. While this approach is technically quite complex, it is very useful because the machine learning approach makes it applicable in conflict regions anywhere and scaling it doesn't come with significant extra costs.
+@hansmullerMonitoringWarDestruction use high resolution data of three Syrian cities and applies machine learning technique to detect building damage over time. They use a two stage classification process which feeds data first to a Convolutional Neural Networks (CNN) and then passes it through a random forest. To get a rough understanding of CNN, watch the video linked below. The CNN generates labels and predicted values for each pixel that are then used to train a RF model to generate a prediction for the test sample. The two steps are needed because building damage is both spatially as well as structurally auto-correlated and hence using just a RF would lead to over fitting of the model. While this approach is technically quite complex, it is very useful because the machine learning approach makes it applicable in conflict regions anywhere and scaling it doesn't come with significant extra costs.
 
 ```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vJiZqZRkIg8" frameborder="0" allowfullscreen></iframe>
 ```
+However, a major issue with this approach is that it may be over fitting. When they are doing the test / train split, they are doing this within each of the 6 Syrian cities. This is not how a model would be used in practice. What is more likely is that a model is trained on a specific city in Syria and then used in a new city, e.g. Gaza. The model performs well because a test point and a training point in the same city will be very similar. This has been discussed in the lecture 10 and we will look at a different approach in week 10 using SAR data.
+
 ```{r, echo=FALSE, include_graphics15, out.width='100%', fig.cap='Figure 15: Damange Assessment Allepo', fig.scap='[@MonitoringWarDestructiona]', cache=FALSE}
 knitr::include_graphics('figures/w6p3.png')
 ```
-
-However, a major issue with this approach is that it may be over fitting. When they are doing the test / train split, they are doing this within each of the 6 Syrian cities. This is not how a model would be used in practice. What is more likely is that a model is trained on a specific city in Syria and then used in a new city, e.g. Gaza. The model performs well because a test point and a training point in the same city will be very similar. This has been discussed in the lecture 10 and we will look at a different approach in week 10 using SAR data.
 
 ### Damage Assessment in Ukraine using public data sources
 
 @aimaitiWarRelatedBuilding2022 use a completely different approach for detecting building destruction in Kyiv Ukraine. The focus of their methodology is on testing how useful publicly available satellite data can be for damage assessment.
 
-The study tests two different approaches: 1. Sentinel 1 data applying a SAR log ratio of intensity (SAR = Synthetic Aperture Radar is a remote sensing technology that uses microwave radar to create high-resolution images of the Earth's surface, regardless of weather conditions or time of day.) 2. Sentinel 2 data applying texture analysis
-
-To support this approach, changes in other other land covers (e.g., forest) are suppressed using a mask for built up areas based on OpenStreetMap building footprints and World Settlement Footprint (WSF). For assessing the accuracy of the approach the classification was manually verified by comparing findings with the official United Nations Satellite Center (UNOSAT) damage assessment map. The classification (combined from the two approaches) achieved accuracy of 58%.
+The study tests two different approaches: 1. Sentinel 1 data applying a SAR log ratio of intensity (SAR = Synthetic Aperture Radar is a remote sensing technology that uses microwave radar to create high-resolution images of the Earth's surface, regardless of weather conditions or time of day.) 2. Sentinel 2 data applying texture analysis To support this approach, changes in other other land covers (e.g., forest) are suppressed using a mask for built up areas based on OpenStreetMap building footprints and World Settlement Footprint (WSF). For assessing the accuracy of the approach the classification was manually verified by comparing findings with the official United Nations Satellite Center (UNOSAT) damage assessment map. The classification (combined from the two approaches) achieved accuracy of 58%.
 
 ```{r, echo=FALSE, include_graphics16, out.width='100%', fig.cap='Figure 16: Damange Assessment Kyiv', fig.scap='[@aimaitiWarRelatedBuilding2022]', cache=FALSE}
 knitr::include_graphics('figures/w6p4.png')
@@ -96,12 +94,10 @@ This week was really fascinating!
 
 First, it's been great to start looking into machine learning and starting to grasp how classification works methodologically.
 
-Secondly, I really enjoyed looking into the application area of conflict monitoring. I have previously conducted research in this field from a social science perspective. I looked at urban development in the West Bank and Refugee Housing in Berlin both from the perspective of critical theory and post colonial research. While it was brilliant to deeply understand these phenomena through theory, I always felt like my research was missing evidence and applicability in policy making. The studies discussed above are highly relevant for practitioners and provide a more objective evidence base for understanding war.
+Secondly, I really enjoyed looking into the application area of conflict monitoring. I have previously conducted research in this field from a social science perspective. I looked at urban development in the West Bank and Refugee Housing in Berlin both from the perspective of critical theory. While it was brilliant to deeply understand these phenomena through theory, I always felt like my research was missing evidence and applicability for policy making. The studies discussed above are highly relevant for practitioners and provide a more objective evidence base for understanding conflict.
 
 Two thinks struck me while digesting the studies discussed above:
 
 1\. Neither of them mentions Google Earth Engine, which surprised me. After last weeks lecture, I got the impression that nearly all studies now use GEE. I wonder why they chose not to use it here.
 
 2\. Both studies confirmed, again, the need to enrich remote sensing data with other contextual data sources.This seems to be emerging as a key learning from engaging with literature on very different use cases.
-
-**Add video from forensic architecture here!**

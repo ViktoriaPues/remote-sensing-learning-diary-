@@ -4,8 +4,6 @@
 
 This week we continued working on classifications. I will cover sub-pixel-based analysis, object-based analysis and accuracy below. The main take away this week is this: **When classification models do not consider spatial autocorrelation (a measure of similarity between nearby data), it will likely lead to overly optimistic accuracy levels.**
 
-What happens if a classification model doesn't consider spatial autocorrelation ? The model will have better accuracy that it actually does
-
 ### Sub-pixel-based Analysis
 
 Sub-pixel analysis is useful when a pixel has more than one land cover type. A method that can be applied is Spectralmixture analysis (SMA). It is used to decompose the spectral reflectance within a pixel from surface reflectance from different material. "The mixing can be modeled as the sum of end member reflectance multiplied by their fraction contribution to a best-fit mixed spectrum." [@jensenIntroductoryDigitalImage2015] In short this means it determines the proportion of land cover per pixel.
@@ -34,7 +32,7 @@ knitr::include_graphics('figures/w7p1.png')
 
 ## Application
 
-I am looking again at informal settlements mapping because when I looked at the topic it in week three, I didn't have enough content to really understand the method applied yet.
+I am looking again at informal settlements mapping because when I looked at the topic in week three, I didn't have enough content to really understand the method applied yet.
 
 The study discussed in week three used publicly available data (sentinel 2) and pixel based classification with a random forest algorithm [@matariraGoogleEarthEngine2022] to map informal settlements in Durban, South Africa. In this study, the focus is on exploring the potential of open data to map settlements. It was able to detect informal settlements with a overall accuracy of around 80%.
 
@@ -49,8 +47,8 @@ knitr::include_graphics('figures/w7p2.png')
 
 I personally feel like this lecture/ practical was a little rushed. I am starting to get a rough overview on the different types of classifications. But the practical code is pretty complex. While it works when I copy it over to GEE and its cool to see how it builds up the maps step by step, I personally would need a bit more guidance and hand-holding to really put these concepts into practice.
 
-A resource that I started using and that I find really helpful is this online book: <https://www.eefabook.org/>. It has fantastic videos that guide you step by step through how to implement the different methods in GEE. I am working my way through but haven't made it to object-based classification yet. The book and videos are a good addition to the lectures and practicals, which go deeper into the theory and are more critical on methods.
+A resource that I started using and that I find really helpful is this online book: <https://www.eefabook.org/>. It has fantastic videos that guide you step by step through how to implement the different methods in GEE. The book and videos are a good addition to the lectures and practicals, which go deeper into the theory and are more critical on methods.
 
-Doing this module, I have been thinking a lot about how to find the right level of detail in all of this content for me. I've been thinking about what type of role I want to have after learning all of these new contents and skills. Do I want to do remote sensing analysis myself in my work going forward? Or, do I want to be in the position to work with people who do this? Or be able to procure such analysis? Finding answers to these question, over the summer perhaps, will be useful to be strategic in how I select courses for the remainder of the course and what content to really focus on.
+Doing this module, I have been thinking a lot about how to find the right level of detail in all of this content for me. I've been thinking about what type of role I want to have after learning all of these new contents and skills. Do I want to do remote sensing analysis myself, manage programmes where this is part, or work on a more strategic level to integrate remote sensing into programmes.... ?
 
 In any case, I feel like my brain has been expanding over the past few months (sometimes with a lot of growing pain). That in itself is great!
