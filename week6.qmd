@@ -4,7 +4,7 @@
 
 Images classification is one of the main outputs, we try to achieve when analysing satellite images. Classification turns a satellite image into a schematic map showing different land use or land cover types. Essentially, it means labeling each pixel of the selected image bands as a categorical variable.
 
-```{r, echo=FALSE, include_graphics13, out.width='100%', fig.cap='Figure 13: Classification', fig.scap='jeffreya.cardilleCloudBasedRemoteSensing', cache=FALSE}
+```{r, echo=FALSE, include_graphics13, out.width='100%', fig.cap='Figure 13: Classification. Source: @jeffreya.cardilleCloudBasedRemoteSensing', cache=FALSE}
 knitr::include_graphics('figures/w6p1.png')
 ```
 
@@ -36,7 +36,7 @@ Random Forest is a supervised machine learning algorithm used for classification
 
 4.  determination of the decision trees with the most votes.
 
-```{r, echo=FALSE, include_graphics14, out.width='100%', fig.cap='Figure 14: Random Forests', fig.scap='https://medium.com/analytics-vidhya/random-forest-classifier-and-its-hyperparameters-8467bec755f6', cache=FALSE}
+```{r, echo=FALSE, include_graphics14, out.width='100%', fig.cap='Figure 14: Random Forests. Source: https://medium.com/analytics-vidhya/random-forest-classifier-and-its-hyperparameters-8467bec755f6', cache=FALSE}
 knitr::include_graphics('figures/w6p2.png')
 
 ```
@@ -72,7 +72,7 @@ Let's look at two recent studies from Syria and Ukraine.
 ```
 However, a major issue with this approach is that it may be over fitting. When they are doing the test / train split, they are doing this within each of the 6 Syrian cities. This is not how a model would be used in practice. What is more likely is that a model is trained on a specific city in Syria and then used in a new city, e.g. Gaza. The model performs well because a test point and a training point in the same city will be very similar. This has been discussed in the lecture 10 and we will look at a different approach in week 10 using SAR data.
 
-```{r, echo=FALSE, include_graphics15, out.width='100%', fig.cap='Figure 15: Damange Assessment Allepo', fig.scap='[@MonitoringWarDestructiona]', cache=FALSE}
+```{r, echo=FALSE, include_graphics15, out.width='100%', fig.cap='Figure 15: Damange Assessment Allepo. Source: @MonitoringWarDestructiona', cache=FALSE}
 knitr::include_graphics('figures/w6p3.png')
 ```
 

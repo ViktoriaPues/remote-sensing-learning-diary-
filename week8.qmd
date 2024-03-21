@@ -12,7 +12,7 @@ SAR sensors are off nadir and they are moving. The fact that a SAR sensor is in 
 
 SAR polarization refers to the SAR sensor being able to transmit and receive electro-magnetic signal horizontally and vertically. Different earth surfaces reflect differently in terms of vertical and horizontal waves. The image below shows how different objects reflect differently.
 
-```{r, echo=FALSE, include_graphics19, out.width='100%', fig.cap='Figure 18: Scattering from different objects', fig.scap='Lecture Slides', cache=FALSE}
+```{r, echo=FALSE, include_graphics19, out.width='100%', fig.cap='Figure 18: Scattering from different objects. Source: https://andrewmaclachlan.github.io/CASA0023-lecture-9/#16', cache=FALSE}
 knitr::include_graphics('figures/w8p1.png')
 ```
 
@@ -28,13 +28,13 @@ Ollie (Ballinger) is working on an approach for using SAR data for identifying b
 
 So the method that Ollie is working on, and presented in the lecture, uses pre- and post-disater images and applies a simple t-test to calculate the ratio in change in amplitude to general pixel variance. Damage to a buildings leads to a change in backscatter amplitude from the pre to post disaster image. In order to differentiate between a building damage and normal changes the results need to be compared with the building footprint. There is always a little bit of variation, e.g. because of rain or snow. In the image below you can see the difference between double bounce scattering (building) and rough surface scattering (rubble). The variation within pre and post scattering is fairly low, because both the pre and post war structure is static.
 
-```{r, echo=FALSE, include_graphics20, out.width='100%', fig.cap='Figure 18: Damage Assessment Ukraine 1', fig.scap='Lecture Slides', cache=FALSE}
+```{r, echo=FALSE, include_graphics20, out.width='100%', fig.cap='Figure 18: Damage Assessment Ukraine 1. Source: Lecture slides', cache=FALSE}
 knitr::include_graphics('figures/w8p2.png')
 ```
 
 So essentially, we check if there is a significant difference between the means of the pre disaster and post disaster pixels. So for this to work you need a clear pre and post image. That is not always the case. In some instances, for example in Gaza, there is continuous or repeated destruction. In other instances, not SAR data may be available pre disaster.
 
-```{r, echo=FALSE, include_graphics21, out.width='100%', fig.cap='Figure 18: Damage Assessment Ukraine 2', fig.scap='Lecture Slides', cache=FALSE}
+```{r, echo=FALSE, include_graphics21, out.width='100%', fig.cap='Figure 18: Damage Assessment Ukraine 2. Source: lecture slides', cache=FALSE}
 knitr::include_graphics('figures/w8p3.png')
 ```
 

@@ -6,7 +6,7 @@ This week, we finally started working with Google Earth Engine (GEE). I was exci
 
 In summary, GEE is a cloud-based platform developed by Google that enables users to access and analyse huge amounts of satellite data. The main advantage is that, when we do analysis on GEE it's not running on our own machine. It is either running on the browser (client side) or on Google serves (server side). The GGE servers are very powerful and can compute huge amounts of data in seconds.
 
-```{r, echo=FALSE, include_graphics8, out.width='100%', fig.cap='Figure 8: Google Earth Engine User Interface', fig.scap='@amaniGoogleEarthEngine2020a', cache=FALSE}
+```{r, echo=FALSE, include_graphics8, out.width='100%', fig.cap='Figure 8: Google Earth Engine User Interface. Source: @amaniGoogleEarthEngine2020a', cache=FALSE}
 knitr::include_graphics('figures/w5p1.png')
 
 ```
@@ -51,11 +51,11 @@ I will look at three applications of NDVI here ranging from pretty simple to ver
 
 This app is a very intuitive introduction to NDVI. It is simply a base map of North Africa and South Asia with an NDVI layer. Different NDVI values are assigned 5 different colors to represent vegetation density/health. What's cool about this app is that you can choose different times for the left and right hand side of the screen and then drag the image between them. It allows you to visually detect vegetation change. In my case here, I looked at the Nile Delta Region between 2000 and 2023. You can see that vegetation increased in the west and some of the coastal areas. What makes this app great, is that it is really simple to use and allows to communicate differences in vegetation in a very powerful way. In my case, it could help visualize the success of irrigation policy in the Nile Delta over the past two decades.
 
-```{r, echo=FALSE, include_graphics9, out.width='100%', fig.cap='Figure 9: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider', cache=FALSE}
+```{r, echo=FALSE, include_graphics9, out.width='100%', fig.cap='Figure 9: NDVI Slider Application. Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider', cache=FALSE}
 knitr::include_graphics('figures/w5p3.png')
 ```
 
-```{r, echo=FALSE, include_graphics10, out.width='100%', fig.cap='Figure 10: NDVI Slider Application', fig.scap='Image Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider', cache=FALSE}
+```{r, echo=FALSE, include_graphics10, out.width='100%', fig.cap='Figure 10: NDVI Slider Application. Source: https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider', cache=FALSE}
 knitr::include_graphics('figures/w5p4.png')
 ```
 
@@ -67,7 +67,7 @@ NDVI can also be used to detect drought. Drought is one of the deadliest disaste
 
 This study in interesting for comparing how severely different regions suffer from drought and if we can defect changes over time. However, it says nothing about the impact of drought on people.
 
-```{r, echo=FALSE, include_graphics11, out.width='100%', fig.cap='Figure 11: Global Drought Severity Index', fig.scap='Image Source: @khanGlobalDroughtMonitoring2021 ', cache=FALSE}
+```{r, echo=FALSE, include_graphics11, out.width='100%', fig.cap='Figure 11: Global Drought Severity Index. Source: @khanGlobalDroughtMonitoring2021 ', cache=FALSE}
 knitr::include_graphics('figures/w5p5.png')
 ```
 
@@ -77,7 +77,7 @@ The worst impact related to drought is famine, but not every drought leads to fa
 
 USAID has been running the Famine Early Earning System Network since 1980s and is one of the major providers for evidence based early warning information on current and future food insecurity. They developed the Acute Food Insecurity Area Classification Map. They use satellite data to understand drought but enrich this with a range of other analysis including conflict, migration, market and trade
 
-```{r, echo=FALSE, include_graphics12, out.width='100%', fig.cap='Figure 12: Acute Food Insecurity Area Classification Map', fig.scap='Image Source: https://fews.net/ ', cache=FALSE}
+```{r, echo=FALSE, include_graphics12, out.width='100%', fig.cap='Figure 12: Acute Food Insecurity Area Classification Map. Source: https://fews.net/ ', cache=FALSE}
 knitr::include_graphics('figures/w5p6.png')
 ```
 

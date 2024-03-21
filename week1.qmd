@@ -8,7 +8,7 @@ Remote Sensing, also referred to as Earth Observation, is the process of collect
 
 The Electro Magnetic Spectrum (EMS) has a huge range of energy waves, electric or magnetic, that vary in amplitude (α), length (λ), and frequency. Only a fraction of the spectrum is visible to the human eye. Those that are visible, we see as colors. All objects on the earth reflect electromagnetic waves in unique ways. For example, trees have a different electromagnetic signature than buildings or water bodies. [@bradyRemoteSensingDummies2021]
 
-```{r, echo=FALSE, include_graphics1, out.width='100%', fig.cap='Figure 1: Amplitude, length, and frequency of electric wave', fig.scap='Image Source: Principles of Remote Sensing', cache=FALSE}
+```{r, echo=FALSE, include_graphics1, out.width='100%', fig.cap='Figure 1: Amplitude, length, and frequency of electric wave. Source: Principles of Remote Sensing', cache=FALSE}
 knitr::include_graphics('figures/w1p2.png')
 ```
 
@@ -16,7 +16,7 @@ The images taken through remote sensing include wavelengths beyond those that ar
 
 Generally, there are two types of sensors -- active and passive ones. Passive sensors use the sun as their energy source, while active sensors have their own energy source and therefore emit electromagnetic waves.
 
-```{r, echo=FALSE, include_graphics2, out.width='100%', fig.cap='Figure 2: Overview of the EMS', fig.scap='Remote Sensing for Dummies', cache=FALSE}
+```{r, echo=FALSE, include_graphics2, out.width='100%', fig.cap='Figure 2: Overview of the EMS. Source: Remote Sensing for Dummies', cache=FALSE}
 knitr::include_graphics('figures/w1p1.png')
 ```
 
@@ -47,7 +47,7 @@ Below I discuss the use of Sentinel data (from the European Space Agency) and La
 
 Figure 3 provides an overview of a typical work flow for a flood risk mapping using Landsat Data. I will understand these steps better over the next weeks. In short, Landsat 5, 7, and 8 images with low cloud cover are used to cover a longer period. A classifier that differentiates permanent water (river, sea, lakes etc.) from temporary water (flood) is applied. Vegetation (NDVI) and site specific other data (HAND) is masked (which means its cut out) to leave only a map of permanent and temporary water.
 
-```{r, echo=FALSE, include_graphics3, out.width='100%', fig.cap='Figure 3: Workflow Flood Mapping', fig.scap='Image Source: Mehmood et.al.', cache=FALSE}
+```{r, echo=FALSE, include_graphics3, out.width='100%', fig.cap='Figure 3: Workflow Flood Mapping. Source: @mehmoodMappingFloodAreas2021', cache=FALSE}
 knitr::include_graphics('figures/w1p4.png')
 ```
 
@@ -61,7 +61,7 @@ Some of the image processing methods applied sound already somewhat familiar as 
 
 Something, that I noticed is that the study only takes into account the growing population for forecasting but not the effects of climate change on the likelihood and intensity of tropical cyclones in the future. Modeling climate change may be a useful to take this study forward and better understand future flood risk in Maputo and Beira.
 
-```{r, echo=FALSE, include_graphics4, out.width='100%', fig.cap='Figure 4: Senitnel 2 image of Mosampique flooding including in Maputo', fig.scap='Image Source: Principles of Remote Sensing', cache=FALSE}
+```{r, echo=FALSE, include_graphics4, out.width='100%', fig.cap='Figure 4: Senitnel 2 image of Mosampique flooding including in Maputo. Source: @twumasiFloodMappingMozambique2022', cache=FALSE}
 knitr::include_graphics('figures/w1p3.png')
 ```
 

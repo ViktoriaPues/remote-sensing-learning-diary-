@@ -30,7 +30,7 @@ This week, I explore an application area of remote sensing that I have always be
 
 Informal settlements are often the most vulnerable parts of cities. They tend to be located in areas that are extremely vulnerable to the effects of climate change, such as flooding or heat and lack basic urban services, such as sanitation infrastructure or public transport. Makeshift houses leave residents exposed to the elements, and provide little protection against intruders. Many people living in informal settlements lack security of tenure and are under constant threat of eviction. What may look like temporary neighborhoods often remain for decades. One of the most famous examples, is Dharavi in Mumbai. Dharavi is one of the largest informal settlements in the world right in the center of Mumbai.
 
-```{r, echo=FALSE, include_graphics5, out.width='100%', fig.cap='Figure 5:Darawi', fig.scap='Image Source: Principles of Remote Sensing', cache=FALSE}
+```{r, echo=FALSE, include_graphics5, out.width='100%', fig.cap='Figure 5:Darawi. Source: https://www.mediapolisjournal.com/2019/11/the-mumbai-slum/', cache=FALSE}
 knitr::include_graphics('figures/w3p1a.png')
 ```
 
@@ -50,7 +50,7 @@ The method for processing used was pretty complex and I didn't understand it ful
 
 It is great that the data used in this study is free. However, it still does not seem very accessible to a local government in a LMIC because technical capabilities to procure, let alone conduct such a study seems immense. It would be great if there was a spatial application that allowed city governments to map informal areas in their city in an automated way. [Ollie Ballinger](https://oballinger.github.io/) actually managed to built an interesting Google Earth Engine Application to map informal settlements in Dar es Salam in Tanzania. It is different to the approach taken in Durban because he removes the formal buildings and than applies classification only on the remaining areas. [@ollieballingerInformalSettlementMapping2024]
 
-```{r, echo=FALSE, include_graphics6, out.width='100%', fig.cap='Figure 6: Informal Settlement Mapper', fig.scap='Image Source: Principles of Remote Sensing', cache=FALSE}
+```{r, echo=FALSE, include_graphics6, out.width='100%', fig.cap='Figure 6: Informal Settlement Mapper. Source: https://ollielballinger.users.earthengine.app/view/ism', cache=FALSE}
 knitr::include_graphics('figures/w3p2.png')
 ```
 
